@@ -1,0 +1,83 @@
+/* Sets the group title to be a bolder font */
+.group-title {
+  font-family: Lato;
+  font-weight: 800;
+}
+
+/* Changes the card title to be a bolder font */
+.title {
+  font-weight: 700;
+}
+
+/* Changes the subtitle to be a bolder font */
+.subtitle {
+  font-weight: 500;
+}
+
+/* Adds spacing to the bottom of cards */
+body #app .card-content {
+  margin-bottom: 0.75rem;
+}
+
+ /*Adds more border radius to the cards */
+body .layout-vertical .column div:first-of-type .card {
+  border-radius: 1rem;
+}
+body .layout-vertical .card {
+  border-radius: 1rem;
+}
+.card {
+    border-radius: 1rem;
+}
+body .layout-vertical .column div:last-of-type .card { 
+    border-radius: 1rem; 
+}
+
+body .search-bar input {
+  opacity: 20%;
+}
+
+/* Hide scrollbar for Chrome */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* "Zoom" Doesnt work on Firefox */
+body {
+  zoom: 80%;
+}
+
+/* "Zoom" fix for Firefox */
+.container {
+  -moz-transform: scale(0.8);
+  -moz-transform-origin: 50% 0;
+}
+
+/*  Makes The YouTube player take up the whole space.
+ *  Replace with whichever video or livestream you want from YouTube by replacing the link located in config.yml; line 55
+ *  Hidden on mobile screens because it looks bad and doesn't matter anyway. 
+ */
+
+.message-body {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 45/9;
+} 
+
+.message-body iframe {
+  width: 600%;
+  height: 200%;
+  margin-left: -250%;
+  transform: scale(1.60);
+  transform-origin: center;
+  margin-top: -7%;
+}
+
+@media (max-width: 768px) {
+  .message-body {
+    display: none;
+  }
+  .message-header {
+    display: none;
+  }
+}

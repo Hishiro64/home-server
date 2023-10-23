@@ -1,0 +1,32 @@
+---
+version: '3.5'
+services:
+  jellyfin:
+    container_name: jellyfin
+    image: jellyfin/jellyfin
+    hostname: jellyfin
+    user: 1000:1000
+    restart: unless-stopped
+    ports:
+      - 8096:8096 # HTTP
+      #- 8920:8920 # HTTPS
+      #- 7359:7359/udp # service auto-discovery 
+      #- 1900:1900/udp # auto-discovery. 
+    volumes:
+      - /srv/stacks/jellyfin/config:/config # Config
+      - /srv/stacks/jellyfin/media/movies:/movies:ro
+      - /srv/stacks/jellyfin/media/shows:/shows:ro
+      - /srv/stacks/jellyfin/media/anime:/anime:ro # Shows
+      - jellyfin_cache:/cache
+    environment:
+      - JELLYFIN_PublishedServerUrl=192.168.1.100
+      - TZ=America/New_York
+    devices:
+      - /dev/video10:/dev/video10
+      - /dev/video11:/dev/video11
+      - /dev/video12:/dev/video12
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+     jellyfin_cache:

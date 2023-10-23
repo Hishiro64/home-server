@@ -1,0 +1,14 @@
+version: '3'
+services:
+    jellyseerr:
+       container_name: jellyseerr
+       image: fallenbagel/jellyseerr:latest
+       ports:
+            - 8097:8097
+       volumes:
+            - /srv/stacks/jellyseerr:/app/config
+       environment:
+            - LOG_LEVEL=debug
+            - TZ=America/New_York
+            - PORT=8097
+       restart: unless-stopped

@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  qbittorrent:
+    container_name: qbittorrent
+    image: ghcr.io/hotio/qbittorrent
+    restart: always
+    ports:
+      - "10006:8080"
+    volumes:
+      - /srv/stacks/qbittorrent/config:/config
+      - /srv/stacks/qbittorrent/downloads:/downloads
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=America/New_York
+
+# Username: admin
+# Password: adminadmin

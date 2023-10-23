@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  duplicacy:
+    container_name: duplicacy
+    image: ghcr.io/hotio/duplicacy
+    hostname: duplicacy
+    ports:
+      - "10014:3875"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=America/New_York
+      - DWE_PASSWORD=changeme # Your gui password
+    volumes:
+      - /srv/stacks/duplicacy/config:/config
+      - /srv/stacks/duplicacy/backup:/backup # Your backup directory
+      - /srv/stacks/duplicacy/restore:/restore # Your restore directory
+      - duplicacy_cache:/cache
+      - duplicacy_logs:/logs
+
+volumes:
+     duplicacy_cache:
+     duplicacy_logs:

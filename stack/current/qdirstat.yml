@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    qdirstat:
+        container_name: qdirstat
+        image: jlesage/qdirstat
+        ports:
+            - '10012:10012'
+        volumes:
+          #  - '/srv/stacks/qdirstat/config:/config:rw'
+            - '/:/storage:ro'
+        environment:
+           - WEB_LISTENING_PORT=10012
+           - DARK_MODE=1
+           - VNC_PASSWORD=changeme

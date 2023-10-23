@@ -1,0 +1,16 @@
+version: "2"
+services:
+  homer:
+    image: b4bz/homer
+    container_name: homer
+    hostname: homer
+    user: 1000:1000
+    restart: unless-stopped
+    volumes:
+      - /srv/stacks/homer/:/www/assets
+    ports:
+      - 10000:8080
+    environment:
+      - INIT_ASSETS=0
+    security_opt:
+      - no-new-privileges:true

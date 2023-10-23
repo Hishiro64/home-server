@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  scrutiny:
+    container_name: scrutiny
+    image: ghcr.io/analogj/scrutiny:master-omnibus
+    ports:
+      - "10003:8080" # webui
+     # - "9959:8086" # influxDB admin
+    cap_add:
+      - SYS_RAWIO
+    volumes:
+      - /run/udev:/run/udev:ro
+      - /srv/stacks/scrutiny/config:/opt/scrutiny/config
+      - scrutiny_influxdb:/opt/scrutiny/influxdb
+    devices:
+      - "/dev/sda"
+    restart: always
+
+volumes:
+   scrutiny_influxdb:

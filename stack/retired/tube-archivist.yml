@@ -1,0 +1,58 @@
+version: '3.3'
+services:
+  tubearchivist:
+    container_name: tube-archivist
+    restart: unless-stopped
+    image: bbilly1/tubearchivist
+    ports:
+      - 10013:8000
+    volumes:
+      - tube-archivist_media:/youtube
+      - tube-archivist_cache:/cache
+    environment:
+      - ES_URL=http://archivist-es:9200     # needs protocol e.g. http and port
+      - REDIS_HOST=archivist-redis          # don't add protocol
+      - HOST_UID=1000
+      - HOST_GID=1000
+      - TA_HOST=192.168.1.100               # set your host name
+      - TA_USERNAME=admin                   # your initial TA credentials
+      - TA_PASSWORD=changeme                # your initial TA credentials
+      - ELASTIC_PASSWORD=verysecret         # set password for Elasticsearch
+      - TZ=America/New_York                 # set your time zone
+    depends_on:
+      - archivist-es
+      - archivist-redis
+  archivist-redis:
+    image: redis/redis-stack-server
+    container_name: archivist-redis
+    restart: unless-stopped
+    expose:
+      - "6379"
+    volumes:
+      - tube-archivist_redis:/data
+    depends_on:
+      - archivist-es
+  archivist-es:
+    image: elasticsearch:8.9.0              # change "bbilly1/tubearchivist-es ==> official es 8.9.0" for arm64
+    container_name: archivist-es
+    restart: unless-stopped
+    environment:
+      - "ELASTIC_PASSWORD=verysecret"       # matching Elasticsearch password
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "xpack.security.enabled=true"
+      - "discovery.type=single-node"
+      - "path.repo=/usr/share/elasticsearch/data/snapshot"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - tube-archivist_es:/usr/share/elasticsearch/data    # check for permission error when using bind mount, see readme
+    expose:
+      - "9200"
+
+volumes:
+  tube-archivist_media:
+  tube-archivist_cache:
+  tube-archivist_redis:
+  tube-archivist_es:

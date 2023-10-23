@@ -1,0 +1,26 @@
+---
+version: '3.0'
+services:
+  pihole:
+    container_name: pi-hole-vanilla 
+    image: pihole/pihole:latest
+    hostname: pi-hole-vanilla 
+    restart: unless-stopped
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      #- "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      - 10008:80/tcp # pihole web interface port
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - FTLCONF_LOCAL_IPV4=192.168.1.100
+      - TZ=America/New_York
+      - WEBPASSWORD=changeme
+      - PIHOLE_DNS_=192.168.1.1;1.1.1.1
+      #- DNSSEC=true
+      - WEBTHEME=default-darker
+      - WEBUIBOXEDLAYOUT=boxed
+    volumes:
+      - /srv/stacks/pi-hole/etc_pihole:/etc/pihole:rw
+      - /srv/stacks/pi-hole/etc_dnsmasq:/etc/dnsmasq.d:rw

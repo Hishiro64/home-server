@@ -1,0 +1,16 @@
+version: "3"
+services:
+  filebrowser:
+    container_name: file-browser
+    image: filebrowser/filebrowser:latest
+    hostname: file-browser
+    user: 1000:1000 # default
+    restart: unless-stopped
+    volumes:
+      - /srv:/srv
+      - /srv/stacks/file-browser/database.db:/database.db
+      - /srv/stacks/file-browser/branding:/branding
+    ports:
+      - 10001:80
+    security_opt:
+      - no-new-privileges:true

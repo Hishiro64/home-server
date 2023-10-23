@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+    corentinth:
+        container_name: it-tools
+        image: 'ghcr.io/corentinth/it-tools:latest'
+        restart: unless-stopped
+        ports:
+            - '10011:80'

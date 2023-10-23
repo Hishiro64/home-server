@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  samba:
+    image: crazymax/samba
+    container_name: samba
+    ports:
+      - 445:445
+    volumes:
+      - "/srv/stacks/samba/data:/data"
+      - "/srv/stacks/samba/Serva:/samba/Serva" # share directory
+    environment:
+      - "TZ=America/New_York"
+      - "SAMBA_LOG_LEVEL=0"
+      - "SAMBA_SERVER_STRING=Serva"
+      - "SAMBA_FOLLOW_SYMLINKS=no"
+      - "SAMBA_WIDE_LINKS=no"
+    restart: always

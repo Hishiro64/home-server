@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    doku:
+        container_name: doku
+        image: amerkurev/doku
+        restart: unless-stopped
+        ports:
+            - '10004:9090'
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock:ro'
+            - '/:/hostroot:ro'
