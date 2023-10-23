@@ -17,7 +17,7 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 2. Without the Primary drive connected, just insert the micro-SD and Boot to the pi.
 
-3. **Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. Bookworm is still new, and the Raspberry Pi 5 only just released. Things could change!**
+3. **Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. Bookworm is new and the Raspberry Pi 5 only just released. Things could change! The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
 
 4. SSH into the pi with the credentials you set in the imager. On Windows it's `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi.
 
@@ -39,16 +39,16 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 12. Shutdown by using `sudo shutdown -h now`, remove the sd-card, and boot again.
 
- Once you ssh back in, all of the storage is now being available, you can continue to enable Trim.
+ Once you ssh back in, all of the storage is now accessible, you can continue to enable Trim.
 
 # Enable Trim
 Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi).
 
 # Lower reserved space for root
 You can get some remaining space by downsizing the ratio of reserved blocks for root. The default is 5%, but that scales up with drive size. You can lower it to 1-3%.
-    
+```bash    
     sudo tune2fs -m 3 /dev/sda2
-
+```
 ![image.png](/docs/assets/WindowsTerminal_pubchefax4.png)
 
 Now move on to [OS Configuration](/docs/2_OS%20Configuration.md).
