@@ -58,10 +58,14 @@ auto_initramfs=1
 disable_fw_kms_setup=1
 # Bookworm related
 
-# Gpu
+# GPU
 dtoverlay=vc4-kms-v3d
 max_framebuffers=2
-# Gpu
+# GPU
+
+# CPU
+#arm_boost=1
+# CPU
 
 # DO NOT CHANGE
 arm_64bit=1
