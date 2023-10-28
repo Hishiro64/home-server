@@ -9,7 +9,7 @@
 2. In *CHOOSE OS*, select `Raspberry Pi OS Other`
 
 ​![image.png](assets/rpi-imager_NCmfwAhg5F.png)
-###### Version 1.7.5 of Raspberry Pi Imager was used.
+###### Version 1.7.5 of Raspberry Pi Imager was used. (1.8.1 works too)
     
 3. Select `Raspberry Pi OS Lite (64-Bit) - Debian Bookworm with no desktop environment`.  
 
