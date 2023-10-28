@@ -533,6 +533,28 @@ Change it to this:
 ``` 
 Exit and save by <kbd>CTRL+X</kbd> <kbd>Y</kbd> <kbd>ENTER</kbd>
 
+## cpufreq
+We want to make our CPU ramp up when it's under load and ramp down when it's idle. Provided we have adequate cooling, changing the default cpufreq governor from *Powersave* to something like *Ondemand* or *Schedutil*, is a good idea.
+
+1. Install cpufrequtils:
+
+  ```
+  sudo apt install cpufrequtils
+  ```
+2. View available governors:
+
+  ```
+  cpufreq-info
+  ```
+3. Change the cpufreq governor. I use *Ondemand*:
+
+  ```
+  sudo cpufreq-set -g ondemand  
+  ```
+4. (Optional) You can uncomment `arm_boost=1` located at `/boot/config.txt`, to increase the max frequency on a Pi-4.
+
+5. **This change will reset upon reboot**. I maximize uptime on my server, so it’s a non issue for me. If you do reboot, make sure to run step 3 again or create a script to automatically run it on every startup.
+
 ## sysctl.conf (Don't Use/Needs Testing)
 
 Trying to edge out improved performance, security, lower network latency, and faster networking. May vary based on use case. Needs testing and is incomplete:
