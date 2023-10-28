@@ -165,10 +165,14 @@ auto_initramfs=1
 disable_fw_kms_setup=1
 # Bookworm related
 
-# Gpu
+# GPU
 dtoverlay=vc4-kms-v3d
 max_framebuffers=2
-# Gpu
+# GPU
+
+# CPU
+#arm_boost=1
+# CPU
 
 # DO NOT CHANGE
 arm_64bit=1
@@ -268,7 +272,7 @@ Then `sudo reboot`
     ```
     Expected output:
     ```c
-    WinMachine~ ssh-keygen -t ed25519 -a 100 -C "admin@server"
+    WinMachine> ssh-keygen -t ed25519 -a 100 -C "admin@server"
     Generating public/private ed25519 key pair.
     Enter file in which to save the key (C:\Users\WinMachine/.ssh/id_ed25519):
     Enter passphrase (empty for no passphrase):
@@ -289,7 +293,7 @@ Then `sudo reboot`
     |*O=oB . .o       |
     |+E+=   o.        |
     +----[SHA256]-----+
-    WinMachine~
+    WinMachine>
     ```
 
 3. **Send the public key to the Pi** 
