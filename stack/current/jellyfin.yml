@@ -11,7 +11,7 @@ services:
       - 8096:8096 # HTTP
       #- 8920:8920 # HTTPS
       #- 7359:7359/udp # service auto-discovery 
-      #- 1900:1900/udp # auto-discovery. 
+      - 1900:1900/udp # auto-discovery 
     volumes:
       - /srv/stacks/jellyfin/config:/config # Config
       - /srv/stacks/jellyfin/media/movies:/movies:ro
@@ -21,12 +21,23 @@ services:
     environment:
       - JELLYFIN_PublishedServerUrl=192.168.1.100
       - TZ=America/New_York
-    devices:
-      - /dev/video10:/dev/video10
-      - /dev/video11:/dev/video11
-      - /dev/video12:/dev/video12
+    #devices:
+      #- /dev/video10:/dev/video10
+      #- /dev/video11:/dev/video11
+      #- /dev/video12:/dev/video12
     security_opt:
       - no-new-privileges:true
 
 volumes:
      jellyfin_cache:
+
+# Transcoding Notes for Pi-4
+#   Enabling:
+#    - Uncomment the device lines: 24-27
+#    - Comment out the user line: 8
+#   Results:
+#    - Works well with H.264 1080p Remuxes, everything else such as H.265 or AV1 performs really bad
+#    - It can crash and prevent transcoding until the system is restarted
+#    - Not well implemented using the official jellyfin-ffmpeg
+#    - Should to wait for better support, recommend to disable transcoding for stability
+
