@@ -14,17 +14,17 @@ Contains my config files, docker compose files, and documentation for setting up
           * [File Browser](stack/current/filebrowser.yml)
           * [JellyFin](stack/current/jellyfin.yml)
           * [Aria2 Pro](stack/current/aria2-pro.yml)
+          * [Scrutiny](stack/current/scrutiny.yml)
+          * [Netdata](stack/current/netdata.yml) <!-- Needs some work -->
+          * [Dozzle](stack/current/dozzle.yml)
           * [qBittorrent](stack/current/qbittorrent.yml)
           * [Pi-hole](stack/current/pi-hole-vanilla.yml)
           * [Gitea](stack/current/gitea.yml)
           * [Stash](stack/current/stash.yml)
-          * [Dozzle](stack/current/dozzle.yml)
-          * [Scrutiny](stack/current/scrutiny.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
           * [Watchtower](stack/current/watchtower.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Doku](stack/current/doku.yml)
-          * [Netdata](stack/current/netdata.yml) <!-- Needs work -->
           * [Samba](stack/current/samba.yml) <!-- Needs work -->
         * ❌ Retired Services 
           * [Jellyseerr](stack/retired/jellyseerr.yml) <!-- Want alternative -->
