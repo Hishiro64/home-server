@@ -61,6 +61,7 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │       ├── 📁 shows
         │       └── 📁 anime
         ├── 📁 jellyseerr
+        ├── 📁 wg-easy
         ├── 📁 aria2-pro
         │   ├── 📁 config
         │   └── 📁 downloads
