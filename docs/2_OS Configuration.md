@@ -61,7 +61,7 @@ sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoclean -y && sudo 
 This might take a while.
 
 ## EEPROM
-Skip unless you have a reason to update.
+❗Skip unless you have a reason to update.
 
 Check the EEPROM version:
 ```
@@ -557,7 +557,7 @@ We want to make our CPU ramp up when it's under load and ramp down when it's idl
 
 ## sysctl.conf (Don't Use/Needs Testing)
 
-Trying to edge out improved performance, security, lower network latency, and faster networking. May vary based on use case. Needs testing and is incomplete:
+❗Trying to edge out improved performance, security, lower network latency, and faster networking. May vary based on use case. Needs testing and is incomplete:
 
 ```bash
 # ////////////////////////////////////////////////////////////////////////////////////////////
