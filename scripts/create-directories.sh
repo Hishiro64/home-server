@@ -10,7 +10,7 @@ mkdir -p /srv/stacks
 
 cd /srv/stacks
 
-mkdir -p {portainer,homer,wg-easy,file-browser/branding,jellyfin/{config,media/{movies,shows,anime}},jellyseerr,aria2-pro/{config,downloads},qbittorrent/{config,downloads},pi-hole/{etc_pihole,etc_dnsmasq},pi.alert/config,gitea/data,stash/{config,data,metadata,cache,blobs,generated},netdata/netdataconfig,samba/{data,Serva},scrutiny/config,duplicacy/{config,backup,restore},qdirstat/config}
+mkdir -p {portainer,homer,wg-easy,file-browser/branding,jellyfin/{config,media/{movies,shows,anime}},jellyseerr,aria2-pro/{config,downloads},qbittorrent/{config,downloads},pi-hole/{etc_pihole,etc_dnsmasq},pi.alert/config,gitea/data,stash/{config/scrapers,data,metadata,cache,blobs,generated},netdata/netdataconfig,samba/{data,Serva},scrutiny/config,duplicacy/{config,backup,restore},qdirstat/config}
 
 # File Browser
 cd ./file-browser
