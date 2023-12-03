@@ -78,6 +78,7 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │   └── 📁 lfs
         ├── 📁 stash
         │   ├── 📁 config
+        │   │   └── 📁 scrapers
         │   ├── 📁 data
         │   ├── 📁 metadata
         │   ├── 📁 cache
