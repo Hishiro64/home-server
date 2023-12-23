@@ -13,7 +13,7 @@
 * ### Storage
     I would recommend using a SATA drive. See [here](/docs/SSD/Storage%20Considerations.md) for a small rundown of drive types. Before scaling, [plan it out](/docs/SSD/Storage%20Plan.md), and read [this](/docs/SSD/SATA%20SSD%20Setup.md) for previewing how a SATA SSD would be setup. Please arrange to your setup. Here are my recommendations.
     * [Kingston 960GB A400 SATA3 2.5" Internal SSD SA400S37/960G](https://www.amazon.com/Kingston-240GB-Solid-SA400S37-240G/dp/B079XC5PVV/) (9 months with no issues on Bullseye, with no external power)
-    * ❗ [SAMSUNG 870 EVO 4TB 2.5 Inch SATA III Internal SSD (MZ-77E4T0B/AM)](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF/) ( 1 month in currently testing on Bookworm, no issues so far, with no external power)
+    * ❗ [SAMSUNG 870 EVO 4TB 2.5 Inch SATA III Internal SSD (MZ-77E4T0B/AM)](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF/) ( 2 months in, currently testing on Bookworm, no issues so far, with no external power)
         * [StarTech.com USB 3.1 to 2.5" SATA Hard Drive Adapter ](https://www.amazon.com/StarTech-com-SATA-USB-Cable-USB3S2SAT3CB/dp/B00XLAZODE/) 
     * [SanDisk 128GB Extreme microSDXC UHS-I Memory Card with Adapter](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7BK27V/)
 * ### Recommended
@@ -23,7 +23,7 @@
     
     The Pi always thermal throttles without any cooling.
     * [SunFounder Raspberry Pi Cooling Fan, Raspberry Pi Ice Tower Cooler](https://www.amazon.com/SunFounder-Raspberry-Cooling-Heatsink-Radiator/dp/B09QPBT4GL/)
-        * ❗ I had one of the fans it came with, fail on me after around 8 months (245 Days). I expect the 2nd one it came with to also fail as well. These small fans are cheap, and it might be better off it just get a reliable one in the first place.
+        * ❗ I had one of the included fans, fail on me after around 8 months. I expect the 2nd one it came with to also fail as well. These small fans are cheap, and it might be better off it just get a reliable one in the first place.
         * ❗ [Noctua NF-A4x10 5V](https://www.amazon.com/Noctua-Cooling-Bearing-NF-A4X10-FLX-5V/dp/B00NEMGCIA/) (Untested)
 
     This case can house all the combinations in this hardware section.    
