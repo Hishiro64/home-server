@@ -25,9 +25,9 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Watchtower](stack/current/watchtower.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Doku](stack/current/doku.yml)
+          * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Want alternative -->
           * [Samba](stack/current/samba.yml) <!-- Needs work -->
         * ❌ Retired Services 
-          * [Jellyseerr](stack/retired/jellyseerr.yml) <!-- Want alternative -->
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, Want alternative -->
           * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Want alternative -->
