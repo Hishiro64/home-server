@@ -17,6 +17,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Scrutiny](stack/current/scrutiny.yml)
           * [Netdata](stack/current/netdata.yml) <!-- Needs some work -->
           * [Dozzle](stack/current/dozzle.yml)
+          * [WireGuard-Easy](stack/current/wg-easy.yml)
           * [qBittorrent](stack/current/qbittorrent.yml)
           * [Pi-hole](stack/current/pi-hole-vanilla.yml)
           * [Gitea](stack/current/gitea.yml)
@@ -60,6 +61,7 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │       ├── 📁 shows
         │       └── 📁 anime
         ├── 📁 jellyseerr
+        ├── 📁 wg-easy
         ├── 📁 aria2-pro
         │   ├── 📁 config
         │   └── 📁 downloads
@@ -76,6 +78,7 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │   └── 📁 lfs
         ├── 📁 stash
         │   ├── 📁 config
+        │   │   └── 📁 scrapers
         │   ├── 📁 data
         │   ├── 📁 metadata
         │   ├── 📁 cache
