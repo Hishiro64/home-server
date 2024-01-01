@@ -16,11 +16,14 @@ services:
       - /srv/stacks/netdata/netdataconfig:/etc/netdata # Config Directory
       - /etc/passwd:/host/etc/passwd:ro
       - /etc/group:/host/etc/group:ro
+      - /etc/localtime:/etc/localtime:ro
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /etc/os-release:/host/etc/os-release:ro
+      - /var/log:/host/var/log:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /var/lib/smartmontools:/var/lib/smartmontools/:ro # For SMART drive monitoring
+      - /run/dbus:/run/dbus:ro # Systemd Units Monitoring
+      #- /var/lib/smartmontools:/var/lib/smartmontools/:ro # For SMART drive monitoring # Must Run: [sudo apt install smartmontools] # I use Scrutiny instead
       - netdata_lib:/var/lib/netdata
       - netdata_cache:/var/cache/netdata
 
