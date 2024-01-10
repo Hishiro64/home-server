@@ -23,6 +23,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Gitea](stack/current/gitea.yml)
           * [Stash](stack/current/stash.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
+          * [Syncthing](stack/current/syncthing.yml)
           * [Watchtower](stack/current/watchtower.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Doku](stack/current/doku.yml)
@@ -62,6 +63,7 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │       └── 📁 anime
         ├── 📁 jellyseerr
         ├── 📁 wg-easy
+        ├── 📁 syncthing
         ├── 📁 aria2-pro
         │   ├── 📁 config
         │   └── 📁 downloads
