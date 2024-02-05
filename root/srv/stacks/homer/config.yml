@@ -151,6 +151,15 @@ services:
         apikey: "<---insert-api-key-here--->" # optional, needed if web interface is password protected
         #background: black
         target: "_blank"
+      - name: "WireGuard 🛡"
+        logo: "assets/resources/logos/wireguard.svg"
+        subtitle: "Secure VPN Tunnel"
+        tag: "network"
+        keywords: "wireguard"
+        #type: "Ping"
+        url: "http://192.168.1.100:51821" 
+        #method: "head"
+        target: "_blank"
       - name: "Pi.Alert ❗️"
         logo: "assets/resources/logos/pi.alert.png"
         subtitle: "A Intrusion Detection System"
