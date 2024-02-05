@@ -16,6 +16,7 @@ services:
       - /srv/stacks/jellyfin/config:/config # Config
       - /srv/stacks/jellyfin/media/movies:/movies:ro
       - /srv/stacks/jellyfin/media/shows:/shows:ro
+      - /srv/stacks/jellyfin/media/restricted:/restricted:ro # Movies
       - /srv/stacks/jellyfin/media/anime:/anime:ro # Shows
       - jellyfin_cache:/cache
     environment:
@@ -40,4 +41,3 @@ volumes:
 #    - It can crash and prevent transcoding until the system is restarted
 #    - Not well implemented using the official jellyfin-ffmpeg
 #    - Should to wait for better support, recommend to disable transcoding for stability
-

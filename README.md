@@ -60,7 +60,8 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │   └── 📁 media
         │       ├── 📁 movies
         │       ├── 📁 shows
-        │       └── 📁 anime
+        │       ├── 📁 anime
+        │       └── 📁 restricted
         ├── 📁 jellyseerr
         ├── 📁 wg-easy
         ├── 📁 syncthing
