@@ -11,7 +11,7 @@ Contains my config files, docker compose files, and documentation for setting up
       * [Portainer Setup](docs/3_Portainer%20Setup.md)
         * 📚 Stacks  
           * [Homer](stack/current/homer.yml)
-          * [File Browser](stack/current/filebrowser.yml)
+          * [File Browser](stack/current/filebrowser.yml) <!-- Could be better -->
           * [JellyFin](stack/current/jellyfin.yml)
           * [Aria2 Pro](stack/current/aria2-pro.yml)
           * [Scrutiny](stack/current/scrutiny.yml)
@@ -24,7 +24,6 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Stash](stack/current/stash.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
           * [Syncthing](stack/current/syncthing.yml)
-          * [Watchtower](stack/current/watchtower.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Doku](stack/current/doku.yml)
           * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Want alternative -->
@@ -32,6 +31,7 @@ Contains my config files, docker compose files, and documentation for setting up
         * ❌ Retired Services 
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, Want alternative -->
+          * [Watchtower](stack/current/watchtower.yml) <!-- I update manually now for reliability now -->
           * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Want alternative -->
           * [Dashdot](stack/retired/dashdot.yml) <!-- CPU intensive -->
       * [Config Files](root)
