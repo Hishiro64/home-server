@@ -66,8 +66,8 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         ├── 📁 kavita
         │   ├── 📁 config
         │   └── 📁 data
-        │       ├── 📁 Books
-        │       └── 📁 Light Novels
+        │       ├── 📁 books
+        │       └── 📁 light-novels
         ├── 📁 jellyseerr
         ├── 📁 wg-easy
         ├── 📁 syncthing

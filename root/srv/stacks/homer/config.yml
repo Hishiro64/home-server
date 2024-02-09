@@ -212,7 +212,7 @@ services:
         subtitle: "Your Library"
         tag: "services"
         keywords: "kavita"
-        url: "http://192.168.1.100:1006"
+        url: "http://192.168.1.100:10006"
         target: "_blank"
       #- name: "IT-Tools 🔧"
       #  logo: "assets/resources/logos/it-tools.svg"
