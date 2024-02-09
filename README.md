@@ -25,6 +25,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Duplicacy](stack/current/duplicacy.yml)
           * [Syncthing](stack/current/syncthing.yml)
           * [QDirStat](stack/current/qdirstat.yml)
+          * [Kavita](stack/current/kavita.yml)
           * [Doku](stack/current/doku.yml)
           * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Want alternative -->
           * [Samba](stack/current/samba.yml) <!-- Needs work -->
@@ -62,6 +63,11 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │       ├── 📁 shows
         │       ├── 📁 anime
         │       └── 📁 restricted
+        ├── 📁 kavita
+        │   ├── 📁 config
+        │   └── 📁 data
+        │       ├── 📁 Books
+        │       └── 📁 Light Novels
         ├── 📁 jellyseerr
         ├── 📁 wg-easy
         ├── 📁 syncthing

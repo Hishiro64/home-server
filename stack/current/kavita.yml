@@ -1,0 +1,12 @@
+services:
+    kavita:
+        container_name: kavita
+        image: jvmilazz0/kavita:latest    # Using the stable branch from the offical repo.
+        volumes:
+            - /srv/stacks/kavita/data:/data:ro        
+            - /srv/stacks/kavita/config:/kavita/config     # /kavita/config must not be changed
+        environment:
+            - TZ=America/New_York
+        ports:
+            - "10006:5000"
+        restart: unless-stopped
