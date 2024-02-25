@@ -23,6 +23,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Gitea](stack/current/gitea.yml)
           * [Stash](stack/current/stash.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
+          * [LanguageTool](stack/current/languagetool.yml)
           * [Syncthing](stack/current/syncthing.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Kavita](stack/current/kavita.yml)
@@ -70,6 +71,8 @@ I have deployed this same setup on Bullseye for around 9 months. No noticeable i
         │       └── 📁 light-novels
         ├── 📁 jellyseerr
         ├── 📁 wg-easy
+        ├── 📁 languagetool
+        │   ├── 📁 ngrams
         ├── 📁 syncthing
         ├── 📁 aria2-pro
         │   ├── 📁 config

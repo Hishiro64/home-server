@@ -1,0 +1,17 @@
+version: "3"
+services:
+  languagetool:
+    container_name: languagetool
+    image: erikvl87/languagetool
+    ports:
+      - 8010:8010                        # Using default port from the image
+    #environment:
+    #  - langtool_languageModel=/ngrams   # OPTIONAL: Using ngrams data
+    #  - Java_Xms=512m                    # OPTIONAL: Setting a minimal Java heap size of 512 mib
+    #  - Java_Xmx=1g                      # OPTIONAL: Setting a maximum Java heap size of 1 Gib
+    #volumes:
+    #  - /srv/stacks/languagetool/ngrams:/ngrams    # OPTIONAL: The location of ngrams data on the local machine (Very Slow on Raspberry Pi 4)
+                                                    # 1. Grab from here: https://languagetool.org/download/ngram-data/
+                                                    # 2. This file: ngrams-en-xxxxxxxx.zip
+                                                    # 3. Extract: ngrams-en-xxxxxxxx.zip
+                                                    # 4. Final path should look be placed like this: /srv/stacks/languagetool/ngrams/en/...
