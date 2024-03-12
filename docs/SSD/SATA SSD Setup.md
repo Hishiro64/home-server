@@ -21,21 +21,22 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 4. SSH into the pi with the credentials you set in the imager. On Windows it's `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi.
 
-5. Once you are ssh in, `sudo shutdown -h now`
+5. Once you are SSH in, `sudo shutdown -h now`
 
 6. Unplug in the Primary drive, insert micro-SD card, and Boot to the pi.
 
 7. Wait again for that initial setup to automatically complete, now on the micro-SD card.
 
-8. **Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. Bookworm is new and the Raspberry Pi 5 only just released. Things could change! The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
+> [!CAUTION]
+> 8. Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. Bookworm is new and the Raspberry Pi 5 only just released. Things could change! **The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
 
-9. Once you are ssh in, plug in the large drive. It should be inserted in the bottom blue USB port.
+9. Once you are SSH in, plug in the large drive. It should be inserted in the bottom blue USB port.
 
 10. Back on the [thread](https://forums.raspberrypi.com/viewtopic.php?t=196778) you will see the attachment named `usb-boot.zip`. Download and extract the contents.
 
 11. Find the file called `mbr2gpt`. Open it up using Notepad. <kbd>CTRL+a</kbd> and <kbd>CTRL+c</kbd>. **Make sure everything is copied.**
 
-12. In the ssh session, run `nano mbr2gpt`, paste, and save using <kbd>CTRL+X</kbd> <kbd>Y</kbd> <kbd>ENTER</kbd>.
+12. In the SSH session, run `nano mbr2gpt`, paste, and save using <kbd>CTRL+X</kbd> <kbd>Y</kbd> <kbd>ENTER</kbd>.
 
 13. Make the script executable by running `sudo chmod +x ./mbr2gpt`
 
@@ -47,7 +48,7 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 16. Shutdown by using `sudo shutdown -h now`, remove the sd-card, and boot again.
 
- Once you ssh back in, all of the storage is now accessible, you can continue to enable Trim.
+ Once you SSH back in, all of the storage is now accessible, you can continue to enable Trim.
 
 # Enable Trim
 Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi).
