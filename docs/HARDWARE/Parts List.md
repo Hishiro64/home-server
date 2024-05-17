@@ -43,3 +43,6 @@
 
 # Note about the Raspberry Pi 5
 My current build is made and deployed on the Raspberry Pi 4. I am planning to wait while for the Raspberry Pi 5 to mature before migrating over. If you're lucky and already bought a Raspberry Pi 5, and want to use a similar build, know that some of these parts are not compatible, like the case, and cooler. Other parts may be redundant, like the SATA to USB adapter as there is native PCIe on the newer model. It's likely that 3rd parties will soon make a SATA to FPC adapter, made for the Pi. It could be faster and open up other possibilities. Once the Raspberry Pi 5 matures, people will find a far more superior way to set it up as a home server, that takes full advantage of the software and hardware, among other benefits from waiting it out.
+
+# Final note about the Raspberry Pi 5
+I have decided that my home server won't be running on the Raspberry Pi 5 or any Pi platform in the future. The platform is great to start out on, but it won't scale or provide for my needs. I’m going to keep milking what I can from my Pi 4 and switch over to an x86 server in the future.
