@@ -5,4 +5,4 @@ services:
         image: 'ghcr.io/corentinth/it-tools:latest'
         restart: unless-stopped
         ports:
-            - '10011:80'
+            - '10015:80'

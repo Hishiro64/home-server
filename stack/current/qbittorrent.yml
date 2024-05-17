@@ -5,7 +5,7 @@ services:
     image: ghcr.io/hotio/qbittorrent
     restart: always
     ports:
-      - "10006:8080"
+      - "10011:8080"
     volumes:
       - /srv/stacks/qbittorrent/config:/config
       - /srv/stacks/qbittorrent/downloads:/downloads
