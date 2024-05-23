@@ -2,14 +2,13 @@ version: "3"
 services:
   gitea:
     container_name: gitea
-    image: gitea/gitea:1.20.4
+    image: gitea/gitea:1.21.11
     restart: always
     ports:
       - "10010:10010"
       - "2222:22"
     volumes:
       - /srv/stacks/gitea/data:/data
-      - /srv/stacks/gitea/lfs:/lfs
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
@@ -21,10 +20,11 @@ services:
       - GITEA__server__ROOT_URL=http://192.168.1.100:10010/
       - GITEA__server__HTTP_PORT=10010
       - GITEA__server__SSH_DOMAIN=192.168.1.100
+      - GITEA__server__SSH_PORT=2222
       - GITEA__server__DOMAIN=192.168.1.100
       - GITEA__server__OFFLINE_MODE=true
       - GITEA__server__LFS_START_SERVER=true
-      - GITEA__lfs__PATH=/lfs
+      - GITEA__lfs__PATH=/data/lfs
       - GITEA__openid__ENABLE_OPENID_SIGNIN=false
       - GITEA__openid__ENABLE_OPENID_SIGNUP=false
       - GITEA__service__NO_REPLY_ADDRESS=noreply-gitea.192.168.1.100
