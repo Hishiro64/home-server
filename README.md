@@ -37,7 +37,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Want alternative -->
           * [Dashdot](stack/retired/dashdot.yml) <!-- CPU intensive -->
       * [Config Files](root)
-      * 🚘Hardware
+      * 🚘 Hardware
         * [Parts List](docs/HARDWARE/Parts%20List.md)
         * 🗒 SSD Notes
           * [Storage Considerations](docs/SSD/Storage%20Considerations.md)
