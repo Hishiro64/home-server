@@ -29,7 +29,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Kavita](stack/current/kavita.yml)
           * [Doku](stack/current/doku.yml)
           * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Want alternative -->
-          * [Samba](stack/current/samba.yml) <!-- Needs work -->
+          * [Samba](stack/current/samba.yml)
         * ❌ Retired Services 
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, Want alternative -->
