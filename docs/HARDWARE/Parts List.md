@@ -13,7 +13,7 @@
 * ### Storage
     I would recommend using a SATA drive. See [here](/docs/SSD/Storage%20Considerations.md) for a small rundown of drive types. Before scaling, [plan it out](/docs/SSD/Storage%20Plan.md), and read [this](/docs/SSD/SATA%20SSD%20Setup.md) for previewing how a SATA SSD would be setup. Please arrange to your setup. Here are my recommendations.
     * [Kingston 960GB A400 SATA3 2.5" Internal SSD SA400S37/960G](https://www.amazon.com/Kingston-240GB-Solid-SA400S37-240G/dp/B079XC5PVV/) (9 months with no issues on Bullseye, with no external power)
-    * [SAMSUNG 870 EVO 4TB 2.5 Inch SATA III Internal SSD (MZ-77E4T0B/AM)](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF/) (4 months in, currently using on Bookworm, no issues, with no external power)
+    * [SAMSUNG 870 EVO 4TB 2.5 Inch SATA III Internal SSD (MZ-77E4T0B/AM)](https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E4T0B-AM/dp/B08QBL36GF/) (8 months in, currently using on Bookworm, no issues, with no external power)
         * [StarTech.com USB 3.1 to 2.5" SATA Hard Drive Adapter ](https://www.amazon.com/StarTech-com-SATA-USB-Cable-USB3S2SAT3CB/dp/B00XLAZODE/) 
     * [SanDisk 128GB Extreme microSDXC UHS-I Memory Card with Adapter](https://www.amazon.com/SanDisk-Extreme-microSDXC-Memory-Adapter/dp/B09X7BK27V/)
 * ### Recommended
