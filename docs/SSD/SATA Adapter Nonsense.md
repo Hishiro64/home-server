@@ -18,7 +18,8 @@ Connect a drive to the adapter before running the firmware update.
 
 ```
 
-You can run the executable while a drive is connected and proceed.
+You can run the Windows executable while a drive is connected and proceed. 
+*(I'm not sure about updating the firmware from a linux machine.)*
 
 Be wary of other small stuff like this. Not all SATA to USB adapters work well. Mainly, you want to look for adapters that use the ASM1153E chipset. To make the most of it, make sure it has UASP and Trim support. Do research for your own adapter.
 
