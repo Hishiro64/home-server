@@ -1,7 +1,6 @@
 @import url("https://theme-park.dev/css/base/filebrowser/organizr.css");
 
 /* Available Themes:
-
 @import url("https://theme-park.dev/css/base/filebrowser/aquamarine.css");
 @import url("https://theme-park.dev/css/base/filebrowser/hotline.css");
 @import url("https://theme-park.dev/css/base/filebrowser/hotpink.css");
@@ -16,5 +15,10 @@
 */
 
 /* You can also use this for more icon colors:
-/* https://raw.githubusercontent.com/jniggemann/filebrowser-css/main/custom.css
-/*
+/*https://raw.githubusercontent.com/jniggemann/filebrowser-css/main/custom.css
+
+
+/* remove some padding from the file list entries */
+#listing.list .item {
+    padding: 0.3em;
+}
