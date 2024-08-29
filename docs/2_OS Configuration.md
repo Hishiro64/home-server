@@ -310,7 +310,7 @@ Back on the server, harden the SSH server config:
 sudo nano /etc/ssh/sshd_config
 ```
 
-**Make sure you change "AllowUsers" to use your username. In my case it's *admin*.**
+❗**Make sure you change "AllowUsers" to use your username. In my case it's *admin*.**
 
 This is the new config:
 
@@ -493,7 +493,7 @@ AllowUsers admin
 
 Exit and save by <kbd>CTRL+X</kbd> <kbd>Y</kbd> <kbd>ENTER</kbd>
 
-**Test your configuration:** 
+❗**Test your configuration:** 
 ```bash
 sudo /usr/sbin/sshd -t
 ```  
@@ -557,7 +557,7 @@ We want to make our CPU ramp up when it's under load and ramp down when it's idl
 
 ## sysctl.conf (Don't Use/Needs Testing)
 
-❗Trying to edge out improved performance, security, lower network latency, and faster networking. May vary based on use case. Needs testing and is incomplete:
+❗Trying to edge out possible improved performance, security, lower network latency, and faster networking by modifying `sysctl.conf`. May vary based on use case. Needs testing and is incomplete:
 
 ```bash
 # ////////////////////////////////////////////////////////////////////////////////////////////
