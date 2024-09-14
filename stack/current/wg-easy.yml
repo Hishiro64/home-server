@@ -6,10 +6,11 @@ services:
     restart: unless-stopped
     ports:
       - "51820:51820/udp" # Port forward this
-      - "51821:51821/tcp" # Web-ui Port
+      - "51821:51821/tcp" # Web-ui Port | You can comment this out afterward
     environment:
       - WG_HOST=XXX.XXX.XXX.XXX # Set this to your public ip address
-      - PASSWORD=changeme # Web-ui Password
+      - PASSWORD_HASH=refer_to_link # Web-ui Password | https://github.com/wg-easy/wg-easy/blob/master/How_to_generate_an_bcrypt_hash.md
+                                    # You will have to replace EACH '$' symbol with two '$$' symbols. | Do NOT wrap the generated hash password in single quotes!
       - WG_DEFAULT_DNS=192.168.1.1, 1.1.1.1 # You may want to set this to pi-hole's dns
       - WG_ALLOWED_IPS=192.168.1.100/32 # https://www.procustodibus.com/blog/2021/03/wireguard-allowedips-calculator/
       # - WG_PORT=51820
@@ -24,6 +25,7 @@ services:
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
+      #- NET_RAW # ⚠️ Uncomment if using Podman
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
