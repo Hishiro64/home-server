@@ -16,8 +16,9 @@ services:
       - /srv/stacks/jellyfin/config:/config # Config
       - /srv/stacks/jellyfin/media/movies:/movies:ro
       - /srv/stacks/jellyfin/media/shows:/shows:ro
-      - /srv/stacks/jellyfin/media/restricted:/restricted:ro # Movies
+      - /srv/stacks/jellyfin/media/music:/music:ro
       - /srv/stacks/jellyfin/media/anime:/anime:ro # Shows
+      - /srv/stacks/jellyfin/media/restricted:/restricted:ro # Restricted Movies Through Library Access
       - jellyfin_cache:/cache
     environment:
       - JELLYFIN_PublishedServerUrl=192.168.1.100
