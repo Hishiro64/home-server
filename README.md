@@ -30,6 +30,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Doku](stack/current/doku.yml)
           * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Would perfer an alternative -->
           * [Samba](stack/current/samba.yml)
+          * [LANraragi](stack/current/lanraragi.yml)
         * ❌ Retired Services 
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
