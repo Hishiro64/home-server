@@ -1,0 +1,16 @@
+---
+version: '3.3'
+services:
+  komga:
+    container_name: komga 
+    image: gotson/komga
+    user: "1000:1000"
+    volumes:
+      - /srv/stacks/komga/data:/data:ro       
+      - /srv/stacks/komga/config:/config
+    ports:
+      - 10006:10006 # Swapped with Kavita's port
+    environment:
+      - TZ=America/New_York
+      - SERVER_PORT=10006
+    restart: unless-stopped
