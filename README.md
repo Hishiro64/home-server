@@ -28,14 +28,15 @@ Contains my config files, docker compose files, and documentation for setting up
           * [QDirStat](stack/current/qdirstat.yml)
           * [Kavita](stack/current/kavita.yml)
           * [Doku](stack/current/doku.yml)
-          * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Want alternative -->
+          * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Would perfer an alternative -->
           * [Samba](stack/current/samba.yml)
         * ❌ Retired Services 
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
-          * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, Want alternative -->
-          * [Watchtower](stack/current/watchtower.yml) <!-- I update manually now for reliability now -->
-          * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Want alternative -->
-          * [Dashdot](stack/retired/dashdot.yml) <!-- CPU intensive -->
+          * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
+          * [Watchtower](stack/current/watchtower.yml) <!-- Update manually now for reliability now -->
+          * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Alternative fork available -->
+          * [Dashdot](stack/retired/dashdot.yml) <!-- Quite CPU intensive -->
+          * [Komga](stack/retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
       * [Config Files](root)
       * 🚘 Hardware
         * [Parts List](docs/HARDWARE/Parts%20List.md)
