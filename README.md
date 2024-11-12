@@ -2,6 +2,7 @@
 Contains my config files, docker compose files, and documentation for setting up my home server. All hosted on one single Raspberry Pi and one 4TB SSD!
 
 ![preview](docs/assets/homer-preview.png)
+<img src="docs/assets/uptime-2024-11-12%2011-28-24.png" width="400" />
 ## 📃 Index 
 <!--ts-->
    * 📔 Docs 
