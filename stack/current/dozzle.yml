@@ -4,10 +4,11 @@ services:
     container_name: dozzle
     image: amir20/dozzle:latest
     ports:
-      - 10002:8080
+      - 10002:10002
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOZZLE_HOSTNAME=Server
+      - "DOZZLE_ADDR=:10002"
       - DOZZLE_NO_ANALYTICS=true
     restart: always
