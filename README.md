@@ -31,6 +31,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Would perfer an alternative -->
           * [Samba](stack/current/samba.yml)
           * [LANraragi](stack/current/lanraragi.yml)
+          * [Calibre Web Automated](stack/current/calibre-web-automated.yml)
         * ❌ Retired Services 
           * [Kavita](stack/retired/kavita.yml)
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
