@@ -24,7 +24,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Gitea](stack/current/gitea.yml)
           * [Stash](stack/current/stash.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
-          * [LanguageTool](stack/current/languagetool.yml)
+          * [LanguageTool](stack/current/languagetool.yml) <!-- Version 8.13.2 of the Firefox add-on -->
           * [Syncthing](stack/current/syncthing.yml)
           * [QDirStat](stack/current/qdirstat.yml)
           * [Doku](stack/current/doku.yml)
