@@ -5,7 +5,10 @@ services:
         image: amerkurev/doku
         restart: unless-stopped
         ports:
-            - '10004:9090'
+            - '10004:10004'
+        environment:
+            - PORT=10004
+            - SCAN_INTENSITY=light
         volumes:
             - '/var/run/docker.sock:/var/run/docker.sock:ro'
             - '/:/hostroot:ro'
