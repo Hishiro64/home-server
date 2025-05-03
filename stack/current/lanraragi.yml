@@ -6,8 +6,8 @@ services:
     ports:
       - "10011:3000"
     volumes:
-      - /srv/stacks/lanraragi/content:/home/koyomi/lanraragi/content:ro # You still need to create /srv/stacks/lanraragi/content/thumb
-      - lrr-thumbnails:/home/koyomi/lanraragi/content/thumb
+      - /srv/stacks/lanraragi/content:/home/koyomi/lanraragi/content:ro
+      - lrr-thumbnails:/home/koyomi/lanraragi/thumb
       - lrr-database:/home/koyomi/lanraragi/database
     restart: unless-stopped
 
