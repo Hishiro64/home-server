@@ -34,6 +34,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Calibre Web Automated](stack/current/calibre-web-automated.yml)
         * ❌ Retired Services 
           * [Kavita](stack/retired/kavita.yml)
+          * [ByteStash](stack/retired/bytestash.yml) <!-- Kinda worse than snippet-box at the moment-->
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
           * [Watchtower](stack/current/watchtower.yml) <!-- Update manually now for reliability now -->
