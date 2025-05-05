@@ -16,7 +16,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [JellyFin](stack/current/jellyfin.yml)
           * [Aria2 Pro](stack/current/aria2-pro.yml)
           * [Scrutiny](stack/current/scrutiny.yml)
-          * [Netdata](stack/current/netdata.yml) <!-- Needs some work -->
+          * [Netdata](stack/current/netdata.yml) <!-- Will force a cloud requirement! -->
           * [Dozzle](stack/current/dozzle.yml)
           * [WireGuard-Easy](stack/current/wg-easy.yml)
           * [qBittorrent](stack/current/qbittorrent.yml)

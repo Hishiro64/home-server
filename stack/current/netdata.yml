@@ -2,7 +2,7 @@ version: '3'
 services:
   netdata:
     image: netdata/netdata
-    container_name: netdata
+    container_name: netdata # Don't bother with this, it will force a cloud requirement. Use old version
     hostname: netdata
     pid: host
     network_mode: host
