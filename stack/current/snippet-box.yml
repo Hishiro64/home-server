@@ -1,0 +1,10 @@
+version: '3'
+services:
+  snippet-box:
+    image: pawelmalak/snippet-box:arm
+    container_name: snippet-box
+    volumes:
+      - /srv/stacks/snippet-box/data:/app/data
+    ports:
+      - 5000:5000
+    restart: unless-stopped

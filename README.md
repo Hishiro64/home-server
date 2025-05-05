@@ -32,6 +32,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Samba](stack/current/samba.yml)
           * [LANraragi](stack/current/lanraragi.yml)
           * [Calibre Web Automated](stack/current/calibre-web-automated.yml)
+          * [Snippet Box](stack/current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
         * ❌ Retired Services 
           * [Kavita](stack/retired/kavita.yml)
           * [ByteStash](stack/retired/bytestash.yml) <!-- Kinda worse than snippet-box at the moment-->
