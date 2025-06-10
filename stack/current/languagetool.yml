@@ -8,7 +8,7 @@ services:
     #environment:
     #  - langtool_languageModel=/ngrams   # OPTIONAL: Using ngrams data
     #  - Java_Xms=512m                    # OPTIONAL: Setting a minimal Java heap size of 512 mib
-    #  - Java_Xmx=1g                      # OPTIONAL: Setting a maximum Java heap size of 1 Gib
+      - Java_Xmx=1g                      # OPTIONAL: Setting a maximum Java heap size of 1 Gib
     #volumes:
     #  - /srv/stacks/languagetool/ngrams:/ngrams    # OPTIONAL: The location of ngrams data on the local machine (Very Slow on Raspberry Pi 4)
                                                     # 1. Grab from here: https://languagetool.org/download/ngram-data/
