@@ -9,6 +9,7 @@ services:
         environment:
             - PORT=10004
             - SCAN_INTENSITY=light
+            - SCAN_BINDMOUNTS_INTERVAL=43200 # Scan every 12hrs
         volumes:
             - '/var/run/docker.sock:/var/run/docker.sock:ro'
             - '/:/hostroot:ro'
