@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     volumes:
       - /srv:/srv
-      - /srv/stacks/file-browser/database.db:/database.db
+      - /srv/stacks/file-browser/filebrowser.db:/filebrowser.db
       - /srv/stacks/file-browser/branding:/branding
     ports:
       - 10001:80
