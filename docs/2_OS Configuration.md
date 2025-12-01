@@ -242,7 +242,7 @@ sudo nmtui
 
 Select `Edit a connection` --> `Wired connection 1`
 
-This is what I use for my static ip. Your gateway, available dns servers, and available ip ranges may be different.
+This is what I use for my static ip. Your gateway, available dns servers, and available ip ranges may be different. Make sure not to use an ip in a reserved range. The primary reason I have switched to using `192.168.1.200` years later. Becomes a pain to swap everything over after the fact.
 
 ![image.png](assets/ApplicationFrameHost_8j8ecPSvuP.png)
 
