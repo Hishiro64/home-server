@@ -33,6 +33,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [LANraragi](stack/current/lanraragi.yml)
           * [Calibre Web Automated](stack/current/calibre-web-automated.yml)
           * [Memos](stack/current/memos.yml)
+          * [Immich](stack/current/immich.yml)
           * [Snippet Box](stack/current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
         * ❌ Retired Services 
           * [Kavita](stack/retired/kavita.yml)

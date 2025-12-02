@@ -114,6 +114,13 @@ services:
         keywords: "stash"
         url: "http://192.168.1.200:10005/"
         target: "_blank"
+      - name: "Immich 📸"
+        logo: "assets/resources/logos/immich.svg"
+        subtitle: "Photo and video management solution"
+        tag: "media"
+        keywords: "immich"
+        url: "http://192.168.1.200:2283/"
+        target: "_blank"
   - name: "Storage"
     icon: "fa-solid fa-folder-tree"
     items:
