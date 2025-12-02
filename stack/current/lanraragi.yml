@@ -6,10 +6,14 @@ services:
     ports:
       - "10011:3000"
     volumes:
-      - /srv/stacks/lanraragi/content:/home/koyomi/lanraragi/content:ro
+      - /srv/stacks/lanraragi/content:/home/koyomi/lanraragi/content
       - lrr-thumbnails:/home/koyomi/lanraragi/thumb
       - lrr-database:/home/koyomi/lanraragi/database
+    environment:
+      - LRR_UID=1000
+      - LRR_GID=1000
     restart: unless-stopped
+    
 
 volumes:
   lrr-database:
