@@ -67,8 +67,8 @@ services:
         tag: "server"
         keywords: "portainer"
         url: "http://192.168.1.200:9999/#!/auth"
-        type: "Portainer"
-        apikey: "ptr_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx="
+        #type: "Portainer"
+        #apikey: "ptr_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx="
         environments:
          - "Server"
         target: "_blank"
