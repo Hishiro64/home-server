@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  kiwix-serve:
+      ports:
+        - 8080:8080
+      image: ghcr.io/kiwix/kiwix-serve:latest
+      # uncomment next 4 lines to use it with local zim file in /tmp/zim
+      volumes:
+        - /srv/stacks/kiwix-serve/zim:/data
+      command:
+        - '*.zim'
+      # uncomment next 2 lines to use it with remote zim file
+      # environment:
+      #   - 'DOWNLOAD=https://download.kiwix.org/zim/wikipedia_bm_all.zim'
