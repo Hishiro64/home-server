@@ -21,7 +21,7 @@ services:
       - /srv/stacks/jellyfin/media/restricted:/restricted:ro # Restricted Movies Through Library Access
       - jellyfin_cache:/cache
     environment:
-      - JELLYFIN_PublishedServerUrl=192.168.1.100
+      - JELLYFIN_PublishedServerUrl=192.168.1.200
       - TZ=America/New_York
     #devices:
       #- /dev/video10:/dev/video10
@@ -42,3 +42,4 @@ volumes:
 #    - It can crash and prevent transcoding until the system is restarted
 #    - Not well implemented using the official jellyfin-ffmpeg
 #    - Should to wait for better support, recommend to disable transcoding for stability
+
