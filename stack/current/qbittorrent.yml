@@ -5,15 +5,17 @@ services:
     image: ghcr.io/hotio/qbittorrent
     restart: always
     ports:
-      - "10011:8080"
+      - "10012:10012"
     volumes:
       - /srv/stacks/qbittorrent/config:/config
-      - /srv/stacks/qbittorrent/downloads:/downloads
+      - /srv/stacks/qbittorrent/downloads:/downloads # Has to be changed to be default directory in web-ui
     environment:
       - PUID=1000
       - PGID=1000
       - UMASK=002
+      - WEBUI_PORTS=10012/tcp
       - TZ=America/New_York
+      - LIBTORRENT=v1
 
 # Username: admin
-# Password: adminadmin
+# Password: Temporary password in logs, set in web-ui
