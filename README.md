@@ -20,7 +20,6 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Dozzle](stack/current/dozzle.yml)
           * [WireGuard-Easy](stack/current/wg-easy.yml)
           * [qBittorrent](stack/current/qbittorrent.yml)
-          * [Pi-hole](stack/current/pi-hole-vanilla.yml)
           * [Gitea](stack/current/gitea.yml)
           * [Stash](stack/current/stash.yml)
           * [Duplicacy](stack/current/duplicacy.yml)
@@ -38,6 +37,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Snippet Box](stack/current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
         * ❌ Retired Services 
           * [Kavita](stack/retired/kavita.yml)
+          * [Pi-hole](stack/retired/pi-hole-vanilla.yml) <!-- Dont really use it, ublock on firefox, no smart devices, etc-->
           * [ByteStash](stack/retired/bytestash.yml) <!-- Kinda worse than snippet-box at the moment-->
           * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
           * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
