@@ -1,7 +1,26 @@
 [<- index](/README.md)
 # OS Configuration
 
-SSH into the pi with the credentials you set in the imager. On Windows it is `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi.  
+## Table of Contents
+
+* [Locale](2_OS%20Configuration.md#locale)
+* [Time Zone](2_OS%20Configuration.md#time-zone)
+* [Update/Upgrade](2_OS%20Configuration.md#updateupgrade)
+* [EEPROM](2_OS%20Configuration.md#eeprom)
+* [Password](2_OS%20Configuration.md#password)
+* [Sudo](2_OS%20Configuration.md#sudo)
+* [config.txt](2_OS%20Configuration.md#configtxt)
+* [cmdline.txt](2_OS%20Configuration.md#cmdlinetxt)
+* [nmtui](2_OS%20Configuration.md#nmtui)
+* [Processes (Minimizing idle load)](2_OS%20Configuration.md#processes)
+* [Generating SSH Keys](2_OS%20Configuration.md#generating-ssh-keys)
+* [sshd_config (Hardening)](2_OS%20Configuration.md#sshd_config)
+* [Issue banner](2_OS%20Configuration.md#issue-banner)
+* [cpufreq (Changing governor)](2_OS%20Configuration.md#cpufreq)
+
+
+## First Remote in
+SSH into the pi with the credentials you set in the imager. On Windows it is `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi. We are doing this headless.  
   
 
 ## Locale

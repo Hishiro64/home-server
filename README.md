@@ -9,8 +9,22 @@ Contains my config files, docker compose files, and documentation for setting up
       * [Preparing Raspberry Pi OS (Bookworm)](docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) 🐛
         * [SATA SSD Setup](docs/SSD/SATA%20SSD%20Setup.md)
       * [OS Configuration](docs/2_OS%20Configuration.md)
+          * [Locale](docs/2_OS%20Configuration.md#locale)
+          * [Time Zone](docs/2_OS%20Configuration.md#time-zone)
+          * [Update/Upgrade](docs/2_OS%20Configuration.md#updateupgrade)
+          * [EEPROM](docs/2_OS%20Configuration.md#eeprom)
+          * [Password](docs/2_OS%20Configuration.md#password)
+          * [Sudo](docs/2_OS%20Configuration.md#sudo)
+          * [config.txt](docs/2_OS%20Configuration.md#configtxt)
+          * [cmdline.txt](docs/2_OS%20Configuration.md#cmdlinetxt)
+          * [nmtui](docs/2_OS%20Configuration.md#nmtui)
+          * [Processes (Minimizing idle load)](docs/2_OS%20Configuration.md#processes)
+          * [Generating SSH Keys](docs/2_OS%20Configuration.md#generating-ssh-keys)
+          * [sshd_config (Hardening)](docs/2_OS%20Configuration.md#sshd_config)
+          * [Issue banner](docs/2_OS%20Configuration.md#issue-banner)
+          * [cpufreq (Changing governor)](docs/2_OS%20Configuration.md#cpufreq)
       * [Portainer Setup](docs/3_Portainer%20Setup.md)
-        * 📚 Stacks  
+        * 📚 [Stacks](stack/)  
           * [Homer](stack/current/homer.yml)
           * [File Browser](stack/current/filebrowser.yml) <!-- Could be better -->
           * [JellyFin](stack/current/jellyfin.yml)
