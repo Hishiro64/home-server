@@ -59,61 +59,56 @@ I'm currently running with Bookworm on a Pi 4 for the last year with a 4TB Samsu
 
 ## 🌴 Tree Map
 
-```text
-📁 /srv
-    └── 📁 stacks
-        ├── 📁 portainer
-        ├── 📁 homer
-        ├── 📁 file-browser
-        │   └── 📁 branding
-        ├── 📁 jellyfin
-        │   ├── 📁 config
-        │   └── 📁 media
-        │       ├── 📁 movies
-        │       ├── 📁 shows
-        │       ├── 📁 anime
-        │       └── 📁 restricted
-        ├── 📁 kavita
-        │   ├── 📁 config
-        │   └── 📁 data
-        │       ├── 📁 books
-        │       └── 📁 light-novels
-        ├── 📁 jellyseerr
-        ├── 📁 wg-easy
-        ├── 📁 languagetool
-        │   ├── 📁 ngrams
-        ├── 📁 syncthing
-        ├── 📁 aria2-pro
-        │   ├── 📁 config
-        │   └── 📁 downloads
-        ├── 📁 qbittorrent
-        │   ├── 📁 config
-        │   └── 📁 downloads
-        ├── 📁 pi-hole
-        │   ├── 📁 etc_pihole
-        │   └── 📁 etc_dnsmasq
-        ├── 📁 pi.alert
-        │   └── 📁 config
-        ├── 📁 gitea
-        │   └── 📁 data
-        │   └── 📁 lfs
-        ├── 📁 stash
-        │   ├── 📁 config
-        │   │   └── 📁 scrapers
-        │   ├── 📁 data
-        │   ├── 📁 metadata
-        │   ├── 📁 cache
-        │   ├── 📁 blobs
-        │   └── 📁 generated
-        ├── 📁 netdata
-        │   └── 📁 netdataconfig
-        ├── 📁 samba
-        │   ├── 📁 data
-        │   └── 📁 Serva
-        ├── 📁 scrutiny
-        │   └── 📁 config
-        └── 📁 duplicacy
-            ├── 📁 config
-            ├── 📁 backup
-            └── 📁 restore
+```ruby
+📁 /srv/stacks
+├── 📁 aria2-pro
+│   ├── 📁 config
+│   └── 📁 downloads
+├── 📁 calibre-web-automated
+│   ├── 📁 calibre-library
+│   ├── 📁 config
+│   └── 📁 cwa-book-ingest
+├── 📁 file-browser
+│   ├── 📁 branding
+│   └── 📁 filebrowser.db
+├── 📁 gitea
+│   └── 📁 data
+├── 📁 homer
+├── 📁 immich
+│   ├── 📁 library
+│   └── 📁 postgres
+├── 📁 jellyfin
+│   ├── 📁 config
+│   └── 📁 media
+│       ├── 📁 anime:ro
+│       ├── 📁 movies:ro
+│       ├── 📁 music:ro
+│       ├── 📁 restricted:ro
+│       └── 📁 shows:ro
+├── 📁 jellyseerr
+├── 📁 kiwix-serve
+│   └── 📁 zim
+├── 📁 lanraragi
+│   └── 📁 content
+├── 📁 memos
+├── 📁 netdata
+│   └── 📁 netdataconfig
+├── 📁 qbittorrent
+│   ├── 📁 config
+│   └── 📁 downloads
+├── 📁 samba
+│   ├── 📁 data
+│   └── 📁 Serva
+├── 📁 scrutiny
+│   └── 📁 config
+├── 📁 snippet-box
+│   └── 📁 data
+├── 📁 stash
+│   ├── 📁 blobs
+│   ├── 📁 cache
+│   ├── 📁 config
+│   ├── 📁 data:ro
+│   ├── 📁 generated
+│   └── 📁 metadata
+└── 📁 syncthing
 ```
