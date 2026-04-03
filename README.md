@@ -6,9 +6,9 @@ Contains my config files, docker compose files, and documentation for setting up
 ## 📃 Index 
 <!--ts-->
    * 📔 Docs 
-      * [Preparing Raspberry Pi OS (Bookworm)](docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) 🐛
+      * 🍓 [Preparing Raspberry Pi OS (Bookworm)](docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) 
         * [SATA SSD Setup](docs/SSD/SATA%20SSD%20Setup.md)
-      * [OS Configuration](docs/2_OS%20Configuration.md)
+      * ⚙️ [OS Configuration](docs/2_OS%20Configuration.md)
           * [Locale](docs/2_OS%20Configuration.md#locale)
           * [Time Zone](docs/2_OS%20Configuration.md#time-zone)
           * [Update/Upgrade](docs/2_OS%20Configuration.md#updateupgrade)
@@ -23,49 +23,16 @@ Contains my config files, docker compose files, and documentation for setting up
           * [sshd_config (Hardening)](docs/2_OS%20Configuration.md#sshd_config)
           * [Issue banner](docs/2_OS%20Configuration.md#issue-banner)
           * [cpufreq (Changing governor)](docs/2_OS%20Configuration.md#cpufreq)
-      * [Portainer Setup](docs/3_Portainer%20Setup.md)
-        * 📚 [Stacks](stack/)  
-          * [Homer](stack/current/homer.yml)
-          * [File Browser](stack/current/filebrowser.yml) <!-- Could be better -->
-          * [JellyFin](stack/current/jellyfin.yml)
-          * [Aria2 Pro](stack/current/aria2-pro.yml)
-          * [Scrutiny](stack/current/scrutiny.yml)
-          * [Netdata](stack/current/netdata.yml) <!-- Will force a cloud requirement! -->
-          * [Dozzle](stack/current/dozzle.yml)
-          * [WireGuard-Easy](stack/current/wg-easy.yml)
-          * [qBittorrent](stack/current/qbittorrent.yml)
-          * [Gitea](stack/current/gitea.yml)
-          * [Stash](stack/current/stash.yml)
-          * [LanguageTool](stack/current/languagetool.yml) <!-- Version 8.13.2 of the Firefox add-on -->
-          * [Syncthing](stack/current/syncthing.yml)
-          * [QDirStat](stack/current/qdirstat.yml)
-          * [Doku](stack/current/doku.yml)
-          * [Jellyseerr](stack/current/jellyseerr.yml) <!-- Would perfer an alternative -->
-          * [Samba](stack/current/samba.yml)
-          * [LANraragi](stack/current/lanraragi.yml)
-          * [Calibre Web Automated](stack/current/calibre-web-automated.yml)
-          * [Memos](stack/current/memos.yml)
-          * [Immich](stack/current/immich.yml)
-          * [Kiwix-Serve](stack/current/kiwix-serve.yml)
-          * [Snippet Box](stack/current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
-        * ❌ Retired Services 
-          * [Duplicacy](stack/retired/duplicacy.yml)
-          * [Kavita](stack/retired/kavita.yml)
-          * [Pi-hole](stack/retired/pi-hole-vanilla.yml) <!-- Dont really use it, ublock on firefox, no smart devices, etc-->
-          * [ByteStash](stack/retired/bytestash.yml) <!-- Kinda worse than snippet-box at the moment-->
-          * [IT-Tools](stack/retired/it-tools.yml) <!-- Don't find myself using it -->
-          * [Tube Archivist](stack/retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
-          * [Watchtower](stack/retired/watchtower.yml) <!-- Update manually now for reliability now -->
-          * [Pi.Alert](stack/retired/pi.alert.yml) <!-- Alternative fork available -->
-          * [Dashdot](stack/retired/dashdot.yml) <!-- Quite CPU intensive -->
-          * [Komga](stack/retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
-      * [Config Files](root)
-      * 🚘 Hardware
-        * [Parts List](docs/HARDWARE/Parts%20List.md)
-        * 🗒 SSD Notes
+      * 🐳 [Portainer Setup](docs/3_Portainer%20Setup.md)
+        * 📚 [Stacks](stack/)
+      * 🗒️ [Config Files](root)
+      * 🚘 [Hardware](docs/HARDWARE/)
+        * 🔨 [Parts List](docs/HARDWARE/Parts%20List.md)
+        * 💾 [SSD Notes](docs/SSD/)
           * [Storage Considerations](docs/SSD/Storage%20Considerations.md)
-              * [Storage Plan](docs/SSD/Storage%20Plan.md)
-          * [SATA Adapter Nonsense](docs/SSD/SATA%20Adapter%20Nonsense.md)      
+          * [Storage Plan](docs/SSD/Storage%20Plan.md)
+          * [SATA Adapter Nonsense](docs/SSD/SATA%20Adapter%20Nonsense.md) 
+               
 <!--te-->
 ## 🪂 Deployment
 ![hardware](/docs/assets/hardware.jpg)
