@@ -7,7 +7,7 @@ services:
     user: 1000:1000
     restart: unless-stopped
     volumes:
-      - /srv/stacks/homer/:/www/assets
+      - /srv/stacks/homer:/www/assets
     ports:
       - 10000:8080
     environment:
