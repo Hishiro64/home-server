@@ -16,7 +16,7 @@
   * [Syncthing](current/syncthing.yml)
   * [QDirStat](current/qdirstat.yml)
   * [Doku](current/doku.yml)
-  * [Jellyseerr](current/jellyseerr.yml) <!-- Would perfer an alternative -->
+  * [Seerr](current/seerr.yml) <!-- Would perfer an alternative -->
   * [Samba](current/samba.yml)
   * [LANraragi](current/lanraragi.yml)
   * [Calibre Web Automated](current/calibre-web-automated.yml)
