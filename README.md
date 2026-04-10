@@ -78,7 +78,7 @@ I'm currently running with Bookworm on a Pi 4 for the last year with a 4TB Samsu
 │   └── 📁 downloads
 ├── 📁 samba
 │   ├── 📁 data
-│   └── 📁 Serva
+│   └── 📁 Serva:ro
 ├── 📁 scrutiny
 │   └── 📁 config
 ├── 📁 seerr
