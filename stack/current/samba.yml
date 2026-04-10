@@ -7,7 +7,7 @@ services:
       - 445:445
     volumes:
       - "/srv/stacks/samba/data:/data"
-      - "/srv/stacks/samba/Serva:/samba/Serva" # share directory
+      - "/srv/stacks/samba/Serva:/samba/Serva:ro" # share directory
     environment:
       - "TZ=America/New_York"
       - "SAMBA_LOG_LEVEL=0"
