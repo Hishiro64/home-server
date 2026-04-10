@@ -66,7 +66,6 @@ I'm currently running with Bookworm on a Pi 4 for the last year with a 4TB Samsu
 │       ├── 📁 music:ro
 │       ├── 📁 restricted:ro
 │       └── 📁 shows:ro
-├── 📁 seerr
 ├── 📁 kiwix-serve
 │   └── 📁 zim
 ├── 📁 lanraragi
@@ -82,6 +81,7 @@ I'm currently running with Bookworm on a Pi 4 for the last year with a 4TB Samsu
 │   └── 📁 Serva
 ├── 📁 scrutiny
 │   └── 📁 config
+├── 📁 seerr
 ├── 📁 snippet-box
 │   └── 📁 data
 ├── 📁 stash
