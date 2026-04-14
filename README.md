@@ -36,7 +36,7 @@ Contains my config files, docker compose files, and documentation for setting up
 <!--te-->
 ## 🪂 Deployment
 ![hardware](/docs/assets/hardware.jpg)
-I'm currently running with Bookworm on a Pi 4 for the last year with a 4TB Samsung drive. I have deployed this same setup on Bullseye for around 9 months, no noticeable issues with a 1TB Kingston drive, also running on the Pi 4. The Samsung drive requires some initial setup to get it fully up and running, documented in this repository. Nevertheless, I am not an expert, use this entire reference at your own risk. I don't always show or follow best practices. Some information may be out of date. I have updated this reference lightly for initial setup with Bookworm. This repository is mainly for me, but you may find it useful.
+I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB Samsung drive. I have deployed this same setup on Bullseye for around 9 months, no noticeable issues with a 1TB Kingston drive, also running on the Pi 4. The Samsung drive requires some initial setup to get it fully up and running, documented in this repository. Nevertheless, I am not an expert, use this entire reference at your own risk. I don't always show or follow best practices. Some information may be out of date. I have updated this reference lightly for initial setup with Bookworm. This repository is mainly for me, but you may find it useful.
 
 ## 🌴 Tree Map
 
