@@ -1,3 +1,4 @@
 # TODO
 
-* [ ] Create a minimal backup Solution 
+* [ ] Add a minimal backup Solution for small important files.
+* [ ] SMTP
