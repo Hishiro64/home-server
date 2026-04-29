@@ -4,7 +4,7 @@
 
 title: "Dashboard"
 subtitle: "Admin"
-logo: "assets/icons/pwa-192x192.png"
+#logo: "assets/icons/pwa-192x192.png"
 icon: "fas fa-sad-cry" # Optional icon
 stylesheet:
   - "assets/custom.css"
