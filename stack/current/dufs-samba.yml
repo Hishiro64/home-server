@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  dufs:
+    image: sigoden/dufs
+    container_name: dufs-samba
+    ports:
+      - "5001:5001"
+    volumes:
+      - /srv/stacks/samba/Serva:/Serva:ro
+    command: /Serva --allow-archive -p 5001
+    restart: unless-stopped
