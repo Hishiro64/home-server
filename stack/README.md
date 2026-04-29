@@ -20,7 +20,6 @@
   * [Samba](current/samba.yml)
   * [LANraragi](current/lanraragi.yml)
   * [Calibre Web Automated](current/calibre-web-automated.yml)
-  * [Memos](current/memos.yml)
   * [Immich](current/immich.yml)
   * [Kiwix-Serve](current/kiwix-serve.yml)
   * [Snippet Box](current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
@@ -36,3 +35,4 @@
   * [Pi.Alert](retired/pi.alert.yml) <!-- Alternative fork available -->
   * [Dashdot](retired/dashdot.yml) <!-- Quite CPU intensive -->
   * [Komga](retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
+  * [Memos](retired/memos.yml)
