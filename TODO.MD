@@ -5,3 +5,4 @@
 * [ ] Encrypted Folder
 * [ ] NFS
 * [ ] File Sharing
+* [ ] Local livestream for homer
