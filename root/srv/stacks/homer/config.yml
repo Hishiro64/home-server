@@ -54,7 +54,7 @@ message:
     style: "is-dark is-small"
     title: "Lofi Radio  (M to unmute)"
     icon: "fa-brands fa-youtube"
-    content: '<iframe width="100%" height="250" align="center" src="https://www.youtube.com/embed/jfKfPfyJRdk?controls=1&rel=0&autoplay=1&mute=1" title="lofi hip hop radio - beats to relax/study to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+    content: '<iframe width="100%" height="250" align="center" src="https://www.youtube.com/embed/jfKfPfyJRdk?controls=1&rel=0&autoplay=1&mute=1" title="lofi hip hop radio - beats to relax/study to" frameborder="0" allow="autoplay; encrypted-media; web-share" allowfullscreen></iframe>'
     
 # Services
 services:
