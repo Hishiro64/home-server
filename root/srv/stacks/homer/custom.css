@@ -34,7 +34,7 @@ body .layout-vertical .column div:last-of-type .card {
 }
 
 body .search-bar input {
-  opacity: 20%;
+  opacity: 0.2;
 }
 
 /* Hide scrollbar for Chrome */
