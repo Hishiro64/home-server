@@ -6,7 +6,7 @@ services:
     ports:
       - 10002:10002
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - DOZZLE_HOSTNAME=Server
       - "DOZZLE_ADDR=:10002"
