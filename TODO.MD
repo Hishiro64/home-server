@@ -6,3 +6,4 @@
 * [ ] NFS
 * [ ] Local livestream for homer
 * [ ] Changelog
+* [ ] Look into selfhosting TOTP
