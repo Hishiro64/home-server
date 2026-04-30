@@ -24,7 +24,7 @@ Contains my config files, docker compose files, and documentation for setting up
           * [Issue banner](docs/2_OS%20Configuration.md#issue-banner)
           * [cpufreq (Changing governor)](docs/2_OS%20Configuration.md#cpufreq)
       * 🐳 [Portainer Setup](docs/3_Portainer%20Setup.md)
-        * 📚 [Stacks (Compose Files)](stack/)
+        * 📚 [**Stacks (Compose Files)**](stack/)
       * 🗒️ [Config Files](root)
       * 🚘 [Hardware](docs/HARDWARE/)
         * 🔨 [Parts List](docs/HARDWARE/Parts%20List.md)
