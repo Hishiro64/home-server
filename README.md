@@ -43,53 +43,56 @@ I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB 
 ```ruby
 📁 /srv/stacks
 ├── 📁 aria2-pro
-│   ├── 📁 config
-│   └── 📁 downloads
+│   ├── 📁 config
+│   └── 📁 downloads
 ├── 📁 calibre-web-automated
-│   ├── 📁 calibre-library
-│   ├── 📁 config
-│   └── 📁 cwa-book-ingest
+│   ├── 📁 calibre-library
+│   ├── 📁 config
+│   └── 📁 cwa-book-ingest
 ├── 📁 file-browser
-│   ├── 📁 branding
-│   └── 📁 filebrowser.db
+│   ├── 📁 branding
+│   └── 📁 filebrowser.db
 ├── 📁 gitea
-│   └── 📁 data
+│   └── 📁 data
 ├── 📁 homer
+├── 📁 hoodik
+│   └── 📁 data
 ├── 📁 immich
-│   ├── 📁 library
-│   └── 📁 postgres
+│   ├── 📁 library
+│   └── 📁 postgres
 ├── 📁 jellyfin
-│   ├── 📁 config
-│   └── 📁 media
-│       ├── 📁 anime:ro
-│       ├── 📁 movies:ro
-│       ├── 📁 music:ro
-│       ├── 📁 restricted:ro
-│       └── 📁 shows:ro
+│   ├── 📁 config
+│   └── 📁 media
+│       ├── 📁 anime:ro
+│       ├── 📁 movies:ro
+│       ├── 📁 music:ro
+│       ├── 📁 restricted:ro
+│       └── 📁 shows:ro
 ├── 📁 kiwix-serve
-│   └── 📁 zim
+│   └── 📁 zim
 ├── 📁 lanraragi
-│   └── 📁 content
-├── 📁 memos
+│   └── 📁 content
+├── 📁 mailpit
+│   └── 📁 data
 ├── 📁 netdata
-│   └── 📁 netdataconfig
+│   └── 📁 netdataconfig
 ├── 📁 qbittorrent
-│   ├── 📁 config
-│   └── 📁 downloads
+│   ├── 📁 config
+│   └── 📁 downloads
 ├── 📁 samba
-│   ├── 📁 data
-│   └── 📁 Serva:ro
+│   ├── 📁 data
+│   └── 📁 Serva:ro
 ├── 📁 scrutiny
-│   └── 📁 config
+│   └── 📁 config
 ├── 📁 seerr
 ├── 📁 snippet-box
-│   └── 📁 data
+│   └── 📁 data
 ├── 📁 stash
-│   ├── 📁 blobs
-│   ├── 📁 cache
-│   ├── 📁 config
-│   ├── 📁 data:ro
-│   ├── 📁 generated
-│   └── 📁 metadata
+│   ├── 📁 blobs
+│   ├── 📁 cache
+│   ├── 📁 config
+│   ├── 📁 data:ro
+│   ├── 📁 generated
+│   └── 📁 metadata
 └── 📁 syncthing
 ```
