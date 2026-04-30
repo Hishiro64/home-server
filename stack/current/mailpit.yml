@@ -1,0 +1,20 @@
+services:
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025" # Web UI
+      - "1025:1025" # SMTP
+      - "1010:1110" # POP3
+    environment:
+      - MP_MAX_MESSAGES=500
+      - MP_DATABASE=/data/mailpit.db
+      - TZ=America/New_York
+      - MP_SMTP_AUTH_ACCEPT_ANY=true
+      - MP_SMTP_AUTH_ALLOW_INSECURE=true
+      - MP_POP3_AUTH=admin:changeme
+      - MP_TAGS_USERNAME=true # Mail tagged with smtp username
+      - MP_TAG="Me=to:admin@server"  # All mail sent to admin@server tagged as Me, except for plus addressing
+    volumes:
+      - /srv/stacks/mailpit/data:/data

@@ -24,6 +24,7 @@
   * [Kiwix-Serve](current/kiwix-serve.yml)
   * [Snippet Box](current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
   * [Dufs](current/dufs-samba.yml)
+  * [Mailpit](current/mailpit.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
