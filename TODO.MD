@@ -9,3 +9,4 @@
 * [ ] Look into selfhosting TOTP
 * [ ] Look into Rclone
 * [ ] Look into container update notifications
+* [ ] Add benchmarks and results
