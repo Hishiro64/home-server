@@ -5,5 +5,7 @@
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] NFS
 * [ ] Local livestream for homer
-* [ ] Changelog
+* [ ] Generating Changelog
 * [ ] Look into selfhosting TOTP
+* [ ] Look into Rclone
+* [ ] Look into container update notifications
