@@ -38,3 +38,4 @@
   * [Dashdot](retired/dashdot.yml) <!-- Quite CPU intensive -->
   * [Komga](retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
   * [Memos](retired/memos.yml)
+  * [Papra](retired/papra.yml)

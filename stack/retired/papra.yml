@@ -1,0 +1,15 @@
+services:
+  papra:
+    image: ghcr.io/papra-hq/papra:latest
+    container_name: papra
+    restart: unless-stopped
+    ports:
+      - 1221:1221
+    environment:
+      - AUTH_SECRET=<your-auth-secret> # https://docs.papra.app/self-hosting/using-docker/#quick-deployment
+      - APP_BASE_URL=http://192.168.1.200:1221
+      - INGESTION_FOLDER_IS_ENABLED=true
+    volumes:
+      - /srv/stacks/papra/app-data:/app/app-data
+      - /srv/stacks/papra/ingestion:/app/ingestion
+    user: 1000:1000
