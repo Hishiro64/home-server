@@ -11,3 +11,4 @@
 * [ ] Look into container update notifications
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
+* [ ] set this up https://opengist.io/
