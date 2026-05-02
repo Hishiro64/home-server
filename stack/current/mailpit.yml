@@ -14,7 +14,9 @@ services:
       - MP_SMTP_AUTH_ACCEPT_ANY=true
       - MP_SMTP_AUTH_ALLOW_INSECURE=true
       - MP_POP3_AUTH=admin:changeme
-      - MP_TAGS_USERNAME=true # Mail tagged with smtp username
-      - MP_TAG="Me=to:admin@server"  # All mail sent to admin@server tagged as Me, except for plus addressing
+      - MP_UI_AUTH=admin:changeme
+      - MP_TAGS_TITLE_CASE=true
+      - MP_TAGS_USERNAME=true
+      - MP_TAGS_CONFIG=/data/tags.yaml
     volumes:
       - /srv/stacks/mailpit/data:/data
