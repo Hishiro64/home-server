@@ -14,9 +14,9 @@ services:
       SMTP_ADDRESS: 192.168.1.200
       SMTP_PORT: 1025
       SMTP_TLS_MODE: none
-      SMTP_USERNAME: "hoodik"
+      SMTP_USERNAME: "Hoodik"
       SMTP_PASSWORD: "none"
-      SMTP_DEFAULT_FROM_EMAIL: "hoodik@server"
+      SMTP_DEFAULT_FROM_EMAIL: "hoodik@server.home.arpa"
     volumes:
       - /srv/stacks/hoodik/data:/data
     restart: unless-stopped
