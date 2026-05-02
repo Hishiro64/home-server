@@ -22,7 +22,7 @@
   * [Calibre Web Automated](current/calibre-web-automated.yml)
   * [Immich](current/immich.yml)
   * [Kiwix-Serve](current/kiwix-serve.yml)
-  * [Snippet Box](current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
+  * [ByteStash](retired/bytestash.yml) <!-- Better than snippet-box now-->
   * [Dufs](current/dufs-samba.yml)
   * [Mailpit](current/mailpit.yml)
   * [Hoodik](current/hoodik.yml)
@@ -30,7 +30,7 @@
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
   * [Pi-hole](retired/pi-hole-vanilla.yml) <!-- Dont really use it, ublock on firefox, no smart devices, etc-->
-  * [ByteStash](retired/bytestash.yml) <!-- Kinda worse than snippet-box at the moment-->
+  * [Snippet Box](current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
   * [IT-Tools](retired/it-tools.yml) <!-- Don't find myself using it -->
   * [Tube Archivist](retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
   * [Watchtower](retired/watchtower.yml) <!-- Update manually now for reliability now -->
