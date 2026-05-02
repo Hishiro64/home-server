@@ -1,0 +1,5 @@
+filters:
+  - match: to:admin
+    tags: Me
+  - match: to:mailpit
+    tags: All
