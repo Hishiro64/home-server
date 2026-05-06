@@ -2,13 +2,13 @@
 
 * [x] Encrypted Folder
 * [x] File Sharing
+* [x] Look into container update notifications
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] NFS
 * [ ] Local livestream for homer
 * [ ] Generating Changelog
 * [ ] Look into selfhosting TOTP
 * [ ] Look into Rclone
-* [ ] Look into container update notifications
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
-* [ ] set this up https://opengist.io/
+* [ ] Set this up https://opengist.io/

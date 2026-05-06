@@ -1,0 +1,22 @@
+services:
+  whatsupdocker:
+    image: getwud/wud
+    container_name: wud
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - 3000:3000
+    environment:
+      - WUD_TRIGGER_SMTP_MAILPIT_HOST=192.168.1.200
+      - WUD_TRIGGER_SMTP_MAILPIT_PORT=1025
+      - WUD_TRIGGER_SMTP_MAILPIT_FROM_ADDRESS=wud@server.home.arpa
+      - WUD_TRIGGER_SMTP_MAILPIT_FROM_NAME=Wud
+      - WUD_TRIGGER_SMTP_MAILPIT_TO=admin+notification+@server.home.arpa
+      - WUD_TRIGGER_SMTP_MAILPIT_USER=Wud
+      - WUD_TRIGGER_SMTP_MAILPIT_PASS=none
+      - WUD_TRIGGER_SMTP_MAILPIT_TLS_ENABLED=false
+      # Check every day at 4:00 AM
+      - 'WUD_WATCH_POLL=0 4 * * *'
+      - 'WUD_TRIGGER_SMTP_MAILPIT_SIMPLETITLE=🚀 Update Available: $${container.name.charAt(0).toUpperCase() + container.name.slice(1)}'
+      - 'WUD_TRIGGER_SMTP_MAILPIT_SIMPLEBODY=📦 Container: $${container.name}\n\n- Current: $${container.updateKind.localValue.substring(0, 12)}\n- Target:  $${container.updateKind.remoteValue.substring(0, 12)}\n' 
+      

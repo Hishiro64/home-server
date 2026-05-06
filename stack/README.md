@@ -26,6 +26,7 @@
   * [Dufs](current/dufs-samba.yml)
   * [Mailpit](current/mailpit.yml)
   * [Hoodik](current/hoodik.yml)
+  * [Wud](current/wud.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

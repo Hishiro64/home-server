@@ -59,7 +59,7 @@ services:
   - name: "Docker"
     icon: "fa-brands fa-docker"
     items:
-      - name: "Portainer 🐳"
+      - name: "Portainer ⚓"
         logo: "assets/resources/logos/portainer.svg"
         subtitle: "Manage docker containers"
         tag: "server"
@@ -69,6 +69,13 @@ services:
         #apikey: "ptr_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx="
         environments:
          - "Server"
+        target: "_blank"
+      - name: "Wud 🐳"
+        logo: "assets/resources/logos/wud-logo.svg"
+        subtitle: "What's up Docker?"
+        tag: "server"
+        keywords: "wud"
+        url: "http://192.168.1.200:3000"
         target: "_blank"
       - name: "Doku 🔵️"
         icon: "fa-solid fa-hard-drive"
