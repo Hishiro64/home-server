@@ -3,3 +3,65 @@ filters:
     tags: Me
   - match: to:mailpit
     tags: All
+  - match: "Container: aria2-pro"
+    tags: Aria2-Pro
+  - match: "Container: ariang"
+    tags: Ariang
+  - match: "Container: calibre-web-automated"
+    tags: Calibre-Web-Automated
+  - match: "Container: doku"
+    tags: Doku
+  - match: "Container: dozzle"
+    tags: Dozzle
+  - match: "Container: dufs-samba"
+    tags: Dufs-Samba
+  - match: "Container: file-browser"
+    tags: File-Browser
+  - match: "Container: gitea"
+    tags: Gitea
+  - match: "Container: homer"
+    tags: Homer
+  - match: "Container: hoodik"
+    tags: Hoodik
+  - match: "Container: immich_server"
+    tags: Immich_server
+  - match: "Container: immich_machine_learning"
+    tags: Immich_machine_learning
+  - match: "Container: immich_redis"
+    tags: Immich_redis
+  - match: "Container: immich_postgres"
+    tags: Immich_postgres
+  - match: "Container: jellyfin"
+    tags: Jellyfin
+  - match: "Container: languagetool"
+    tags: Languagetool
+  - match: "Container: lanraragi"
+    tags: Lanraragi
+  - match: "Container: mailpit"
+    tags: Mailpit
+  - match: "Container: netdata"
+    tags: Netdata
+  - match: "Container: qbittorrent"
+    tags: Qbittorrent
+  - match: "Container: qdirstat"
+    tags: Qdirstat
+  - match: "Container: samba"
+    tags: Samba
+  - match: "Container: scrutiny"
+    tags: Scrutiny
+  - match: "Container: seerr"
+    tags: Seerr
+  - match: "Container: snippet-box"
+    tags: Snippet-Box
+  - match: "Container: stash"
+    tags: Stash
+  - match: "Container: syncthing"
+    tags: Syncthing
+  - match: "Container: wg-easy"
+    tags: Wg-Easy
+  - match: "Container: bytestash"
+    tags: Bytestash
+  - match: "Container: kiwix-serve"
+    tags: Kiwix-Serve
+  - match: "Container: wud"
+    tags: Wud
