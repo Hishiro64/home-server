@@ -78,6 +78,7 @@ I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB 
 │   └── 📁 data
 ├── 📁 netdata
 │   └── 📁 netdataconfig
+├── 📁 opengist
 ├── 📁 qbittorrent
 │   ├── 📁 config
 │   └── 📁 downloads
@@ -97,4 +98,5 @@ I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB 
 │   ├── 📁 generated
 │   └── 📁 metadata
 └── 📁 syncthing
+
 ```
