@@ -4,7 +4,7 @@ from pathlib import Path
 # Helper script to generate container related tags seen in /root/srv/stacks/mailpit/data/tags.yaml
 # The following doesn't work in Wud:
 # - WUD_TRIGGER_SMTP_MAILPIT_TO=admin+notification+$${container.name}@server.home.arpa
-# So this work around is used instead
+# So this work around is used instead for Wud notifications to be tagged in mailpit
 # Just append everything under "filters:" to existing rules
 
 # returns entire stack as list object
