@@ -27,6 +27,7 @@
   * [Mailpit](current/mailpit.yml)
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
+  * [Opengist](current/opengist.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

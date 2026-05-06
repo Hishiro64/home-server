@@ -1,0 +1,20 @@
+services:
+  opengist:
+    image: ghcr.io/thomiceli/opengist:latest
+    container_name: opengist
+    restart: unless-stopped
+    ports:
+      - "6157:6157" # HTTP port
+    volumes:
+      - "/srv/stacks/opengist:/opengist"
+    environment:
+      - OG_SSH_GIT_ENABLED=false
+      - OG_CUSTOM_NAME=Gists
+      - OG_CUSTOM_LOGO=logo.svg # png       
+      - OG_CUSTOM_FAVICON=favicon.svg # svg, ico
+      - OG_CUSTOM_STATIC_LINK_0_NAME=Homer
+      - OG_CUSTOM_STATIC_LINK_0_PATH=http://192.168.1.200:10000
+      - OG_CUSTOM_STATIC_LINK_1_NAME=Gitea
+      - OG_CUSTOM_STATIC_LINK_1_PATH=http://192.168.1.200:10010
+      - OG_CUSTOM_STATIC_LINK_2_NAME=ByteStash
+      - OG_CUSTOM_STATIC_LINK_2_PATH=http://192.168.1.200:5000
