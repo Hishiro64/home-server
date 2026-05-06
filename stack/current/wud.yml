@@ -11,7 +11,7 @@ services:
       - WUD_TRIGGER_SMTP_MAILPIT_PORT=1025
       - WUD_TRIGGER_SMTP_MAILPIT_FROM_ADDRESS=wud@server.home.arpa
       - WUD_TRIGGER_SMTP_MAILPIT_FROM_NAME=Wud
-      - WUD_TRIGGER_SMTP_MAILPIT_TO=admin+notification+@server.home.arpa
+      - WUD_TRIGGER_SMTP_MAILPIT_TO=admin+notification@server.home.arpa
       - WUD_TRIGGER_SMTP_MAILPIT_USER=Wud
       - WUD_TRIGGER_SMTP_MAILPIT_PASS=none
       - WUD_TRIGGER_SMTP_MAILPIT_TLS_ENABLED=false
