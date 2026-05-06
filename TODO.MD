@@ -12,4 +12,5 @@
 * [ ] Look into Rclone
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
+* [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
 
