@@ -18,5 +18,4 @@ services:
       # Check every day at 4:00 AM
       - 'WUD_WATCH_POLL=0 4 * * *'
       - 'WUD_TRIGGER_SMTP_MAILPIT_SIMPLETITLE=🚀 Update Available: $${container.name.charAt(0).toUpperCase() + container.name.slice(1)}'
-      - 'WUD_TRIGGER_SMTP_MAILPIT_SIMPLEBODY=📦 Container: $${container.name}\n\n- Current: $${container.updateKind.localValue.substring(0, 12)}\n- Target:  $${container.updateKind.remoteValue.substring(0, 12)}\n' 
-      
+      - 'WUD_TRIGGER_SMTP_MAILPIT_SIMPLEBODY=📦 Container: $${container.name}\n\n- Current: $${container.updateKind.localValue.substring(0, 12)}\n- Target:  $${container.updateKind.remoteValue.substring(0, 12)}\n'
