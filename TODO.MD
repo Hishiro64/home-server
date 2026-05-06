@@ -13,4 +13,4 @@
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
-
+* [ ] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
