@@ -65,3 +65,5 @@ filters:
     tags: Kiwix-Serve
   - match: "Container: wud"
     tags: Wud
+  - match: "Container: opengist"
+    tags: Opengist
