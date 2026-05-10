@@ -4,6 +4,7 @@
 * [x] File Sharing
 * [x] Look into container update notifications
 * [x] Set this up https://opengist.io/
+* [x] Look into Papra
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
@@ -15,3 +16,9 @@
 * [ ] Look into setting a *.home.arpa hostname
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
 * [ ] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
+* [ ] Look into Paperless-ngx
+* [ ] Look into Linkding (bookmarks)
+* [ ] Look into Archivebox
+* [ ] Look into Audiobookshelf
+* [ ] Look into Restic
+* [ ] Look into Flatnotes
