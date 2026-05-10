@@ -22,3 +22,4 @@
 * [ ] Look into Audiobookshelf
 * [ ] Look into Restic
 * [ ] Look into Flatnotes
+* [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH)
