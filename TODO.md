@@ -23,3 +23,4 @@
 * [ ] Look into Restic
 * [ ] Look into Flatnotes
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH)
+* [ ] Standardize Email format and record it on a doc
