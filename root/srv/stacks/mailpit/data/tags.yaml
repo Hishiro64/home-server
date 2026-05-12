@@ -67,3 +67,5 @@ filters:
     tags: Wud
   - match: "Container: opengist"
     tags: Opengist
+  - match: "Container: flatnotes"
+    tags: Flatnotes
