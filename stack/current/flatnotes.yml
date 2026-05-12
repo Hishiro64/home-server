@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  flatnotes:
+    container_name: flatnotes
+    image: dullage/flatnotes:latest
+    environment:
+      PUID: 1000
+      PGID: 1000
+      FLATNOTES_AUTH_TYPE: "password" # Also has totp 
+      FLATNOTES_USERNAME: "admin"
+      FLATNOTES_PASSWORD: "changeme"
+      FLATNOTES_SECRET_KEY: "aLongRandomSeriesOfCharacters"
+      #FLATNOTES_TOTP_KEY: <random_32_character_string> # https://github.com/dullage/flatnotes/wiki/Environment-Variables#flatnotes_totp_key
+      FLATNOTES_PORT: 8081
+    volumes:
+      - "/srv/stacks/flatnotes/data:/data"
+      # Optional. Allows you to save the search index in a different location: 
+      # - "./index:/data/.flatnotes"
+    ports:
+      - "8081:8081"
+    restart: unless-stopped

@@ -30,6 +30,7 @@
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
   * [Opengist](current/opengist.yml)
+  * [Flatnotes](current/flatnotes.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
