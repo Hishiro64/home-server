@@ -30,4 +30,4 @@
 
 # Drives larger than 2TBs
 
-If the drive you just flashed to is greater than 2TBs, Read the first section in [SATA SSD Setup](/docs/SSD/SATA%20SSD%20Setup.md)
+❗If the drive you just flashed to is greater than 2TBs, Read the first section in [SATA SSD Setup](/docs/SSD/SATA%20SSD%20Setup.md)

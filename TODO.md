@@ -6,6 +6,7 @@
 * [x] Set this up https://opengist.io/
 * [x] Look into Papra
 * [x] Look into Flatnotes
+* [x] Standardize Email format and record it on a doc
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
@@ -23,6 +24,5 @@
 * [ ] Look into Audiobookshelf
 * [ ] Look into Restic
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH)
-* [ ] Standardize Email format and record it on a doc
 * [ ] Service for Public ip change notifications
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc... 
