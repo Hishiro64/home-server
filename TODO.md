@@ -22,6 +22,7 @@
 * [ ] Look into Linkding (bookmarks)
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
+* [ ] Look into a music requests container
 * [ ] Look into Restic
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH)
 * [ ] Service for Public ip change notifications
