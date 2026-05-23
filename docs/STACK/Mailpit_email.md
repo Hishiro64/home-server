@@ -31,3 +31,4 @@ Reserved email addresses:
 | :--- | :--- | :--- | :--- | :--- |
 | **Hoodik** | `admin@server.home.arpa` | `Hoodik` | Yes | `Hoodik`, `Me` |
 | **Wud** | `admin+notification@server.home.arpa` | `Wud` | Yes | `Me`, `Notification`, `Wud` |
+| **Immich** | `admin+immich@server.home.arpa` | `None` | No | `Me`, `Immich` |
