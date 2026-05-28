@@ -24,6 +24,6 @@
 * [ ] Look into Audiobookshelf
 * [ ] Look into a music requests container
 * [ ] Look into Restic
-* [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH)
+* [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS,
 * [ ] Service for Public ip change notifications
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc... 
