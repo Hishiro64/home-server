@@ -7,6 +7,7 @@
 * [x] Look into Papra
 * [x] Look into Flatnotes
 * [x] Standardize Email format and record it on a doc
+* [x] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
@@ -17,7 +18,6 @@
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
-* [ ] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
 * [ ] Look into Paperless-ngx
 * [ ] Look into Linkding (bookmarks)
 * [ ] Look into Archivebox
