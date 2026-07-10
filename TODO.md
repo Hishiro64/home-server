@@ -8,11 +8,11 @@
 * [x] Look into Flatnotes
 * [x] Standardize Email format and record it on a doc
 * [x] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
+* [x] Local livestream for homer
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
 * [ ] NFS
-* [ ] Local livestream for homer
 * [ ] Generating Changelog
 * [ ] Look into selfhosting TOTP
 * [ ] Add benchmarks and results

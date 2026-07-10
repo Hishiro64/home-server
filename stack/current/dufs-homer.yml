@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  dufs:
+    image: sigoden/dufs
+    container_name: dufs-homer
+    ports:
+      - "5002:5002"
+    volumes:
+      - /srv/stacks/dufs/homer/:/homer:ro
+    command: /homer --render-index -p 5002
+    restart: unless-stopped

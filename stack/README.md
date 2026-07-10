@@ -25,7 +25,8 @@
   * [Immich](current/immich.yml)
   * [Kiwix-Serve](current/kiwix-serve.yml)
   * [ByteStash](retired/bytestash.yml) <!-- Better than snippet-box now-->
-  * [Dufs](current/dufs-samba.yml)
+  * [Dufs-Samba](current/dufs-samba.yml)
+  * [Dufs-Homer](current/dufs-homer.yml)
   * [Mailpit](current/mailpit.yml)
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
