@@ -26,6 +26,7 @@ Contains my config files, docker compose files, and documentation for setting up
       * 🐳 [Portainer Setup](docs/3_Portainer%20Setup.md)
         * 📚 [**Stacks (Compose Files)**](stack/) 🌟
       * 🗒️ [Config Files](root)
+      * 🔧 [Maintenance](docs/4_Maintenance.md)
       * 🚘 [Hardware](docs/HARDWARE/)
         * 🔨 [Parts List](docs/HARDWARE/Parts%20List.md)
         * 💾 [SSD Notes](docs/SSD/)
