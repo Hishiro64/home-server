@@ -12,7 +12,11 @@ You can reduce the size by running this:
 sudo journalctl --vacuum-size=500M
 ```
 ## Docker 
-You can free up space by deleting unused images.
+You can free up space by deleting unused images:
 ```bash
 docker image prune
+```
+You can free up networks by deleting unused networks:
+```bash
+docker network prune
 ```
