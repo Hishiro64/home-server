@@ -36,7 +36,7 @@
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
   * [Pi-hole](retired/pi-hole-vanilla.yml) <!-- Dont really use it, ublock on firefox, no smart devices, etc-->
-  * [Snippet Box](current/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
+  * [Snippet Box](retired/snippet-box.yml) <!-- Need alternative, unmaintained, CVE-2023-23277 -->
   * [IT-Tools](retired/it-tools.yml) <!-- Don't find myself using it -->
   * [Tube Archivist](retired/tube-archivist.yml) <!-- RAM intensive, would like an alternative, otherwise use Stash -->
   * [Watchtower](retired/watchtower.yml) <!-- Update manually now for reliability now -->
