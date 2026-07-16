@@ -1,0 +1,13 @@
+services:
+  linkding:
+    container_name: linkding
+    image: sissbruecker/linkding:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - /srv/stacks/linkding:/etc/linkding/data
+    environment:
+      - LD_HOST_PORT=9090
+      - LD_SUPERUSER_NAME=admin
+      - LD_SUPERUSER_PASSWORD=changeme
+    restart: unless-stopped

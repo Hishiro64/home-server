@@ -9,21 +9,22 @@
 * [x] Standardize Email format and record it on a doc
 * [x] Add maintenance.md for `docker image prune -a` and `sudo journalctl --vacuum-size=500M`
 * [x] Local livestream for homer
+* [x] Look into Linkding (bookmarks)
+* [x] Look into selfhosting TOTP
+* [ ] Make homer balanced again  
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
+* [ ] Look into Restic
 * [ ] NFS
 * [ ] Generating Changelog
-* [ ] Look into selfhosting TOTP
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
 * [ ] Look into Paperless-ngx
-* [ ] Look into Linkding (bookmarks)
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
 * [ ] Look into a music requests container
-* [ ] Look into Restic
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole﻿
 * [ ] Service for Public ip change notifications
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc... 

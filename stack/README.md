@@ -32,6 +32,7 @@
   * [Wud](current/wud.yml)
   * [Opengist](current/opengist.yml)
   * [Flatnotes](current/flatnotes.yml)
+  * [Linkding](current/linkding.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
