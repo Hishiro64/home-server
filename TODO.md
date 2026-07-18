@@ -20,7 +20,7 @@
 * [ ] Generating Changelog
 * [ ] Add benchmarks and results
 * [ ] Look into setting a *.home.arpa hostname
-* [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
+* [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy (Netdata)
 * [ ] Look into Paperless-ngx
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
