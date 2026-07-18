@@ -51,8 +51,6 @@ filters:
     tags: Scrutiny
   - match: "Container: seerr"
     tags: Seerr
-  - match: "Container: snippet-box"
-    tags: Snippet-Box
   - match: "Container: stash"
     tags: Stash
   - match: "Container: syncthing"
@@ -69,3 +67,7 @@ filters:
     tags: Opengist
   - match: "Container: flatnotes"
     tags: Flatnotes
+  - match: "Container: dufs-homer"
+    tags: Dufs-Homer
+  - match: "Container: linkding"
+    tags: Linkding
