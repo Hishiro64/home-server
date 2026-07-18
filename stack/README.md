@@ -24,7 +24,7 @@
   * [Calibre Web Automated](current/calibre-web-automated.yml)
   * [Immich](current/immich.yml)
   * [Kiwix-Serve](current/kiwix-serve.yml)
-  * [ByteStash](retired/bytestash.yml) <!-- Better than snippet-box now-->
+  * [ByteStash](current/bytestash.yml) <!-- Better than snippet-box now-->
   * [Dufs-Samba](current/dufs-samba.yml)
   * [Dufs-Homer](current/dufs-homer.yml)
   * [Mailpit](current/mailpit.yml)
