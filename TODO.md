@@ -11,7 +11,7 @@
 * [x] Local livestream for homer
 * [x] Look into Linkding (bookmarks)
 * [x] Look into selfhosting TOTP
-* [ ] Make homer balanced again  
+* [x] Make homer balanced again
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
 * [ ] Look into Rclone
