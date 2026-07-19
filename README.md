@@ -1,9 +1,15 @@
 # **🛖 Home Server**
-Contains my config files, docker compose files, and documentation for setting up my home server. All hosted on one single Raspberry Pi and one 4TB SSD!
+[![OS](https://img.shields.io/badge/OS-Raspberry_Pi_OS_(Bookworm)-C51A4A?logo=raspberry-pi&logoColor=white&style=flat-square)](https://www.raspberrypi.com/software/)
+[![Hardware](https://img.shields.io/badge/Hardware-Raspberry_Pi_4_(8GB)-A22846?logo=arm&logoColor=white&style=flat-square)](docs/HARDWARE/Parts%20List.md)
+[![Management](https://img.shields.io/badge/Managed_by-Portainer-13BEF9?logo=portainer&logoColor=white&style=flat-square)](docs/3_Portainer%20Setup.md)
+[![Docker](https://img.shields.io/badge/Docker_Compose-30_Services-2496ED?logo=docker&logoColor=white&style=flat-square)](./stack/)
+[![Uptime](https://img.shields.io/badge/Last_Uptime-1_Year,_8_Days-success?style=flat-square&logo=uptimekuma&logoColor=white)](#)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
 ![preview](docs/assets/homer-preview.png)
-<img src="docs/assets/uptime-2024-11-12%2011-28-24.png" width="400" />
-## 📃 Index 
+Contains my config files, docker compose files, and documentation for setting up my home server. All hosted on one single Raspberry Pi and one 4TB SSD!
+<!--<img src="docs/assets/uptime-2024-11-12%2011-28-24.png" width="400" /> -->
+## 📃 Index
 <!--ts-->
    * 📔 Docs 
       * 🍓 [Preparing Raspberry Pi OS (Bookworm)](docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) 
