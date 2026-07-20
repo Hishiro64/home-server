@@ -27,7 +27,7 @@
   * [ByteStash](current/bytestash.yml)
   * [Dufs-Samba](current/dufs-samba.yml)
   * [Dufs-Homer](current/dufs-homer.yml)
-  * [Mailpit](current/mailpit.yml)
+  * [Mailpit](current/mailpit.yml) <!-- [Guidelines](/docs/STACK/Mailpit_email.md) -->
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
   * [Opengist](current/opengist.yml)
