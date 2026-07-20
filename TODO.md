@@ -17,8 +17,8 @@
 ### Backup
 * [ ] Add a minimal backup Solution for small important files.
 * [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
-* [ ] Look into Rclone
-* [ ] Look into Restic
+  * [ ] Look into Rclone
+  * [ ] Look into Restic
 ### Services
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy (Netdata)
 * [ ] Look into Paperless-ngx
@@ -29,8 +29,9 @@
 * [ ] NFS container
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole
-* [ ] Look into setting a *.home.arpa hostname
+  * [ ] Look into setting a *.home.arpa hostname
 ### Misc
+* [ ] Completely redo `/stack/README.md`
+  * [ ] Add benchmarks and results
 * [ ] Self Generating Changelog (git-clif)
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc... 
-* [ ] Add benchmarks and results
