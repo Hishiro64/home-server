@@ -5,7 +5,7 @@ If you happen to use the same **exact** SATA to USB adapter as I am, which is _U
 
 This is the exact one: [StarTech.com USB 3.1 to 2.5" SATA Hard Drive Adapter ](https://www.amazon.com/StarTech-com-SATA-USB-Cable-USB3S2SAT3CB/dp/B00XLAZODE/)
 
-![image](https://m.media-amazon.com/images/I/61lsiuFNDvL._SL1500_.jpg)
+<img src="https://m.media-amazon.com/images/I/61lsiuFNDvL._SL1500_.jpg" width="400" />
 
 You can find firmware on this [page](https://www.startech.com/en-us/hdd/usb312sat3cb).
 
