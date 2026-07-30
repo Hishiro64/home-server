@@ -37,4 +37,10 @@
 * [ ] Completely redo `/stack/README.md`
   * [ ] Add benchmarks and results
 * [ ] Self Generating Changelog (git-clif)
-* [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc... 
+* [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc...
+---
+### Event: Immich stack update created memory starvation scenario (7/30/2026)
+* [ ] Document soft recovery solutions properly in case the a memory starvation event experienced today occurs again.
+  * [ ] Under high load or memory starvation, authentication may need to take longer, and exceed the `LoginGraceTime` inside `/etc/ssh/sshd_config`, closing the connection before login. You can raise the interval or if you're already in this situation, you can attempt brute force: `while ! ssh -p 5522 admin@192.168.1.200; do sleep 2; done`. The interval was shorted at the beginning for hardening purposes, clearly needs to be updated since the trade-off is poor. Brute force may not work at all and require manual login. `LoginGraceTime` should be raised.
+  * [ ] If docker commands becomes unresponsive due to memory starvation and are unable to kill high memory containers, you can use `top` to find the PID of a container, then use: `sudo kill -9 <PID>`, making it possible to reclaim memory.
+  * [ ] Swap was disabled for performance reasons, but enabling it leniently could have avoided manual intervention.
