@@ -23,6 +23,7 @@
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy (Netdata)
   * [ ] Find and deploy a new primary monitoring service
   * [ ] Move Netdata to be used as a secondary
+* [ ] Look into Beszel
 * [ ] Look into Paperless-ngx
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
