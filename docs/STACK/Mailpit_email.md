@@ -33,3 +33,4 @@ Reserved email addresses:
 | **Wud** | `admin+notification@server.home.arpa` | `Wud` | Yes | `Me`, `Notification`, `Wud` |
 | **Immich** | `admin+immich@server.home.arpa` | `Immich` | Yes | `Me`, `Immich` |
 | **Seerr** | `seerr@server.home.arpa` | `Seerr` | Yes | `Me`, `Seerr` |
+| **Beszel** | `admin+alerts+beszel@server.home.arpa` | `None` | No | `Me`, `Beszel`, `Alerts` |

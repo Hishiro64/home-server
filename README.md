@@ -53,6 +53,12 @@ I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB 
 ├── 📁 aria2-pro
 │   ├── 📁 config
 │   └── 📁 downloads
+├── 📁 beszel
+│   ├── 📁 beszel-agent
+│   │   └── 📁 beszel_agent_data
+│   └── 📁 beszel-hub
+│       ├── 📁 beszel_data
+│       └── 📁 beszel_socket
 ├── 📁 bytestash
 │   └── 📁 snippets
 ├── 📁 calibre-web-automated

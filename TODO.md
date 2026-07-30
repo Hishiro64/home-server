@@ -13,6 +13,7 @@
 * [x] Look into Linkding (bookmarks)
 * [x] Look into selfhosting TOTP
 * [x] Make homer balanced again
+* [x] Look into Beszel (Not a viable replacement for Netdata)
 ---
 ### Backup
 * [ ] Add a minimal backup Solution for small important files.
@@ -20,10 +21,10 @@
   * [ ] Look into Rclone
   * [ ] Look into Restic
 ### Services
-* [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy (Netdata)
-  * [ ] Find and deploy a new primary monitoring service
+* [ ] Replace Netdata
+  * [ ] Find and deploy a new viable primary monitoring service
   * [ ] Move Netdata to be used as a secondary
-* [ ] Look into Beszel
+* [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
 * [ ] Look into Paperless-ngx
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
