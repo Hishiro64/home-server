@@ -2,7 +2,7 @@
 [![OS](https://img.shields.io/badge/OS-Raspberry_Pi_OS_(Bookworm)-C51A4A?logo=raspberry-pi&logoColor=white&style=flat-square)](https://www.raspberrypi.com/software/)
 [![Hardware](https://img.shields.io/badge/Hardware-Raspberry_Pi_4_(8GB)-A22846?logo=arm&logoColor=white&style=flat-square)](docs/HARDWARE/Parts%20List.md)
 [![Management](https://img.shields.io/badge/Managed_by-Portainer-13BEF9?logo=portainer&logoColor=white&style=flat-square)](docs/3_Portainer%20Setup.md)
-[![Docker](https://img.shields.io/badge/Docker_Compose-30_Services-2496ED?logo=docker&logoColor=white&style=flat-square)](./stack/)
+[![Docker](https://img.shields.io/badge/Docker_Compose-39_Services-2496ED?logo=docker&logoColor=white&style=flat-square)](./stack/)
 [![Uptime](https://img.shields.io/badge/Last_Uptime-1_Year,_8_Days-success?style=flat-square&logo=uptimekuma&logoColor=white)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
@@ -97,6 +97,8 @@ I'm currently running with Bookworm on a Pi 4 for the last 2.5 years with a 4TB 
 │   └── 📁 data
 ├── 📁 netdata
 │   └── 📁 netdataconfig
+├── 📁 nfs-server
+│   └── 📁 share:ro
 ├── 📁 opengist
 ├── 📁 qbittorrent
 │   ├── 📁 config

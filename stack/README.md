@@ -25,7 +25,7 @@
   * [Immich](current/immich.yml)
   * [Kiwix-Serve](current/kiwix-serve.yml)
   * [ByteStash](current/bytestash.yml)
-  * [Dufs-Samba](current/dufs-samba.yml)
+  * [Dufs-Network-Shares](current/dufs-network-shares.yml)
   * [Dufs-Homer](current/dufs-homer.yml)
   * [Mailpit](current/mailpit.yml) <!-- [Guidelines](/docs/STACK/Mailpit_email.md) -->
   * [Hoodik](current/hoodik.yml)
@@ -34,6 +34,7 @@
   * [Flatnotes](current/flatnotes.yml)
   * [Linkding](current/linkding.yml)
   * [Beszel](current/beszel.yml)
+  * [NFS-Server](current/nfs-server.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

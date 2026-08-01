@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  nfs-server:
+    image: sharedvolume/nfs-server:latest
+    container_name: nfs-server
+    privileged: true
+    restart: unless-stopped
+    environment:
+      - SHARED_DIRECTORY=/share
+      #- SHARED_DIRECTORY_2=/Serva # Also serve samba share point, but won't to avoid crisscrossing
+      - PERMITTED=192.168.1.0\/24  # Restrict to local network # Backslash required here
+      - READ_ONLY=true
+      - SYNC=true
+    volumes:
+      - /srv/stacks/nfs-server/share:/share:ro
+      #- /srv/stacks/samba/Serva:/Serva:ro
+    ports:
+      - "2049:2049"
+    networks:
+      - nfs-network
+
+networks:
+  nfs-network:
+    driver: bridge

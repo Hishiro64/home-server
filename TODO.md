@@ -14,6 +14,7 @@
 * [x] Look into selfhosting TOTP
 * [x] Make homer balanced again
 * [x] Look into Beszel (Not a viable replacement for Netdata)
+* [x] NFS container
 ---
 ### Backup
 * [ ] Add a minimal backup Solution for small important files.
@@ -30,7 +31,6 @@
 * [ ] Look into Audiobookshelf
 * [ ] Look into a music requests container
 * [ ] Service for Public ip change notifications
-* [ ] NFS container
 * [ ] Container that restarts LanguageTool every 24hrs
 * [ ] Guest homepage 
 ### DNS
@@ -45,7 +45,7 @@
 ### Docs
 * [ ]  Move entire documentation to a dedicated docs project site using Vitepress 
 ### Event: Immich stack update created memory starvation scenario (7/30/2026)
-* [ ] Document soft recovery solutions properly in case the a memory starvation event experienced today occurs again.
+* [ ] Document soft recovery solutions properly in case the memory starvation event experienced today occurs again.
   * [ ] Under high load or memory starvation, authentication may need to take longer, and exceed the `LoginGraceTime` inside `/etc/ssh/sshd_config`, closing the connection before login. You can raise the interval or if you're already in this situation, you can attempt brute force: `while ! ssh -p 5522 admin@192.168.1.200; do sleep 2; done`. The interval was shorted at the beginning for hardening purposes, clearly needs to be updated since the trade-off is poor. Brute force may not work at all and require manual login. `LoginGraceTime` should be raised.
   * [ ] If docker commands becomes unresponsive due to memory starvation and are unable to kill high memory containers, you can use `top` to find the PID of a container, then use: `sudo kill -9 <PID>`, making it possible to reclaim memory.
   * [ ] Swap was disabled for performance reasons, but enabling it leniently could have avoided manual intervention.
