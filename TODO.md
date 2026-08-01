@@ -1,4 +1,5 @@
 # TODO
+> **[R]** = reserved in homer
 ### Done
 * [x] SMTP
 * [x] Encrypted Folder
@@ -17,8 +18,8 @@
 * [x] NFS container
 ---
 ### Backup
-* [ ] Add a minimal backup Solution for small important files.
-* [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage.
+* [ ] Add a minimal backup solution for small important files.
+* [ ] Evaluate cheap backup: Encrypted Gdrive, BuddyBackup, Pi-Zero with USB storage. **[R]**
   * [ ] Look into Rclone
   * [ ] Look into Restic
 ### Services
@@ -26,15 +27,17 @@
   * [ ] Find and deploy a new viable primary monitoring service
   * [ ] Move Netdata to be used as a secondary
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
-* [ ] Look into Paperless-ngx
+* [ ] Look into Paperless-ngx **[R]**
 * [ ] Look into Archivebox
 * [ ] Look into Audiobookshelf
-* [ ] Look into a music requests container
+* [ ] Look into a music requests container **[R]**
 * [ ] Service for Public ip change notifications
+* [ ] Look into WatchYourLAN and NetAlertX **[R]**
+* [ ] Redeploy it-tools again **[R]**
 * [ ] Container that restarts LanguageTool every 24hrs
-* [ ] Guest homepage 
+* [ ] Guest homepage **[R]**
 ### DNS
-* [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole
+* [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a *.home.arpa hostname
 ### Misc
 * [ ] Completely redo `/stack/README.md`
@@ -43,7 +46,7 @@
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc...
 ---
 ### Docs
-* [ ]  Move entire documentation to a dedicated docs project site using Vitepress 
+* [ ] Move entire documentation to a dedicated docs project site using Vitepress 
 ### Event: Immich stack update created memory starvation scenario (7/30/2026)
 * [ ] Document soft recovery solutions properly in case the memory starvation event experienced today occurs again.
   * [ ] Under high load or memory starvation, authentication may need to take longer, and exceed the `LoginGraceTime` inside `/etc/ssh/sshd_config`, closing the connection before login. You can raise the interval or if you're already in this situation, you can attempt brute force: `while ! ssh -p 5522 admin@192.168.1.200; do sleep 2; done`. The interval was shorted at the beginning for hardening purposes, clearly needs to be updated since the trade-off is poor. Brute force may not work at all and require manual login. `LoginGraceTime` should be raised.
