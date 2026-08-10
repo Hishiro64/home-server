@@ -29,6 +29,7 @@
 * [ ] Look into WatchYourLAN and NetAlertX **[R]**
 * [ ] Redeploy it-tools again **[R]**
 * [ ] Guest homepage **[R]**
+* [ ] Add Suwayomi-Server to stack
 * [ ] Look into Healthchecks.io
 * [ ] Look into Vaultwarden
 * [ ] Look into SearXNG
