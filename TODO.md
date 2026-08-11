@@ -16,6 +16,7 @@
 * [x] Make homer balanced again
 * [x] Look into Beszel (Not a viable replacement for Netdata)
 * [x] NFS container
+* [x] Add Suwayomi-Server to stack
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -29,7 +30,6 @@
 * [ ] Look into WatchYourLAN and NetAlertX **[R]**
 * [ ] Redeploy it-tools again **[R]**
 * [ ] Guest homepage **[R]**
-* [ ] Add Suwayomi-Server to stack
 * [ ] Look into Healthchecks.io
 * [ ] Look into Vaultwarden
 * [ ] Look into SearXNG

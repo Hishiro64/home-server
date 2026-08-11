@@ -79,3 +79,5 @@ filters:
     tags: Dufs-Samba
   - match: "Container: dufs-nfs"
     tags: Dufs-Nfs
+  - match: "Container: suwayomi"
+    tags: Suwayomi

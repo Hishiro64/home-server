@@ -35,6 +35,7 @@
   * [Linkding](current/linkding.yml)
   * [Beszel](current/beszel.yml)
   * [NFS-Server](current/nfs-server.yml)
+  * [Suwayomi](current/suwayomi.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

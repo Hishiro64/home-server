@@ -1,0 +1,28 @@
+---
+services:
+  suwayomi:
+    image: ghcr.io/suwayomi/suwayomi-server:preview
+    container_name: suwayomi
+    user: 1000:1000
+    environment:
+      - TZ=America/New_York 
+      #- FLARESOLVERR_ENABLED=true
+      #- FLARESOLVERR_URL=http://flaresolverr:8191
+      - BIND_PORT=4567
+      - AUTH_MODE=basic_auth
+      - AUTH_USERNAME=admin
+      - AUTH_PASSWORD=changeme
+      # - EXTENSION_STORES=["https://raw.githubusercontent.com/MY_ACCOUNT/MY_EXTENSION_STORE/repo/index.min.json", "https://raw.githubusercontent.com/MY_ACCOUNT_2/MY_REPO_2/repo/index.pb"]
+    volumes:
+      - /srv/stacks/suwayomi/data:/home/suwayomi/.local/share/Tachidesk
+    ports:
+      - "4567:4567"
+    restart: on-failure:3
+    
+#  flaresolverr:
+#    image: ghcr.io/thephaseless/byparr:latest
+#    container_name: flaresolverr
+#    init: true
+#    environment:
+#      - TZ=America/New_York
+#    restart: unless-stopped
