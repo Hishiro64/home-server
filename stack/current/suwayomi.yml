@@ -12,12 +12,15 @@ services:
       - AUTH_MODE=basic_auth
       - AUTH_USERNAME=admin
       - AUTH_PASSWORD=changeme
+      - DOWNLOAD_AS_CBZ=true
+      - "JAVA_TOOL_OPTIONS=-Xms256m -Xmx1g"
       # - EXTENSION_STORES=["https://raw.githubusercontent.com/MY_ACCOUNT/MY_EXTENSION_STORE/repo/index.min.json", "https://raw.githubusercontent.com/MY_ACCOUNT_2/MY_REPO_2/repo/index.pb"]
     volumes:
       - /srv/stacks/suwayomi/data:/home/suwayomi/.local/share/Tachidesk
     ports:
       - "4567:4567"
     restart: on-failure:3
+
     
 #  flaresolverr:
 #    image: ghcr.io/thephaseless/byparr:latest
