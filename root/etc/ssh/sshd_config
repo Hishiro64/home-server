@@ -144,7 +144,7 @@ PermitTunnel no
 # Disabling Port Forwarding
 
 # Login Screen
-LoginGraceTime 10s
+LoginGraceTime 2m
 MaxAuthTries 2
 # Login Screen
 
