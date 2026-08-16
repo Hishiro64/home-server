@@ -1,34 +1,35 @@
-[<- index](/README.md)
-# GPT Partition Tables
+# MBR to GPT Partition Tables
 
 Since the Raspberry Pi imager makes an MBR partition. The max size of a partition is limited to 2TB. This won't use the full capacity on a drive above 2TB in one neat partition. Using a community script, we can change this MBR partition into a GPT partition.
 
-**Before**
+**Before:**
 
-![image.png](/docs/assets/ShareX_RsDKpx2PNH.png)
+![image](../assets/ShareX_RsDKpx2PNH.png)
 
-**After**
+**After:**
 
-![image.png](/docs/assets/ShareX_6ObjNW9dYi.png)
+![image](../assets/ShareX_6ObjNW9dYi.png)
 
-**This is not an official method, but it does seem to work fine.**
+This Work around was used to achieve this on my own server.
 
-1. After flashing the large Primary drive, redo [steps 1-6](/docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) again, but on a separate micro-SD card.
+### Converting MBR to GPT Partition Tables
 
-2. Without the micro-SD card inserted, just plug in the Primary drive, and boot to the pi.
+1. After flashing the primary drive, redo [steps 1-6](/docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) again, but on a separate micro-SD card.
 
-3. Wait a couple minutes for the initial setup to automatically complete on the Primary drive.
+2. Without the micro-SD card inserted, just plug in the primary drive, and boot the pi.
 
-4. SSH into the pi with the credentials you set in the imager. On Windows it's `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi.
+3. Wait a couple of minutes for the initial setup to automatically complete on the Primary drive.
+
+4. SSH into the pi with the credentials you set in the imager.
 
 5. Once you are SSH in, `sudo shutdown -h now`
 
-6. Unplug in the Primary drive, insert micro-SD card, and Boot to the pi.
+6. Unplug the Primary drive, insert micro-SD card, and Boot to the pi.
 
-7. Wait again for that initial setup to automatically complete, now on the micro-SD card.
+7. Wait again for that initial setup to automatically complete on the micro-SD card.
 
 > [!CAUTION]
-> 8. Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. Bookworm is new and the Raspberry Pi 5 only just released. Things could change! **The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
+> 8. Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. **The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
 
 9. Once you are SSH in, plug in the large drive. It should be inserted in the bottom blue USB port.
 
@@ -44,20 +45,22 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 15. Here are the settings I used. Set them according to your setup.
 
-    ![image.png](/docs/assets/chrome_BYq8OSm1Vt.png)
+    ![image](../assets/chrome_BYq8OSm1Vt.png)
 
 16. Shutdown by using `sudo shutdown -h now`, remove the sd-card, and boot again.
 
- Once you SSH back in, all of the storage is now accessible, you can continue to enable Trim.
+ Once you SSH back in, most storage is now accessible. The rest is reserved in root, which on a large drive can be many gigabtyes. You can reclaim that too by [Lowering reserved space for root](../2_OS%20Configuration.md).
 
-# Enable Trim
-Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi).
+ You should also [enable trim](../2_OS%20Configuration.md).
 
-# Lower reserved space for root
+// move to os-configureation
+
+ ### Lower reserved space for root
 You can get some remaining space by downsizing the ratio of reserved blocks for root. The default is 5%, but that scales up with drive size. You can lower it to 1-3%.
 ```bash    
-    sudo tune2fs -m 3 /dev/sda2
+sudo tune2fs -m 3 /dev/sda2
 ```
-![image.png](/docs/assets/WindowsTerminal_pubchefax4.png)
+![image](./assets/WindowsTerminal_pubchefax4.png)
 
-Now move on to [OS Configuration](/docs/2_OS%20Configuration.md).
+# Enable Trim
+Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi). Make sure your adapter supports it. Mine didn't until a firmware update.
