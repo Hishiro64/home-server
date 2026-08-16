@@ -52,15 +52,3 @@ This Work around was used to achieve this on my own server.
  Once you SSH back in, most storage is now accessible. The rest is reserved in root, which on a large drive can be many gigabtyes. You can reclaim that too by [Lowering reserved space for root](../2_OS%20Configuration.md).
 
  You should also [enable trim](../2_OS%20Configuration.md).
-
-// move to os-configureation
-
- ### Lower reserved space for root
-You can get some remaining space by downsizing the ratio of reserved blocks for root. The default is 5%, but that scales up with drive size. You can lower it to 1-3%.
-```bash    
-sudo tune2fs -m 3 /dev/sda2
-```
-![image](./assets/WindowsTerminal_pubchefax4.png)
-
-# Enable Trim
-Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi). Make sure your adapter supports it. Mine didn't until a firmware update.

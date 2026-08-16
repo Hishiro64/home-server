@@ -1,28 +1,6 @@
 [<- index](/README.md)
 # OS Configuration
 
-## Table of Contents
-
-* [Locale](2_OS%20Configuration.md#locale)
-* [Time Zone](2_OS%20Configuration.md#time-zone)
-* [Update/Upgrade](2_OS%20Configuration.md#updateupgrade)
-* [EEPROM](2_OS%20Configuration.md#eeprom)
-* [Password](2_OS%20Configuration.md#password)
-* [Sudo](2_OS%20Configuration.md#sudo)
-* [config.txt](2_OS%20Configuration.md#configtxt)
-* [cmdline.txt](2_OS%20Configuration.md#cmdlinetxt)
-* [nmtui](2_OS%20Configuration.md#nmtui)
-* [Processes (Minimizing idle load)](2_OS%20Configuration.md#processes)
-* [Generating SSH Keys](2_OS%20Configuration.md#generating-ssh-keys)
-* [sshd_config (Hardening)](2_OS%20Configuration.md#sshd_config)
-* [Issue banner](2_OS%20Configuration.md#issue-banner)
-* [cpufreq (Changing governor)](2_OS%20Configuration.md#cpufreq)
-
-
-## First Remote in
-SSH into the pi with the credentials you set in the imager. On Windows it is `ssh {USERNAME}@{ASSIGNED-IP-FOR-PI}`. For my values it's `ssh admin@192.168.1.164`. Where my assigned ip `192.168.1.164` is automatically set by my router. This will be different; you need to use the address to your own pi. We are doing this headless.  
-  
-
 ## Locale
 
 Change the localization from *UK* to *US*.
@@ -574,22 +552,15 @@ We want to make our CPU ramp up when it's under load and ramp down when it's idl
 
 5. **This change will reset upon reboot**. I maximize uptime on my server, so it’s a non issue for me. If you do reboot, make sure to run step 3 again or create a script to automatically run it on every startup.
 
-## sysctl.conf (Don't Use/Needs Testing)
+# SSDs
+If you are using NVME ssd or SATA ssd you should do the following:
 
-❗Trying to edge out possible improved performance, security, lower network latency, and faster networking by modifying `sysctl.conf`. May vary based on use case. Needs testing and is incomplete:
-
-```bash
-# ////////////////////////////////////////////////////////////////////////////////////////////
-# sysctl.conf
-
-# Default: pfifo_fast
-net.core.default_qdisc=fq
-
-# Default: cubic
-net.ipv4.tcp_congestion_control=bbr
-
-# Default: 100; Docs --> https://docs.kernel.org/admin-guide/sysctl/vm.html?highlight=vm+vfs_cache_pressure#vfs-cache-pressure
-#vm.vfs_cache_pressure=75
-
-# ////////////////////////////////////////////////////////////////////////////////////////////
+### Lower the reserved space for root
+You can get some remaining space by downsizing the ratio of reserved blocks for root. The default is 5%, but that scales up with drive size. You can lower it to 1-3%.
+```bash    
+sudo tune2fs -m 3 /dev/sda2
 ```
+![image](./assets/WindowsTerminal_pubchefax4.png)
+
+## Enable Trim
+Enable Trim support, use [Jeff Geerling's guide](https://www.jeffgeerling.com/blog/2020/enabling-trim-on-external-ssd-on-raspberry-pi). Make sure your adapter supports it. Mine didn't until a firmware update.
