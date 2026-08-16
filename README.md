@@ -11,6 +11,8 @@ Contains my config files, docker compose files, and documentation for setting up
 <!--<img src="docs/assets/uptime-2024-11-12%2011-28-24.png" width="400" /> -->
 ## 📃 Index
 <!--ts-->
+> [!CAUTION] 
+🚧 Currently under construction 
    * 📔 Docs 
       * 🍓 [Preparing Raspberry Pi OS (Bookworm)](docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) 
         * [SATA SSD Setup](docs/SSD/SATA%20SSD%20Setup.md)
