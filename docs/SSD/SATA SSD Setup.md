@@ -1,4 +1,4 @@
-# MBR to GPT Partition Tables
+# MBR and GPT Partition Tables
 
 Since the Raspberry Pi imager makes an MBR partition. The max size of a partition is limited to 2TB. This won't use the full capacity on a drive above 2TB in one neat partition. Using a community script, we can change this MBR partition into a GPT partition.
 
@@ -12,7 +12,7 @@ Since the Raspberry Pi imager makes an MBR partition. The max size of a partitio
 
 This Work around was used to achieve this on my own server.
 
-### Converting MBR to GPT Partition Tables
+# Converting MBR to GPT Partition Tables
 
 1. After flashing the primary drive, redo [steps 1-6](/docs/1_Raspberry%20Pi%20OS%20Image%20Configuration.md) again, but on a separate micro-SD card.
 
@@ -31,7 +31,7 @@ This Work around was used to achieve this on my own server.
 > [!CAUTION]
 > 8. Read The first and last few posts [here](https://forums.raspberrypi.com/viewtopic.php?t=196778) on this thread. **The very first post containing the instructions is actively maintained and should take precedence over the following instructions presented below.**
 
-9. Once you are SSH in, plug in the large drive. It should be inserted in the bottom blue USB port.
+9. Now that both the micro-SD card and primary storage device is intialized, Once you are SSH in, booted off the micro-SD, plug in the large drive. It should be inserted in the bottom blue USB port.
 
 10. Back on the [thread](https://forums.raspberrypi.com/viewtopic.php?t=196778) you will see the attachment named `usb-boot.zip`. Download and extract the contents.
 
@@ -47,7 +47,7 @@ This Work around was used to achieve this on my own server.
 
     ![image](../assets/chrome_BYq8OSm1Vt.png)
 
-16. Shutdown by using `sudo shutdown -h now`, remove the sd-card, and boot again.
+16. Shutdown by using `sudo shutdown -h now`, remove the sd-card, and boot again with just the primary drive.
 
  Once you SSH back in, most storage is now accessible. The rest is reserved in root, which on a large drive can be many gigabtyes. You can reclaim that too by [Lowering reserved space for root](../2_OS%20Configuration.md).
 

@@ -555,7 +555,7 @@ We want to make our CPU ramp up when it's under load and ramp down when it's idl
 # SSDs
 If you are using NVME ssd or SATA ssd you should do the following:
 
-### Lower the reserved space for root
+## Lower the reserved space for root
 You can get some remaining space by downsizing the ratio of reserved blocks for root. The default is 5%, but that scales up with drive size. You can lower it to 1-3%.
 ```bash    
 sudo tune2fs -m 3 /dev/sda2

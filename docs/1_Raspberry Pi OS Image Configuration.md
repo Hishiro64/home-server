@@ -1,4 +1,4 @@
-# Raspberry Pi OS Headless Image Configuration (Bookworm)
+# 🍓 Raspberry Pi OS Headless Image Configuration (Bookworm)
 
 1. Grab the latest version of Raspberry Pi Imager from [here](https://www.raspberrypi.com/software/). *Version 1.7.5 was used when I made this, some things have changed.*
 
@@ -23,6 +23,8 @@
     ![image](./assets/rpi-imager_GOAPMdhdvf.png)
 
 6. Write and finish. When it is done, **Eject the drive**.
+
+# Test the Headless image 
 
 7. Connect the storage medium and after a few minutes, SSH into the pi with the credentials you set in the imager. The pi will be assigned an ip-address, set by your router. In your router settings, you can view the table of connected devices to find the ip-address assigned to the pi. Once you have that you can simply:
 
