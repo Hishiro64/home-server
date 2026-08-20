@@ -18,13 +18,13 @@
 
     * Cooling should not be a problem, but if you are worried, you can just put a plane heat sink on top of the SSD's hottest sections. You can even take off the top cover and place the heat sinks directly over the controller, cache, NAND Flash chips; Removing the top cover sometimes makes lower capacity drives take up less space. Overkill and may void your warranty.
 
-    * Not as bottlenecked. Still wont use the max capable speed. But closer to line then compared to the M.2/NVME. 
+    * Not as bottlenecked. Still won't use the max capable speed. But closer to line then compared to the M.2/NVME. 
 
-    * Probably get away without external power. (Without external power, I never received a undervoltage warning on neither of my tested SSDs.)
+    * Probably get away without external power. (Without external power, I never received a under voltage warning on neither of my tested SSDs.)
 
     * The USB to SATA adapter should support UASP and Trim. The adapter I selected does support Trim only after a [firmware update](/docs/SSD/SATA%20Adapter%20Nonsense.md). Trim will also need to be enabled manually.
 
     * Drives above 2TB requires some [additional setup](/docs/SSD/SATA%20SSD%20Setup.md).
 
-* ### Network Drives
+* ### Network Drives (Off-site)
     * If you already have one set up on a NAS or a separate server/pi, you may want to incorporate it. Whether it's to serve a backup or used directly by docker as a NFS Volume, depending on how it's set up, it may be advantageous. You will know if this applies to you.

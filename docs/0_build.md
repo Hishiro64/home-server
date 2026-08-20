@@ -1,0 +1,3 @@
+# The Build
+
+The build is quite simple. You only need a Raspberry Pi 4 8Gb, USB-C power adapter, some active cooling solution (heat sink + fan), RJ45 Patch cable, storage, and housing. The only thing that may vary would be the storage and ram. The more ram you have the more simultaneous services you can have running at the same time. Since it's soldered, and you'll be hopefully running this server for years like I am, I wouldn't consider anything other than the 8Gb version. It's more of a mixed bag for storage, and with rising costs, you will have to plan ahead.
