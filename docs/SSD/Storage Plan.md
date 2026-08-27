@@ -1,3 +1,5 @@
+Outdated, Moved to 0_build.md
+---
 # Planning Around Limitations
 
 Ignoring drive failures. In the case where you have to migrate drives, migrate OS, or you have a bricked OS, it will always be a hassle. So, it's best to mitigate as much as we can by planning around these issues, to have an easier time later.

@@ -1,3 +1,5 @@
+Outdated, Moved to 0_build.md
+---
 # Storage Options
 
 * ### Micro SD card
