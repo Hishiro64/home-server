@@ -56,6 +56,7 @@
 ---
 ### Docs
 * [ ] Move entire documentation to a dedicated docs project site using Vitepress
+  * [ ] Completely redo `/docs/0_build.md`
   * [ ] Completely redo `/stack/README.md`
     * [ ] Add benchmarks and results
   * [ ] Self Generating Changelog (git-clif)
