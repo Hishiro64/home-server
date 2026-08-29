@@ -41,7 +41,7 @@ services:
 
   - name: "Study"
     icon: "fas fa-scroll"
-    items:
+    items:      
       - name: "Doujinshi 🍜"
         logo: "assets/resources/logos/filebrowser.ico"
         subtitle: "Doujinshi mix"
@@ -58,7 +58,7 @@ services:
         logo: "assets/resources/logos/filebrowser.ico"
         subtitle: "Manga mix"
         tag: "folder"
-        url: "http://192.168.1.200:10001/files/stacks/suwayomi/data/local/" # Split
+        url: "http://192.168.1.200:10001/files/stacks/suwayomi/data/downloads/mangas/" # Split
         target: "_blank"
 #      - name: "Light novels ☕"
 #        logo: "assets/resources/logos/filebrowser.ico"
