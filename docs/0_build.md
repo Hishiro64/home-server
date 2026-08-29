@@ -3,7 +3,7 @@
 The build is quite simple. You only need a Raspberry Pi 4 8Gb, USB-C power adapter, some active cooling solution (heat sink + fan), RJ45 Patch cable, storage, and housing. The only thing that may vary would be the storage and ram. The more ram you have the more simultaneous services you can have running at the same time. Since RAM is soldered, and you'll be hopefully running this server for years like I have, I wouldn't consider anything other than the 8Gb version. It's more of a mixed bag for storage, and with fluctuating costs, you will have to plan ahead.
 
 ## Storage
-I don't want anyone to pretend that this platform has the foundation for robust storage configurations. While it may be doable, you should reserve that route for some other x86 platform. My recommendation would be to keep it simple with one mass storage device like a SATA SSD and regular offsite backups for important directories. If you need to expand, use NFS volumes on a hosted on a separate machine.
+I don't want anyone to pretend that this platform has the foundation for robust storage configurations. While it may be doable, you should reserve that route for some other x86 platform. There is no typical redundancy or expandability, but sufficient enough workarounds are used to make the most on this setup. My recommendation would be to keep it simple with one mass storage device like a SATA SSD and regular offsite backups for important directories. If you have to expand, use NFS volumes on a hosted on a separate machine.
 
 ## Planning Around Limitations
 
