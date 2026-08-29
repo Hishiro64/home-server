@@ -34,3 +34,4 @@ Reserved email addresses:
 | **Immich** | `admin+immich@server.home.arpa` | `Immich` | Yes | `Me`, `Immich` |
 | **Seerr** | `seerr@server.home.arpa` | `Seerr` | Yes | `Me`, `Seerr` |
 | **Beszel** | `admin+alerts+beszel@server.home.arpa` | `None` | No | `Me`, `Beszel`, `Alerts` |
+| **Gitea** | `hishiro@server.home.arpa` | `None` | Yes | None |
