@@ -17,6 +17,7 @@
 * [x] Look into Beszel (Not a viable replacement for Netdata)
 * [x] NFS container
 * [x] Add Suwayomi-Server to stack
+* [x] Migrate gitea/gitea:1.21.11 -> gitea/gitea:latest
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -45,7 +46,6 @@
 * [ ] Service for Public ip change notifications
 * [ ] Container that restarts LanguageTool every 24hrs
 * [ ] Add memory usage limits to Suwayomi-Server and other containers that have poor garbage collection.
-* [ ] Migrate gitea/gitea:1.21.11 -> gitea/gitea:latest
 * [ ] Pick a grocery container
 * [ ] Look into romM
 ### DNS
