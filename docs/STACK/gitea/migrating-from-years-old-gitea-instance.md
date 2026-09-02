@@ -180,7 +180,7 @@ Under our stack called "gitea" we can now update our stack identically to how it
           - GITEA__service__ENABLE_NOTIFY_MAIL=true
           - GITEA__service__REGISTER_EMAIL_CONFIRM=false
           - GITEA__service__DEFAULT_KEEP_EMAIL_PRIVATE=false
-          - GITEA__service__NO_REPLY_ADDRESS=noreply.gitea.server.home.arpa
+          - GITEA__service__NO_REPLY_ADDRESS=users.noreply.gitea.server.home.arpa
           # openid
           - GITEA__openid__ENABLE_OPENID_SIGNIN=false
           - GITEA__openid__ENABLE_OPENID_SIGNUP=false
