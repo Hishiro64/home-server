@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - "10010:3000"
-      - "2222:22" # change right to port 2222 paired with commenting in ssh section in env
+      - "2222:22" # Change right hand to port 2222 paired with commenting in the ssh section in env
     volumes:
       - /srv/stacks/gitea/data:/data
       - /etc/timezone:/etc/timezone:ro
@@ -15,7 +15,7 @@ services:
       - USER_GID=1000
       # Added
       - APP_NAME=Tea
-      # Enable this to migrate from old container that are already running
+      # Enable this to migrate from slated Gitea instance
       - GITEA__migrations__ALLOW_LOCALNETWORKS=true
       # SMTP
       - GITEA__mailer__ENABLED=true
