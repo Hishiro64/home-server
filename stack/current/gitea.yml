@@ -15,7 +15,7 @@ services:
       - USER_GID=1000
       # Added
       - APP_NAME=Tea
-      # Enable this to migrate from slated Gitea instance
+      # Enable this to migrate from a slated Gitea instance
       - GITEA__migrations__ALLOW_LOCALNETWORKS=true
       # SMTP
       - GITEA__mailer__ENABLED=true

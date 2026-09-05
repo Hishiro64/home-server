@@ -1,17 +1,19 @@
-# 🍵 Migrating From Years Old Gitea Instance 
+# 🍵 Migrating from Years Old Gitea Instance 
 
 > [!CAUTION]
-> Incomplete Draft, Don't Use.
+> Incomplete Draft, Don't reference.
 
 This is for people who have a Gitea instance running for several years pinned on a tag.
 
-Since then, environment variables have changed around and breaking changes have been introduced. Jumping to the latest stable on the existing stack could create *problems*. You could manually stagger update through each minor release, but that's a lot of reading on intermediate releases, room for error, and you'll be updating the compose file for each minor release, when only the last one is maintained.
+Since then, environment variables have changed around and breaking changes have been introduced. Jumping directly to the latest stable on the existing stack could create *problems* which you don't want to find out since you're already reading this. The suggested approach would be to manually update through each minor release back to back, reviewing the changes and migration notes each time. This would mitigate the likelihood of unforeseen problems outside our control. You may be on a release that's a few years old, thus that route would be in advised. Outside of changelogs, docs are not readily accessible for very old releases. Successfully updating the compose file, reviewing each intermediate deployment, and sanity checking each time, may not be doable. It's also not worth you data and risking your infrastructure.
 
-A safer alternative would be to close off and slate the existing instance. Create a new compose file based on latest stable on a fresh new stack, then migrate every repository manually (or use a [Gitea Importer CLI](https://gitea.com/gitea/importer) when it's usable). This should cover most peoples use cases.
+A safer alternative would be to close off and slate the existing instance. Create a new compose file based on latest stable on a fresh new stack, then migrate every repository manually (or use the [Gitea Importer CLI](https://gitea.com/gitea/importer) when it's usable). A repository and content migration should cover most peoples use cases. It would be wise to treat this migration as if you are switching git providers. For such a large jump, you will have to review everything from scratch anyway.
 
-I'll be using `gitea:1.21.11` as an example. Since this is such an old release, Docs are not easily accessible. The compose file was edited from the example template at the time. If you need old docs, you can find them [here](https://dl.gitea.com/gitea/). They exist as tar archives, like the such: `gitea-docs-1.21.11.tar.gz`. The latest release at the time of writing is `gitea:1.27.3`. We'll be migrating to that. You should use target whatever is the latest stable.
+I'll be using `gitea:1.21.11` as an example. It's a little over 2 years old. Since this is an ancient release, Docs can be found as tar archives, like the such: `gitea-docs-1.21.11.tar.gz`. If you need old docs, you can find them [here](https://dl.gitea.com/gitea/). The compose file was edited from the example template at the time. We'll be migrating to the latest release, which at the time is `gitea:1.27.3`. Replace `1.27.3` with the current stable release on your end.
 
-## Slate the current Gitea instance
+## Slate the Current Gitea Instance
+
+We will mark our current instance to be slated by prefixing it with "old" and removing endpoint access.
 
 1. This is what is currently deployed on the compose project:
 
@@ -109,12 +111,12 @@ I'll be using `gitea:1.21.11` as an example. Since this is such an old release, 
           - no-new-privileges:true
     ```
     #### More information
-    These values have to be different since we don't want any existing workspace to point to the slated instance.
+    These values have to be different since we don't want any users or existing workspaces to get pointed to the slated instance. Nothing should have to change on any local repositories. Users should never be asked to change anything on their end.
     
-    For example with local repositories, inside of `.git/config`
+    For example with local repositories, inside `.git/config`
     ```ini
     [remote "origin"]
-        url = http://192.168.1.200:10010/Hishiro/test-repo # points to slate if port not changed
+        url = http://192.168.1.200:10010/Hishiro/test-repo # Expects this to be the up to date remote 
         fetch = +refs/heads/*:refs/remotes/origin/*
     ``` 
     Same thing goes for the mounts and identifiers for distinguishability. 
@@ -125,23 +127,23 @@ I'll be using `gitea:1.21.11` as an example. Since this is such an old release, 
 
 8. Remove the container.
 
-9. In portainer, Under stack details -> Stack duplication / migration 
+9. Step only applies to Portainer, Under stack details -> Stack duplication / migration 
 
     ```
     Stack Name: old-gitea
     Select...: Server
     ```
-    Then duplicate it.
+    Then duplicate it. This is so it doesn't have a naming conflict with the compose project.
 
 10. Run the container
 
-We should now have a separate stack called "old-gitea" running our slated Gitea instance with everything prefixed as "old". Any local repositories won't be able to contact remote. This puts a pause until Gitea and repository migrations are complete.
+We should now have a separate stack called "old-gitea" running our slated Gitea instance with everything prefixed as "old". Any local repositories won't be able to contact remote and users will see an "Unable to connect". This puts a pause until Gitea, user, and repository migrations are complete.
 
-## Deploy a fresh Gitea instance on latest stable.
+## Deploy a Fresh Gitea Instance on Latest Stable.
 
 Under our stack called "gitea" we can now update our stack identically to how it was before. When creating this new compose, you only need to read up on the latest stable docs. 
 
-1. Create the primary directories like before:
+1. Create the primary directories seen in the original compose file:
 
     ```bash
     cd /srv/stacks ; mkdir -p ./gitea/data
@@ -166,7 +168,7 @@ Under our stack called "gitea" we can now update our stack identically to how it
           - USER_GID=1000
           # Added
           - APP_NAME=Tea
-          # Enable this to migrate from slated Gitea instance
+          # Enable this to migrate from a slated Gitea instance
           - GITEA__migrations__ALLOW_LOCALNETWORKS=true
           # SMTP
           - GITEA__mailer__ENABLED=true
@@ -197,11 +199,11 @@ Under our stack called "gitea" we can now update our stack identically to how it
 
 4. Do initial setup and create the administrator account. Use the same username and email as the slated instance.
  
-You should now have a fresh instance of Gitea running on the latest stable. All endpoints like mounts and ports are the same.
+You should now have a fresh instance of Gitea running on the latest stable. All endpoints like mounts and ports are the same. Now we have to migrate our data.
 
-## Migrate repositories
+## Migrate Repositories
 
-1. Inside of Gitea make a new migration.
+1. Inside Gitea make a new migration.
 
 2. Use either:
     ```python
@@ -217,18 +219,18 @@ You should now have a fresh instance of Gitea running on the latest stable. All 
 
 If you selected the latter you can use an Access Token to migrate the additional items. 
 
-You can create one in: 
+You can create one from the Admin account in: 
 
-> User -> Settings -> Applications ->  Manage Access Tokens ->  Generate New Token
+> User -> Settings -> Applications -> Manage Access Tokens -> Generate New Token
 
 Select read for all the permissions and copy the token and use that during each repository migration.
 
-## Delete the slated instance
+## Migrate users
 
-You will have the slated instance and the new instances running alongside each other. If done correctly, everything should work as expected as if nothing has changed. You should not push or pull from the slated instance and only use the new one from here on. Then after some time, you should stop running the slated instance and either safely archive or permanently delete `old-gitea` and `gitea.backup`. 
+Users are responsible for creating and managing their new credentials. 
 
-From now on, regularly maintain the stack through every minor release to avoid having to go through all of this again. 
+## Delete the Slated Instance
 
+Since you manage your own instance, you'll know where additional migration steps will need to be applied. Nevertheless, you will have the slated instance and the new instance running alongside each other. If done correctly, everything should work as expected as if nothing has changed. You should not push or pull from the slated instance and only use the new one from here on. Then after some observation interval, you should stop running the slated instance and either safely archive or permanently delete `old-gitea` and `gitea.backup`. 
 
-
-
+From now on, regularly maintain the stack through every minor release to avoid having to go through all of this again. Refer to [Official docs](https://docs.gitea.com/installation/upgrade-from-gitea/) for the rest.
