@@ -202,18 +202,20 @@ Under our stack called "gitea" we can now update our stack identically to how it
 You should now have a fresh instance of Gitea running on the latest stable. All endpoints like mounts and ports are the same. Now we have to migrate our data.
 
 ## Migrate Repositories
+1. Open the slated Gitea instance in a incognito window and login. Then open the fresh Gitea instance in a regular window. If you don't do this, you get logged in and out of both instances, even on different ports.
 
-1. Inside Gitea make a new migration.
+2. Inside the fresh Gitea instance, make a new migration.
 
-2. Use either:
+3. Use either:
     ```python
     1. "Git - Migrate a repository only from any Git service." 
     or 
     2. "Gitea - Migrate data from gitea.com or other Gitea instances."
     ```
 
-3. Then one by one migrate each repository from the slated instance. If it has LFS, then enable it for the repo. If it has Issues, Pull Requests, Releases, etc... make sure to use the Gitea migration specifically with an Access Token.
+4. Then one by one migrate each repository from the slated instance. If it has LFS, then enable it for the repo. If it has Issues, Pull Requests, Releases, etc... make sure to use the Gitea migration specifically with an Access Token.
 
+5. For mirror repositories, always use the source repository or else it will stop syncing when the slated gitea instance is taken offline.
 
 ## Gitea Access Token
 
