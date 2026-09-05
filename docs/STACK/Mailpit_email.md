@@ -18,7 +18,7 @@ Used for forming email addresses
 
 ## Ending
 
-- Emails should end in `...@server.home.arpa` to be valid.
+- Emails should end in `...@server.home.arpa` to be valid unless it is a noreply address.
 
 ## Final email address should have the form of
 `{scope}+{container_name}+{attribute1}+{attribute2}+...+{attributeN}@server.home.arpa`
@@ -27,7 +27,7 @@ Used for forming email addresses
 
 Reserved email addresses:
 
-| Service / Container | Final Email Address | SMTP User | SMTP Auth? | Formed Tags (Base rules) |
+| Service / Container | Final Email Address | SMTP User | SMTP Auth? | Generated Tags (Base rules) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Hoodik** | `admin@server.home.arpa` | `Hoodik` | Yes | `Hoodik`, `Me` |
 | **Wud** | `admin+notification@server.home.arpa` | `Wud` | Yes | `Me`, `Notification`, `Wud` |
@@ -35,4 +35,4 @@ Reserved email addresses:
 | **Seerr** | `seerr@server.home.arpa` | `Seerr` | Yes | `Me`, `Seerr` |
 | **Beszel** | `admin+alerts+beszel@server.home.arpa` | `None` | No | `Me`, `Beszel`, `Alerts` |
 | **Gitea** | `gitea@server.home.arpa` | `Gitea` | Yes | `Gitea` |
-| **Gitea** | `1+hishiro@users.noreply.gitea.server.home.arpa` | `Gitea` | Yes | `Gitea`, `Hishiro` |
+| **Gitea (auto-generated)** | `1+hishiro@users.noreply.gitea.server.home.arpa` | `Gitea` | Yes | `Gitea`, `Hishiro` |

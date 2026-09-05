@@ -75,6 +75,6 @@ def main():
         username="ServiceB",
         password="none"
     )
-
+# Usage: python test_mailpit.py
 if __name__ == "__main__":
     main()

@@ -5,7 +5,7 @@
 
 This is for people who have a Gitea instance running for several years pinned on a tag.
 
-Since then, environment variables have changed around and breaking changes have been introduced. Jumping directly to the latest stable on the existing stack could create *problems* which you don't want to find out since you're already reading this. The suggested approach would be to manually update through each minor release back to back, reviewing the changes and migration notes each time. This would mitigate the likelihood of unforeseen problems outside our control. You may be on a release that's a few years old, thus that route would be in advised. Outside of changelogs, docs are not readily accessible for very old releases. Successfully updating the compose file, reviewing each intermediate deployment, and sanity checking each time, may not be doable. It's also not worth you data and risking your infrastructure.
+Since then, environment variables have changed around and breaking changes have been introduced. Jumping directly to the latest stable on the existing stack could create *problems* which you don't want to find out since you're already reading this. The suggested approach would be to manually update through each minor release back to back, reviewing the changes and migration notes each time. This would mitigate the likelihood of unforeseen problems outside our control. You may be on a release that's a few years old, thus that route would be in advised. Outside of changelogs, docs are not readily accessible for very old releases. Successfully updating the compose file, reviewing each intermediate deployment, and sanity checking each time, may not be doable. It's also not worth your data and risking your infrastructure.
 
 A safer alternative would be to close off and slate the existing instance. Create a new compose file based on latest stable on a fresh new stack, then migrate every repository manually (or use the [Gitea Importer CLI](https://gitea.com/gitea/importer) when it's usable). A repository and content migration should cover most peoples use cases. It would be wise to treat this migration as if you are switching git providers. For such a large jump, you will have to review everything from scratch anyway.
 
@@ -210,7 +210,7 @@ You should now have a fresh instance of Gitea running on the latest stable. All 
     ```python
     1. "Git - Migrate a repository only from any Git service." 
     or 
-    2. "Gitea - Migrate data from gitea.com or other Gitea instances."
+    2. "Gitea - Migrate data from gitea.com or other Gitea instances." (Recommended)
     ```
 
 4. Then one by one migrate each repository from the slated instance. If it has LFS, then enable it for the repo. If it has Issues, Pull Requests, Releases, etc... make sure to use the Gitea migration specifically with an Access Token.
