@@ -48,6 +48,7 @@
 * [ ] Add memory usage limits to Suwayomi-Server and other containers that have poor garbage collection.
 * [ ] Pick a grocery container
 * [ ] Look into romM
+* [ ] Update Immich Valkey from 8 -> 9
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a `*server.home.arpa` hostname
