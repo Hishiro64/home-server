@@ -1,3 +1,5 @@
+# Email Services with Mailpit
+Doc outlining Mailpit usage.
 # Guidelines
 Used for forming email addresses 
 ## Scope
