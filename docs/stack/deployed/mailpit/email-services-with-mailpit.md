@@ -31,9 +31,10 @@ In Mailpit's web UI, mail can be filtered using tags. Tags only show in the web 
 
 From address conventions are not required but recommended, an example being:
 
-`service@noreply.{service-name}.server.home.arpa`
+`service@noreply.{container_name}.server.home.arpa`
 
 # Guidelines
+Since this SMTP server is not depended on anything else, we root our conventions on written rules that are similar to planned addresses.
 ## Scope
 1. From only 2 base rules defined in `tags.yaml`:
    - Emails that start with `mailpit+...` tagged as `All`
@@ -57,9 +58,9 @@ From address conventions are not required but recommended, an example being:
 ## Final email address should have the form of
 `{scope}+{container_name}+{attribute1}+{attribute2}+...+{attributeN}@server.home.arpa`
 
-# Email Records
+# Temporary Email Records
 
-Reserved email addresses:
+These are in use for the time being, may not follow guidelines:
 
 | Service / Container | Final Email Address | SMTP User | SMTP Auth? | Generated Tags (Base rules) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -70,3 +71,16 @@ Reserved email addresses:
 | **Beszel** | `admin+alerts+beszel@server.home.arpa` | `None` | No | `Me`, `Beszel`, `Alerts` |
 | **Gitea** | `gitea@server.home.arpa` | `Gitea` | Yes | `Gitea` |
 | **Gitea (auto-generated)** | `1+hishiro@users.noreply.gitea.server.home.arpa` | `Gitea` | Yes | `Gitea`, `Hishiro` |
+
+# Service Account Address Book
+
+We assume we eventually switch to a fully fledged SMTP server. Mailpit specific columns are dropped.   
+
+| Service / Container | Email Address |
+| :--- | :--- |
+| **Hoodik** | `service@noreply.hoodik.server.home.arpa` |
+| **Wud** | `notification@noreply.Wud.server.home.arpa` | 
+| **Immich** | `service@noreply.Immich.server.home.arpa` | 
+| **Seerr** | `notification@noreply.seerr.server.home.arpa` | 
+| **Beszel** | `alert@noreply.beszel.server.home.arpa` | 
+| **Gitea** | `service@noreply.gitea.server.home.arpa` |
