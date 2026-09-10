@@ -1,7 +1,39 @@
-# Email Services with Mailpit
-Doc outlining Mailpit usage.
+# 💌 Email Services with Mailpit
+
+A simple catch-all SMTP server, used with services to be able to deliver mail. All mail captured will be pooled into a single inbox. **Using POP3 will only retrieve the last 100 entries and delete them from the server as well**.
+
+## SMTP Configuration
+
+```yml
+SMTP_ADDRESS: 192.168.1.200
+SMTP_PORT: 1025
+SMTP_AUTH_ACCEPT_ANY: true # Auth any pair
+SMTP_USERNAME: <any> # Becomes tag in web UI
+SMTP_PASSWORD: <any>
+POP3_PORT: 1010
+POP3_AUTH: admin:changeme # user:passwd
+```
+No strict verification is done, thus a set of loose guidelines are recommended, alongside a maintained address book for reference.
+
+This is nice because it avoids an interdependent mail system. Which would otherwise be dependent on a configured DNS, domain name, certificates, recipient SMTP server(s), reverse proxy, etc... While this system is in place, we can put these on the back burner and create functional service accounts.
+
+## Filtering Inbox 
+
+Since no relaying is done by default, mail destinations can be filtered by search from the `To` header.
+
+In Mailpit's web UI, mail can be filtered using tags. Tags only show in the web UI and are assigned to messages through several means.
+
+1. The `SMTP_USERNAME` used to send the message becomes the tag. 
+
+2. Match cases defined in `tags.yaml` (special cases)
+
+3. Plus addressing in either the `From` or `To` header. (public)
+
+From address conventions are not required but recommended, an example being:
+
+`service@noreply.{service-name}.server.home.arpa`
+
 # Guidelines
-Used for forming email addresses 
 ## Scope
 1. From only 2 base rules defined in `tags.yaml`:
    - Emails that start with `mailpit+...` tagged as `All`
