@@ -1,6 +1,6 @@
 # 💌 Email Services with Mailpit
 
-A simple catch-all SMTP server, used with services to be able to deliver mail. All mail captured will be pooled into a single inbox. **Using POP3 will only retrieve the last 100 entries and delete them from the server as well**.
+A simple catch-all SMTP server, used with services to be able to deliver mail. All captured mail is pooled into a single inbox. **Using POP3 will only retrieve the last 100 entries and delete them from the server as well**.
 
 ## SMTP Configuration
 
@@ -17,70 +17,82 @@ No strict verification is done, thus a set of loose guidelines are recommended, 
 
 This is nice because it avoids an interdependent mail system. Which would otherwise be dependent on a configured DNS, domain name, certificates, recipient SMTP server(s), reverse proxy, etc... While this system is in place, we can put these on the back burner and create functional service accounts.
 
-## Filtering Inbox 
+## Filtering Recipients
 
-Since no relaying is done by default, mail destinations can be filtered by search from the `To` header.
+Since no relaying is done by default, reading mail sent to a particular destination has to be filtered by searching for it inside of Mailpit's web UI. This does require you to know the recipient mailing address. For viewing unknown recipients use the search query with all known recipients, example:
+
+`to: !user1 to: !user2` -> leaves only unknown recipients.
+
+---
+
+If you are using Thunderbird with POP3, you can create search folders for each recipient:
+
+ 1. Open the Search Messages window: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>
+
+ 2. Create the search query: **Match all the following -> To -> contain -> \<user\> -> Search**
+
+ 3. Save as search folder. Give it the Display Name of the recipient.
+ 
+ 4. Repeat for each recipient.
+
+You can also use this window to create a search folder for unknown recipients. That should be self-explanatory.
+
+## Mailpit Tags
 
 In Mailpit's web UI, mail can be filtered using tags. Tags only show in the web UI and are assigned to messages through several means.
 
-1. The `SMTP_USERNAME` used to send the message becomes the tag. 
+1. The `SMTP_USERNAME` becomes the tag, used by the service account to log in and send messages.
 
-2. Match cases defined in `tags.yaml` (special cases)
+2. Match cases defined in `tags.yaml` (complex cases)
 
-3. Plus addressing in either the `From` or `To` header. (public)
+3. Plus addressing in either the `From` or `To` header get generated into Mailpit tags.
 
-From address conventions are not required but recommended, an example being:
+Don't become heavily dependent on these tags as they are exclusive to Mailpit. Use plus addressing in the user account's mailing address instead, that is preferred, and can be translated outside of Mailpit.
 
-`service@noreply.{container_name}.server.home.arpa`
+## Email Guidelines
+Since this SMTP server is not dependent on anything else, we root our conventions on written guidelines that can be loosely followed rather than aligning with existing foundations such as registered domains and subdomains. 
 
-# Guidelines
-Since this SMTP server is not depended on anything else, we root our conventions on written rules that are similar to planned addresses.
-## Scope
-1. From only 2 base rules defined in `tags.yaml`:
-   - Emails that start with `mailpit+...` tagged as `All`
-   - Emails that start with `admin+...` tagged as `Me`
-2. Not from rules:
-   - Emails that start with `any+...` Will not be tagged
-3. Extra rules will be handled automatically by `tags.yaml`.
+## Service Accounts
+Service Accounts should:
+   1. Use the mailing address `<type>@noreply.<container_name>.server.home.arpa`
+   2. Should have their `SMTP_USERNAME` set as `container_name` from stack, with the first letter capitalized.
 
-## Service Identification
-1. Services that send emails should have their SMTP Username set as `container_name` from stack, with the first letter capitalized.
-2. If the above is not possible use plus addressing instead: `{scope}+{container_name}+...`
-3. You can set both.
+   Note: `<type>` is user-defined and default of `service` is used.  
 
-## Optional  
-- Chain plus addressing to add 1 or more attributes: `{scope}+{container_name}+{attribute1}+{attribute2}+...`
+## User Accounts
+User Accounts should:
+   1. Use the mailing address `<name>@server.home.arpa` (no tag by default)
 
-## Ending
-
-- Emails should end in `...@server.home.arpa` to be valid unless it is a noreply address.
-
-## Final email address should have the form of
-`{scope}+{container_name}+{attribute1}+{attribute2}+...+{attributeN}@server.home.arpa`
+User Accounts can:
+   1. Use chained plus addressing `<name>+<type>+...+<type>@server.home.arpa` (recommended)
+      - `<type>` can derive from the service account mailing address.
+   2. Use `<name>` from `tags.yaml` to be assigned tags in Mailpit. For Example:
+         ```yaml
+         filters:
+            - match: to:user1 # user1@server.home.arpa
+              tags: First-User
+         ```
 
 # Temporary Email Records
 
-These are in use for the time being, may not follow guidelines:
+These are in use for the time being and may not follow guidelines:
 
-| Service / Container | Final Email Address | SMTP User | SMTP Auth? | Generated Tags (Base rules) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Hoodik** | `admin@server.home.arpa` | `Hoodik` | Yes | `Hoodik`, `Me` |
-| **Wud** | `admin+notification@server.home.arpa` | `Wud` | Yes | `Me`, `Notification`, `Wud` |
-| **Immich** | `admin+immich@server.home.arpa` | `Immich` | Yes | `Me`, `Immich` |
-| **Seerr** | `seerr@server.home.arpa` | `Seerr` | Yes | `Me`, `Seerr` |
-| **Beszel** | `admin+alerts+beszel@server.home.arpa` | `None` | No | `Me`, `Beszel`, `Alerts` |
-| **Gitea** | `gitea@server.home.arpa` | `Gitea` | Yes | `Gitea` |
-| **Gitea (auto-generated)** | `1+hishiro@users.noreply.gitea.server.home.arpa` | `Gitea` | Yes | `Gitea`, `Hishiro` |
+| Container | Display Name + Primary Email |
+| :--- | :--- |
+| **Hoodik** | `Hoodik <service@noreply.hoodik.server.home.arpa>` | `Hoodik` |
+| **Wud** | `Docker <notification@noreply.wud.server.home.arpa>` | `Wud` |
+| **Immich** | `Immich <service@noreply.immich.server.home.arpa>` | `Immich` |
+| **Seerr** | `Seerr <notification@noreply.seerr.server.home.arpa>` | `Seerr` |
+| **Gitea** | `Tea <service@noreply.gitea.server.home.arpa>` | `Gitea` |
 
 # Service Account Address Book
+Append to your Thunderbird address book:
 
-We assume we eventually switch to a fully fledged SMTP server. Mailpit specific columns are dropped.   
-
-| Service / Container | Email Address |
+| Display Name | Primary Email |
 | :--- | :--- |
-| **Hoodik** | `service@noreply.hoodik.server.home.arpa` |
-| **Wud** | `notification@noreply.Wud.server.home.arpa` | 
-| **Immich** | `service@noreply.Immich.server.home.arpa` | 
-| **Seerr** | `notification@noreply.seerr.server.home.arpa` | 
-| **Beszel** | `alert@noreply.beszel.server.home.arpa` | 
-| **Gitea** | `service@noreply.gitea.server.home.arpa` |
+| **Hoodik** |  <service@noreply.hoodik.server.home.arpa> |
+| **Docker** |  <notification@noreply.wud.server.home.arpa> | 
+| **Immich** |  <service@noreply.immich.server.home.arpa> | 
+| **Seerr** |  <notification@noreply.seerr.server.home.arpa> | 
+| **Alert** |  <alert@noreply.beszel.server.home.arpa> | 
+| **Tea** |  <service@noreply.gitea.server.home.arpa> |

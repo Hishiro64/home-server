@@ -9,8 +9,8 @@ services:
     environment:
       - WUD_TRIGGER_SMTP_MAILPIT_HOST=192.168.1.200
       - WUD_TRIGGER_SMTP_MAILPIT_PORT=1025
-      - WUD_TRIGGER_SMTP_MAILPIT_FROM_ADDRESS=wud@server.home.arpa
-      - WUD_TRIGGER_SMTP_MAILPIT_FROM_NAME=Wud
+      - WUD_TRIGGER_SMTP_MAILPIT_FROM_ADDRESS=notification@noreply.wud.server.home.arpa
+      - WUD_TRIGGER_SMTP_MAILPIT_FROM_NAME=Docker
       - WUD_TRIGGER_SMTP_MAILPIT_TO=admin+notification@server.home.arpa
       - WUD_TRIGGER_SMTP_MAILPIT_USER=Wud
       - WUD_TRIGGER_SMTP_MAILPIT_PASS=none

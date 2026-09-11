@@ -1,0 +1,3 @@
+# Graveyard
+
+This directory contains docs for containers that are retired, never fully deployed, not recommended, outdated, etc...

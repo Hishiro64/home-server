@@ -175,7 +175,7 @@ Under our stack called "gitea" we can now update our stack identically to how it
           - GITEA__mailer__PROTOCOL=smtp
           - GITEA__mailer__SMTP_ADDR=192.168.1.200
           - GITEA__mailer__SMTP_PORT=1025
-          - GITEA__mailer__FROM=gitea@server.home.arpa
+          - GITEA__mailer__FROM="Tea <service@noreply.gitea.server.home.arpa>"
           - GITEA__mailer__USER=Gitea
           - GITEA__mailer__PASSWD=none
           # Mail
