@@ -84,9 +84,10 @@ These are in use for the time being and may not follow guidelines:
 | **Immich** | `Immich <service@noreply.immich.server.home.arpa>` | `Immich` |
 | **Seerr** | `Seerr <notification@noreply.seerr.server.home.arpa>` | `Seerr` |
 | **Gitea** | `Tea <service@noreply.gitea.server.home.arpa>` | `Gitea` |
+| **Scrutiny** | `Alert <alert@noreply.scrutiny.server.home.arpa>` | None |
 
 # Service Account Address Book
-Append to your Thunderbird address book:
+Import the following entries to your Thunderbird address book:
 
 | Display Name | Primary Email |
 | :--- | :--- |
@@ -94,5 +95,6 @@ Append to your Thunderbird address book:
 | **Docker** |  <notification@noreply.wud.server.home.arpa> | 
 | **Immich** |  <service@noreply.immich.server.home.arpa> | 
 | **Seerr** |  <notification@noreply.seerr.server.home.arpa> | 
-| **Alert** |  <alert@noreply.beszel.server.home.arpa> | 
 | **Tea** |  <service@noreply.gitea.server.home.arpa> |
+| **Alert** | <alert@noreply.scrutiny.server.home.arpa> |
+| **Alert** |  <alert@noreply.beszel.server.home.arpa> |

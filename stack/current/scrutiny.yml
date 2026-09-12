@@ -3,7 +3,7 @@ version: '3.5'
 services:
   scrutiny:
     container_name: scrutiny
-    image: ghcr.io/analogj/scrutiny:master-omnibus
+    image: ghcr.io/analogj/scrutiny:v0.9.3-omnibus
     ports:
       - "10003:8080" # webui
      # - "9959:8086" # influxDB admin
