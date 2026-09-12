@@ -1,20 +1,32 @@
 filters:
   - match: to:admin
     tags: Me
-  - match: to:mailpit
-    tags: All
   - match: "Container: aria2-pro"
     tags: Aria2-Pro
   - match: "Container: ariang"
     tags: Ariang
+  - match: "Container: beszel"
+    tags: Beszel
+  - match: "Container: beszel-agent"
+    tags: Beszel-Agent
+  - match: "Container: bytestash"
+    tags: Bytestash
   - match: "Container: calibre-web-automated"
     tags: Calibre-Web-Automated
   - match: "Container: doku"
     tags: Doku
   - match: "Container: dozzle"
     tags: Dozzle
+  - match: "Container: dufs-homer"
+    tags: Dufs-Homer
+  - match: "Container: dufs-samba"
+    tags: Dufs-Samba
+  - match: "Container: dufs-nfs"
+    tags: Dufs-Nfs
   - match: "Container: file-browser"
     tags: File-Browser
+  - match: "Container: flatnotes"
+    tags: Flatnotes
   - match: "Container: gitea"
     tags: Gitea
   - match: "Container: homer"
@@ -31,14 +43,22 @@ filters:
     tags: Immich_postgres
   - match: "Container: jellyfin"
     tags: Jellyfin
+  - match: "Container: kiwix-serve"
+    tags: Kiwix-Serve
   - match: "Container: languagetool"
     tags: Languagetool
   - match: "Container: lanraragi"
     tags: Lanraragi
+  - match: "Container: linkding"
+    tags: Linkding
   - match: "Container: mailpit"
     tags: Mailpit
   - match: "Container: netdata"
     tags: Netdata
+  - match: "Container: nfs-server"
+    tags: Nfs-Server
+  - match: "Container: opengist"
+    tags: Opengist
   - match: "Container: qbittorrent"
     tags: Qbittorrent
   - match: "Container: qdirstat"
@@ -51,33 +71,11 @@ filters:
     tags: Seerr
   - match: "Container: stash"
     tags: Stash
+  - match: "Container: suwayomi"
+    tags: Suwayomi
   - match: "Container: syncthing"
     tags: Syncthing
   - match: "Container: wg-easy"
     tags: Wg-Easy
-  - match: "Container: bytestash"
-    tags: Bytestash
-  - match: "Container: kiwix-serve"
-    tags: Kiwix-Serve
   - match: "Container: wud"
     tags: Wud
-  - match: "Container: opengist"
-    tags: Opengist
-  - match: "Container: flatnotes"
-    tags: Flatnotes
-  - match: "Container: dufs-homer"
-    tags: Dufs-Homer
-  - match: "Container: linkding"
-    tags: Linkding
-  - match: "Container: beszel"
-    tags: Beszel
-  - match: "Container: beszel-agent"
-    tags: Beszel-Agent
-  - match: "Container: nfs-server"
-    tags: Nfs-Server
-  - match: "Container: dufs-samba"
-    tags: Dufs-Samba
-  - match: "Container: dufs-nfs"
-    tags: Dufs-Nfs
-  - match: "Container: suwayomi"
-    tags: Suwayomi
