@@ -67,6 +67,7 @@ User Accounts can:
    1. Use chained plus addressing `<name>+<type>+...+<type>@server.home.arpa` (recommended)
       - `<type>` can derive from the service account mailing address.
    2. Use `<name>` from `tags.yaml` to be assigned tags in Mailpit. For Example:
+
          ```yaml
          filters:
             - match: to:user1 # user1@server.home.arpa
@@ -85,6 +86,8 @@ These are in use for the time being and may not follow guidelines:
 | **Seerr** | `Seerr <notification@noreply.seerr.server.home.arpa>` | `Seerr` |
 | **Gitea** | `Tea <service@noreply.gitea.server.home.arpa>` | `Gitea` |
 | **Scrutiny** | `Alert <alert@noreply.scrutiny.server.home.arpa>` | None |
+| **Calibre-web-automated** | `Your eBook <ebook@noreply.calibre-web-automated.server.home.arpa>` | `Calibre-web-automated` |
+| **Audiobookshelf** | `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Audiobookshelf` |
 
 # Service Account Address Book
 Import the following entries to your Thunderbird address book:
@@ -98,3 +101,29 @@ Import the following entries to your Thunderbird address book:
 | **Tea** |  <service@noreply.gitea.server.home.arpa> |
 | **Alert** | <alert@noreply.scrutiny.server.home.arpa> |
 | **Alert** |  <alert@noreply.beszel.server.home.arpa> |
+| **Your eBook** | <ebook@noreply.calibre-web-automated.server.home.arpa> |
+| **Your eBook** | <ebook@noreply.audiobookshelf.server.home.arpa> |
+
+# Send to Kindle
+
+Mail addressed outside our domain has to be relayed. A good example of this would be the *Send to Kindle* option. It has to be delivered to `@kindle.com`. Rather than relaying the message to `smtp.gmail.com` to do the transfer, we can just use it directly instead. Both Amazon and Google will scan your EPUB files anyways.
+
+## Gmail SMTP Configuration
+If you use Gmail to log in to Amazon, just use that email to set up Google's SMTP server.
+```yml
+SMTP_ADDRESS: smtp.gmail.com
+SMTP_PORT: 587
+SMTP_USERNAME: <your_gmail_user>@gmail.com # Full address
+SMTP_PASSWORD: <app_password> # Manage your Google Account -> Search -> "App passwords"
+```
+## Service Account Overrides
+| X-Google-Original-From | From |
+| :--- | :--- |
+| `Your eBook <ebook@noreply.calibre-web-automated.server.home.arpa>` | `Your eBook <your_gmail_user>@gmail.com>` |
+| `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Your eBook <your_gmail_user>@gmail.com>` |
+
+## Kindle Address Book
+To find this address look for "Send to Kindle" in your Kindle's settings menu.
+| Display Name | Primary Email |
+| :--- | :--- |
+| **Kindle** | <your_amz_username_randomstring@kindle.com> |

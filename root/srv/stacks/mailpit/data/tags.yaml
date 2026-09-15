@@ -79,3 +79,5 @@ filters:
     tags: Wg-Easy
   - match: "Container: wud"
     tags: Wud
+  - match: "Container: audiobookshelf"
+    tags: Audiobookshelf

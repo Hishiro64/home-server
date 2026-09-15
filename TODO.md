@@ -18,6 +18,7 @@
 * [x] NFS container
 * [x] Add Suwayomi-Server to stack
 * [x] Migrate gitea/gitea:1.21.11 -> gitea/gitea:latest
+* [x] Look into Audiobookshelf
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -42,13 +43,13 @@
 * [ ] Integrate this: https://github.com/Tecnativa/docker-socket-proxy
 * [ ] Integrate container spin up & spin down
 * [ ] Look into Archivebox
-* [ ] Look into Audiobookshelf
 * [ ] Service for Public ip change notifications
 * [ ] Container that restarts LanguageTool every 24hrs
 * [ ] Add memory usage limits to Suwayomi-Server and other containers that have poor garbage collection.
 * [ ] Pick a grocery container
 * [ ] Look into romM
 * [ ] Update Immich Valkey from 8 -> 9
+* [ ] Look into Shelfmark
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a `*server.home.arpa` hostname
@@ -60,6 +61,7 @@
   * [ ] Completely redo `/docs/0_build.md`
   * [ ] Completely redo `/stack/README.md`
     * [ ] Add benchmarks and results
+  * [ ] Completely redo all email docs
   * [ ] Self Generating Changelog (git-clif)
   * [ ] Keep a map crisscross directories (smb & nfs4 -> Serva:ro)
   #### Event: Immich stack update created memory starvation scenario (7/30/2026)
