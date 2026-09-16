@@ -106,24 +106,25 @@ Import the following entries to your Thunderbird address book:
 
 # Send to Kindle
 
-Mail addressed outside our domain has to be relayed. A good example of this would be the *Send to Kindle* option. It has to be delivered to `@kindle.com`. Rather than relaying the message to `smtp.gmail.com` to do the transfer, we can just use it directly instead. Both Amazon and Google will scan your EPUB files anyways.
+Mail addressed outside our domain has to be relayed. A good example of this would be the *Send to Kindle* option. It has to be delivered to `@kindle.com`. Rather than relaying the message from Mailpit to `smtp.gmail.com` to do the transfer, we can just use it directly instead. Both Amazon and Google will scan your EPUB files anyways.
 
-## Gmail SMTP Configuration
-If you use Gmail to log in to Amazon, just use that email to set up Google's SMTP server.
+## SMTP Configuration (Gmail) 
+If you use Gmail to log in to Amazon, just use that email for using Google's SMTP server.
 ```yml
 SMTP_ADDRESS: smtp.gmail.com
 SMTP_PORT: 587
+SMTP_TLS: true
 SMTP_USERNAME: <your_gmail_user>@gmail.com # Full address
 SMTP_PASSWORD: <app_password> # Manage your Google Account -> Search -> "App passwords"
 ```
 ## Service Account Overrides
 | X-Google-Original-From | From |
 | :--- | :--- |
-| `Your eBook <ebook@noreply.calibre-web-automated.server.home.arpa>` | `Your eBook <your_gmail_user>@gmail.com>` |
-| `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Your eBook <your_gmail_user>@gmail.com>` |
+| `Your eBook <ebook@noreply.calibre-web-automated.server.home.arpa>` | `Your eBook <your_gmail_user@gmail.com>` |
+| `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Your eBook <your_gmail_user@gmail.com>` |
 
-## Kindle Address Book
-To find this address look for "Send to Kindle" in your Kindle's settings menu.
+## Ereader Address Book
+To find this address look for "Send to Kindle" in your Kindle's settings menu. Append as a new Ereader Device.
 | Display Name | Primary Email |
 | :--- | :--- |
 | **Kindle** | <your_amz_username_randomstring@kindle.com> |

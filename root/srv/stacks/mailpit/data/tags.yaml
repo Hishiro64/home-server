@@ -81,3 +81,5 @@ filters:
     tags: Wud
   - match: "Container: audiobookshelf"
     tags: Audiobookshelf
+  - match: "Container: shelfmark-lite"
+    tags: Shelfmark-Lite

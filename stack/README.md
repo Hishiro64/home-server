@@ -37,6 +37,7 @@
   * [NFS-Server](current/nfs-server.yml)
   * [Suwayomi](current/suwayomi.yml)
   * [Audiobookshelf](current/audiobookshelf.yml)
+  * [Shelfmark-lite](current/shelfmark-lite.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

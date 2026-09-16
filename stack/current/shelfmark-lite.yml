@@ -1,0 +1,25 @@
+services:
+  shelfmark-lite:
+    image: ghcr.io/calibrain/shelfmark-lite:latest
+    container_name: shelfmark-lite
+    ports:
+      - 8084:8084
+    environment:
+      # EXT_BYPASSER_URL: http://flaresolverr:8191 #If using Flaresolverr
+      TZ: America/New_York
+      PUID: 1000
+      PGID: 1000
+      SEARCH_MODE: universal
+      CALIBRE_WEB_URL: "http://192.168.1.200:10006/"
+      AUDIOBOOK_LIBRARY_URL: "http://192.168.1.200:13378/audiobookshelf/"
+      HARDCOVER_ENABLED: true
+      HARDCOVER_API_KEY: "hc_pat_***"
+    restart: unless-stopped
+    volumes:
+      - /srv/stacks/shelfmark-lite/books:/books
+      - /srv/stacks/shelfmark-lite/config:/config
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8084/api/health"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
