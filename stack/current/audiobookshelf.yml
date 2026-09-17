@@ -9,6 +9,7 @@ services:
       - /srv/stacks/audiobookshelf/config:/config
       - /srv/stacks/audiobookshelf/metadata:/metadata
       - /srv/stacks/audiobookshelf/library/podcasts:/podcasts
+      - /srv/stacks/audiobookshelf/library/mixed:/mixed:ro
       - /srv/stacks/audiobookshelf/library/lightnovels:/lightnovels:ro
     environment:
       - TZ=America/New_York
