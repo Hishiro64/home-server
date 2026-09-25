@@ -5,6 +5,8 @@ filters:
     tags: Aria2-Pro
   - match: "Container: ariang"
     tags: Ariang
+  - match: "Container: audiobookshelf"
+    tags: Audiobookshelf
   - match: "Container: beszel"
     tags: Beszel
   - match: "Container: beszel-agent"
@@ -69,6 +71,8 @@ filters:
     tags: Scrutiny
   - match: "Container: seerr"
     tags: Seerr
+  - match: "Container: shelfmark-lite"
+    tags: Shelfmark-Lite
   - match: "Container: stash"
     tags: Stash
   - match: "Container: suwayomi"
@@ -79,7 +83,3 @@ filters:
     tags: Wg-Easy
   - match: "Container: wud"
     tags: Wud
-  - match: "Container: audiobookshelf"
-    tags: Audiobookshelf
-  - match: "Container: shelfmark-lite"
-    tags: Shelfmark-Lite
