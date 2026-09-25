@@ -11,10 +11,24 @@ services:
       - MP_MAX_MESSAGES=500
       - MP_DATABASE=/data/mailpit.db
       - TZ=America/New_York
+      # Auth
+      - MP_UI_AUTH=admin:changeme
+      - MP_POP3_AUTH=admin:changeme
       - MP_SMTP_AUTH_ACCEPT_ANY=true
       - MP_SMTP_AUTH_ALLOW_INSECURE=true
-      - MP_POP3_AUTH=admin:changeme
-      - MP_UI_AUTH=admin:changeme
+      # Relay (gmail) 
+      - MP_SMTP_RELAY_HOST=smtp.gmail.com
+      - MP_SMTP_RELAY_PORT=587
+      - MP_SMTP_RELAY_STARTTLS=true
+      - MP_SMTP_RELAY_AUTH=login
+      - 'MP_SMTP_RELAY_USERNAME=<your_gmail_user>@gmail.com'
+      - 'MP_SMTP_RELAY_PASSWORD=<app_password>' # Manage your Google Account -> Search -> "App passwords"
+      - 'MP_SMTP_RELAY_RETURN_PATH=<your_gmail_user>@gmail.com'
+      - 'MP_SMTP_RELAY_OVERRIDE_FROM=<your_gmail_user>@gmail.com' # Original gets moved to "X-Original-From" header 
+      - 'MP_SMTP_RELAY_ALLOWED_RECIPIENTS=(@gmail\.com|kindle\.com)$'
+      # Uncomment to auto release emails
+      #- 'MP_SMTP_RELAY_MATCHING=(@gmail\.com|kindle\.com)$' 
+      # Tags
       - MP_TAGS_TITLE_CASE=true
       - MP_TAGS_USERNAME=true
       - MP_TAGS_CONFIG=/data/tags.yaml
