@@ -27,8 +27,8 @@ filters:
     tags: Dufs-Nfs
   - match: "Container: file-browser"
     tags: File-Browser
-  - match: "Container: flatnotes"
-    tags: Flatnotes
+  - match: "Container: flatnotes-enhanced"
+    tags: Flatnotes-Enhanced
   - match: "Container: gitea"
     tags: Gitea
   - match: "Container: homer"

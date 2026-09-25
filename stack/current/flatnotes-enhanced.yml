@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+    flatnotes-enhanced:
+        image: 'dockerbobw/flatnotes-enhanced:latest'
+        container_name: flatnotes-enhanced
+        ports:
+            - "8081:8081"
+        environment:
+            - FLATNOTES_AUTH_TYPE=password
+            - FLATNOTES_USERNAME=admin
+            - FLATNOTES_PASSWORD=changeme
+            - FLATNOTES_SECRET_KEY=aLongRandomSeriesOfCharacters
+            - FLATNOTES_PORT=8081
+            - FLATNOTES_BRAND_NAME=FN
+            - FLATNOTES_BRAND_ACCENT=#3C7886FF
+        volumes:
+            - '/srv/stacks/flatnotes-enhanced/data:/data'

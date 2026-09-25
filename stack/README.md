@@ -31,13 +31,13 @@
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
   * [Opengist](current/opengist.yml)
-  * [Flatnotes](current/flatnotes.yml)
   * [Linkding](current/linkding.yml)
   * [Beszel](current/beszel.yml)
   * [NFS-Server](current/nfs-server.yml)
   * [Suwayomi](current/suwayomi.yml)
   * [Audiobookshelf](current/audiobookshelf.yml)
   * [Shelfmark-lite](current/shelfmark-lite.yml)
+  * [Flatnotes-Enhanced](current/flatnotes-enhanced.yml)
 * ❌ Retired Services 
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
@@ -51,3 +51,4 @@
   * [Komga](retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
   * [Memos](retired/memos.yml)
   * [Papra](retired/papra.yml)
+  * [Flatnotes](current/flatnotes.yml)
