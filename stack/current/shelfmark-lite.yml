@@ -14,9 +14,16 @@ services:
       AUDIOBOOK_LIBRARY_URL: "http://192.168.1.200:13378/audiobookshelf/"
       HARDCOVER_ENABLED: true
       HARDCOVER_API_KEY: "hc_pat_***"
+      EMAIL_SMTP_HOST: 192.168.1.200
+      EMAIL_SMTP_PORT: 1025
+      EMAIL_SMTP_SECURITY: none
+      EMAIL_SMTP_USERNAME: Shelfmark-lite
+      EMAIL_SMTP_PASSWORD: none
+      EMAIL_FROM: service@noreply.shelfmark-lite.server.home.arpa
     restart: unless-stopped
     volumes:
       - /srv/stacks/shelfmark-lite/books:/books
+      - /srv/stacks/calibre-web-automated/calibre-library:/calibre-library:ro # For reading metadata.db
       - /srv/stacks/shelfmark-lite/config:/config
     healthcheck:
       test: ["CMD", "curl", "-sf", "http://localhost:8084/api/health"]

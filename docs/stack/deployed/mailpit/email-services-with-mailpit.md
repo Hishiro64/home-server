@@ -88,6 +88,7 @@ These are in use for the time being and may not follow guidelines:
 | **Scrutiny** | `Alert <alert@noreply.scrutiny.server.home.arpa>` | None |
 | **Calibre-web-automated** | `Your eBook <ebook@noreply.calibre-web-automated.server.home.arpa>` | `Calibre-web-automated` |
 | **Audiobookshelf** | `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Audiobookshelf` |
+| **Shelfmark-lite** | `Shelfmark-lite <service@noreply.shelfmark-lite.server.home.arpa>` | `Shelfmark-lite` |
 
 # Service Account Address Book
 Import the following entries to your Thunderbird address book:
@@ -103,6 +104,7 @@ Import the following entries to your Thunderbird address book:
 | **Alert** |  <alert@noreply.beszel.server.home.arpa> |
 | **Your eBook** | <ebook@noreply.calibre-web-automated.server.home.arpa> |
 | **Your eBook** | <ebook@noreply.audiobookshelf.server.home.arpa> |
+| **Shelfmark-lite** | <service@noreply.shelfmark-lite.server.home.arpa> |
 
 # Send to Kindle
 
