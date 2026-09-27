@@ -1,0 +1,12 @@
+services:
+  radicale:
+    image: ghcr.io/kozea/radicale:stable
+    container_name: radicale
+    ports:
+      - "5232:5232"
+    volumes:
+      - /srv/stacks/radicale/config:/etc/radicale
+      - /srv/stacks/radicale/data:/var/lib/radicale
+    environment:
+      - 'RADICALE_CONFIG=/etc/radicale/config.ini'
+    restart: unless-stopped

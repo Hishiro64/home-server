@@ -1,0 +1,37 @@
+---
+version: "3.4"
+
+services:
+  xandikos:
+    image: ghcr.io/jelmer/xandikos
+    ports:
+      - 5233:5233
+      - 5234:5234  # Metrics port
+    volumes:
+      - /srv/stacks/xandikos/data:/data
+    environment:
+      # Core settings (all optional - defaults shown)
+      - PORT=5233
+      - METRICS_PORT=5234
+      # - LISTEN_ADDRESS=0.0.0.0
+      # - DATA_DIR=/data
+      # - CURRENT_USER_PRINCIPAL=/user/
+      # - ROUTE_PREFIX=/
+
+      # Auto-create directories and default calendar/addressbook
+      - AUTOCREATE=true
+      - DEFAULTS=true
+
+      # Debug options
+      # - DEBUG=false
+      # - DUMP_DAV_XML=false
+
+      # Compatibility mode for buggy clients
+      # - NO_STRICT=false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5234/health"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3

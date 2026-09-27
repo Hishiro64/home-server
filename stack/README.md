@@ -2,7 +2,7 @@
 
 # 📚 Stacks
 
-* ✅ Current Services
+* 🌱 Active Services
   * [Homer](current/homer.yml)
   * [File Browser](current/filebrowser.yml) <!-- Could be better -->
   * [JellyFin](current/jellyfin.yml)
@@ -38,7 +38,7 @@
   * [Audiobookshelf](current/audiobookshelf.yml)
   * [Shelfmark-lite](current/shelfmark-lite.yml)
   * [Flatnotes-Enhanced](current/flatnotes-enhanced.yml)
-* ❌ Retired Services 
+* 🪦 Graveyard Services
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)
   * [Pi-hole](retired/pi-hole-vanilla.yml) <!-- Dont really use it, ublock on firefox, no smart devices, etc-->
@@ -51,4 +51,6 @@
   * [Komga](retired/komga.yml) <!-- Not much better than Kavita, everything other than *.cbz files is slow -->
   * [Memos](retired/memos.yml)
   * [Papra](retired/papra.yml)
-  * [Flatnotes](current/flatnotes.yml)
+  * [Flatnotes](retired/flatnotes.yml)
+  * [Radicale](retired/radicale.yml)
+  * [Xandikos](retired/xandikos.yml)
