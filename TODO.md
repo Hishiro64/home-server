@@ -22,6 +22,7 @@
 * [x] Look into Shelfmark
 * [x] Update Immich Valkey from 8 -> 9
 * [x] Look into Tsunagu (too early)
+* [x] Add memory usage limits to Suwayomi-Server
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -48,11 +49,13 @@
 * [ ] Look into Archivebox
 * [ ] Service for Public ip change notifications
 * [ ] Container that restarts LanguageTool every 24hrs
-* [ ] Add memory usage limits to Suwayomi-Server and other containers that have poor garbage collection.
 * [ ] Pick a grocery container
 * [ ] Look into romM
 * [ ] Look into gitwatch
-
+* [ ] Look into getting a working dedicated flaresolverr or byparr for suwayomi & shelfmark
+* [ ] Add memory usage limits to containers that have poor garbage collection.
+* [ ] Look into Stalwart
+* [ ] Look into a CardDAV server
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a `*server.home.arpa` hostname
@@ -60,7 +63,7 @@
 * [ ] Update `/scripts/tree.py` to be more descriptive: ports, volumes, etc...
 ---
 ### Docs
-* [ ] Move entire documentation to a dedicated docs project site using Vitepress
+* [x] Move entire documentation to a dedicated docs project site using Vitepress
   * [ ] Completely redo `/docs/0_build.md`
   * [ ] Completely redo `/stack/README.md`
     * [ ] Add benchmarks and results
