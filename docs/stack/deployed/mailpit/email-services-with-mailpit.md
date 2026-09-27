@@ -74,7 +74,7 @@ User Accounts can:
               tags: First-User
          ```
 
-# Temporary Email Records
+# Service Account Address Book
 
 These are in use for the time being and may not follow guidelines:
 
@@ -90,21 +90,13 @@ These are in use for the time being and may not follow guidelines:
 | **Audiobookshelf** | `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Audiobookshelf` |
 | **Shelfmark-lite** | `Shelfmark-lite <service@noreply.shelfmark-lite.server.home.arpa>` | `Shelfmark-lite` |
 
-# Service Account Address Book
-Import the following entries to your Thunderbird address book:
+Use the CardDAV server or download the service account address book [here](./assets/service-accounts.vcf) for manual importing.
 
-| Display Name | Primary Email |
-| :--- | :--- |
-| **Hoodik** |  <service@noreply.hoodik.server.home.arpa> |
-| **Docker** |  <notification@noreply.wud.server.home.arpa> | 
-| **Immich** |  <service@noreply.immich.server.home.arpa> | 
-| **Seerr** |  <notification@noreply.seerr.server.home.arpa> | 
-| **Tea** |  <service@noreply.gitea.server.home.arpa> |
-| **Alert** | <alert@noreply.scrutiny.server.home.arpa> |
-| **Alert** |  <alert@noreply.beszel.server.home.arpa> |
-| **Your eBook** | <ebook@noreply.calibre-web-automated.server.home.arpa> |
-| **Your eBook** | <ebook@noreply.audiobookshelf.server.home.arpa> |
-| **Shelfmark-lite** | <service@noreply.shelfmark-lite.server.home.arpa> |
+::: details Click to preview the address book
+
+<<< ./assets/service-accounts.vcf{ini}
+
+:::
 
 # Send to Kindle
 
