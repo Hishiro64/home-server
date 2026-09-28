@@ -38,6 +38,7 @@
   * [Audiobookshelf](current/audiobookshelf.yml)
   * [Shelfmark-lite](current/shelfmark-lite.yml)
   * [Flatnotes-Enhanced](current/flatnotes-enhanced.yml)
+  * [Baikal](current/baikal.yml)
 * 🪦 Graveyard Services
   * [Duplicacy](retired/duplicacy.yml)
   * [Kavita](retired/kavita.yml)

@@ -1,0 +1,22 @@
+# Docker Compose file for a Baikal server
+# See https://github.com/ckulka/baikal-docker/blob/master/docs/email-guide.md
+
+version: "2"
+services:
+  baikal:
+    image: ckulka/baikal:nginx
+    container_name: baikal
+    ports:
+      - "5232:80"
+    environment:
+      MSMTPRC: |
+        defaults
+
+        account        default
+        host           192.168.1.200
+        port           1025
+        from           service@noreply.baikal.server.home.arpa
+    volumes:
+      - /srv/stacks/baikal/config:/var/www/baikal/config
+      - /srv/stacks/baikal/data:/var/www/baikal/Specific
+    restart: always

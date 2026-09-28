@@ -23,6 +23,7 @@
 * [x] Update Immich Valkey from 8 -> 9
 * [x] Look into Tsunagu (too early)
 * [x] Add memory usage limits to Suwayomi-Server
+* [x] Look into a CardDAV server
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -55,7 +56,7 @@
 * [ ] Look into getting a working dedicated flaresolverr or byparr for suwayomi & shelfmark
 * [ ] Add memory usage limits to containers that have poor garbage collection.
 * [ ] Look into Stalwart
-* [ ] Look into a CardDAV server
+* [ ] Generalize network share names
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a `*server.home.arpa` hostname
