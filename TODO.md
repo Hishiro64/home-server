@@ -24,6 +24,7 @@
 * [x] Look into Tsunagu (too early)
 * [x] Add memory usage limits to Suwayomi-Server
 * [x] Look into a CardDAV server
+* [x] Retire Opengist
 ---
 ### Backup
 * [ ] Add a minimal backup solution for small important files.
@@ -57,7 +58,6 @@
 * [ ] Add memory usage limits to containers that have poor garbage collection.
 * [ ] Look into Stalwart
 * [ ] Generalize network share names
-* [ ] Retire Opengist
 * [ ] Look into Logseq again
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)

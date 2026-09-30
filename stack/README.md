@@ -30,7 +30,6 @@
   * [Mailpit](current/mailpit.yml) <!-- [Guidelines](/docs/STACK/Mailpit_email.md) -->
   * [Hoodik](current/hoodik.yml)
   * [Wud](current/wud.yml)
-  * [Opengist](current/opengist.yml)
   * [Linkding](current/linkding.yml)
   * [Beszel](current/beszel.yml)
   * [NFS-Server](current/nfs-server.yml)
@@ -55,3 +54,4 @@
   * [Flatnotes](retired/flatnotes.yml)
   * [Radicale](retired/radicale.yml)
   * [Xandikos](retired/xandikos.yml)
+  * [Opengist](retired/opengist.yml)
