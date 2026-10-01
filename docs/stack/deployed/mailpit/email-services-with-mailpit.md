@@ -90,7 +90,11 @@ These are in use for the time being and may not follow guidelines:
 | **Audiobookshelf** | `Your eBook <ebook@noreply.audiobookshelf.server.home.arpa>` | `Audiobookshelf` |
 | **Shelfmark-lite** | `Shelfmark-lite <service@noreply.shelfmark-lite.server.home.arpa>` | `Shelfmark-lite` |
 
-Use the CardDAV server or download the service account address book [here](./assets/service-accounts.vcf) for manual importing.
+Use the CardDAV server or download the service account address book 
+<a href="/home-server/stack/deployed/mailpit/assets/service-accounts.vcf" download>
+  here
+</a> 
+for manual importing.
 
 ::: details Click to preview the address book
 
