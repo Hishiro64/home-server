@@ -59,6 +59,7 @@
 * [ ] Look into Stalwart
 * [ ] Generalize network share names
 * [ ] Look into Logseq again
+* [ ] Look into MCP server
 ### DNS
 * [ ] Look into DNS nonsense (Recursive DNS and DoT/DoH), Technitium DNS, Pi-hole **[R]** (reserved in homer under Pi-hole)
   * [ ] Look into setting a `*server.home.arpa` hostname
