@@ -41,7 +41,7 @@ services:
       - "3003:3003"
     environment:
       GITEA_HOST: "http://192.168.1.200:10010/"
-      GITEA_ACCESS_TOKEN: "<GITEA_ACCESS_TOKEN>"
+      GITEA_ACCESS_TOKEN: "<GITEA_ACCESS_TOKEN>" # Put it under a new organization to further restrict
       # Set to 'true' for read-only mode
       GITEA_READONLY: "false"
       # Comma-separated list of tool scopes to expose
