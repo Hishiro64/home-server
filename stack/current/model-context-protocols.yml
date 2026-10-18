@@ -1,0 +1,116 @@
+services:
+  time-mcp:
+    image: theo01/mcp-time:latest
+    container_name: time-mcp
+    command:
+      - --transport
+      - stream
+      - --address
+      - http://0.0.0.0:3001/mcp
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    
+  mcp-inspector:
+    image: ghcr.io/modelcontextprotocol/inspector
+    container_name: mcp-inspector
+    ports:
+      - "6274:6274"
+    environment:
+      HOST: 0.0.0.0
+      ALLOWED_ORIGINS: "http://192.168.1.200:6274" # (enable temporarily to use) Firefox -> about:config -> dom.securecontext.allowlist -> 192.168.1.200
+    volumes:
+      - mcp-inspector-data:/home/node/.mcp-inspector
+    restart: unless-stopped
+    
+  filesystem-mcp:
+    command: '-transport http -port 3002 /data'
+    image: 'danielapatin/mcp-filesystem:latest'
+    container_name: filesystem-mcp
+    user: "1000:1000"
+    ports:
+      - '3002:3002'
+    volumes:
+      - /srv/stacks/flatnotes-enhanced/data:/data:ro # Read only for my notes
+
+  gitea-mcp:
+    image: docker.gitea.com/gitea-mcp-server:latest
+    container_name: gitea-mcp
+    command: ["/app/gitea-mcp", "-transport", "http", "-port", "3003"]
+    ports:
+      - "3003:3003"
+    environment:
+      GITEA_HOST: "http://192.168.1.200:10010/"
+      GITEA_ACCESS_TOKEN: "<GITEA_ACCESS_TOKEN>"
+      # Set to 'true' for read-only mode
+      GITEA_READONLY: "false"
+      # Comma-separated list of tool scopes to expose
+      #GITEA_SCOPES: "repository,issue,pull_request"
+      # Comma-separated list of tool names to expose
+      #GITEA_TOOLS: ""
+      GITEA_INSECURE: "true"
+      # Override inline image attachment size limit in bytes
+      #GITEA_MAX_INLINE_ATTACHMENT_BYTES: "5242880"
+      # Override transport mode
+      #MCP_MODE: http
+    restart: unless-stopped
+    
+  basic-memory-mcp:
+    # Use pre-built image (recommended for most users)
+    image: ghcr.io/basicmachines-co/basic-memory:latest
+    container_name: basic-memory-mcp
+    user: "1000:1000"
+    # Volume mounts for knowledge directories and persistent data
+    volumes:
+      # Persistent storage for configuration and database
+      # Container runs as `appuser` (Dockerfile USER directive), so the CLI
+      # config dir lives under /home/appuser, not /root.
+      - /srv/stacks/model-context-protocols/basic-memory/config:/home/appuser/.basic-memory:rw
+      # Mount your knowledge directory (required)
+      # Change './knowledge' to your actual Obsidian vault or knowledge directory
+      - /srv/stacks/model-context-protocols/basic-memory/knowledge:/app/data:rw
+      # OPTIONAL: Mount additional knowledge directories for multiple projects
+      # - ./work-notes:/app/data/work:rw
+      # - ./personal-notes:/app/data/personal:rw
+      # You can edit the project config manually in the mounted config volume
+      # The default project will be configured to use /app/data
+    environment:
+      # Project configuration
+      - BASIC_MEMORY_DEFAULT_PROJECT=main
+      
+      # Enable real-time file synchronization (recommended for Docker)
+      - BASIC_MEMORY_SYNC_CHANGES=true
+      
+      # Logging configuration
+      - BASIC_MEMORY_LOG_LEVEL=INFO
+      
+      # Sync delay in milliseconds (adjust for performance vs responsiveness)
+      - BASIC_MEMORY_SYNC_DELAY=1000
+    
+    # Port exposure for HTTP transport (only needed if not using STDIO)
+    ports:
+      - "3004:3004"
+    # Command with SSE transport (configurable via environment variables above)
+    # IMPORTANT: The SSE and streamable-http endpoints are not secured
+    command: ["basic-memory", "mcp", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "3004"]
+    # Container management
+    restart: unless-stopped
+    # Health monitoring
+    healthcheck:
+      test: ["CMD", "basic-memory", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    # Optional: Resource limits
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 512M
+    #       cpus: '0.5'
+    #     reservations:
+    #       memory: 256M
+    #       cpus: '0.25'
+
+volumes:
+  mcp-inspector-data:
