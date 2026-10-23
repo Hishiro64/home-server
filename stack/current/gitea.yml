@@ -1,7 +1,7 @@
 services:
   gitea:
     container_name: gitea
-    image: docker.gitea.com/gitea:1.27.3
+    image: docker.gitea.com/gitea:28.2.0
     restart: always
     ports:
       - "10010:3000"
@@ -14,15 +14,15 @@ services:
       - USER_UID=1000
       - USER_GID=1000
       # Added
-      - APP_NAME=Tea
+      - 'APP_NAME=Gitea'
       # Enable this to migrate from a slated Gitea instance
-      - GITEA__migrations__ALLOW_LOCALNETWORKS=true
+      #- GITEA__migrations__ALLOW_LOCALNETWORKS=true # Deprecated: https://github.com/go-gitea/gitea/pull/39426, Use ALLOWED_HOST_LIST instead 
       # SMTP
       - GITEA__mailer__ENABLED=true
       - GITEA__mailer__PROTOCOL=smtp
       - GITEA__mailer__SMTP_ADDR=192.168.1.200
       - GITEA__mailer__SMTP_PORT=1025
-      - GITEA__mailer__FROM="Tea <service@noreply.gitea.server.home.arpa>"
+      - GITEA__mailer__FROM="Gitea <service@noreply.gitea.server.home.arpa>"
       - GITEA__mailer__USER=Gitea
       - GITEA__mailer__PASSWD=none
       # Mail
