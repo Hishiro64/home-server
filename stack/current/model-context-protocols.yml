@@ -36,7 +36,7 @@ services:
   gitea-mcp:
     image: docker.gitea.com/gitea-mcp-server:latest
     container_name: gitea-mcp
-    command: ["/app/gitea-mcp", "-transport", "http", "-port", "3003"]
+    command: ["/app/gitea-mcp", "-transport", "http", "-port", "3003"] # Forces SSE web mode for network access
     ports:
       - "3003:3003"
     environment:
@@ -44,8 +44,8 @@ services:
       GITEA_ACCESS_TOKEN: "<GITEA_ACCESS_TOKEN>" # Put it under a new organization to further restrict
       # Set to 'true' for read-only mode
       GITEA_READONLY: "false"
-      # Comma-separated list of tool scopes to expose
-      #GITEA_SCOPES: "repository,issue,pull_request"
+      # Comma-separated list of tool scopes to expose # Not exposed: version, search, milestone, package, file, release
+      GITEA_SCOPES: "user,notification,label,wiki,timetracking,project,issue,pull_request,actions,repository,branch,tag,commit"
       # Comma-separated list of tool names to expose
       #GITEA_TOOLS: ""
       GITEA_INSECURE: "true"
