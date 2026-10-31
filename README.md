@@ -6,7 +6,7 @@
 [![Uptime](https://img.shields.io/badge/Last_Uptime-1_Year,_8_Days-success?style=flat-square&logo=uptimekuma&logoColor=white)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
-![preview](docs/assets/homer-preview.png)
+![preview](docs/assets/homer-preview-2026-10-31.png)
 Contains my config files, docker compose files, and documentation for setting up my home server. All hosted on one single Raspberry Pi and one 4TB SSD!
 <!--<img src="docs/assets/uptime-2024-11-12%2011-28-24.png" width="400" /> -->
 ## 📃 Index
