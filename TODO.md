@@ -38,7 +38,7 @@
 * [ ] Look into a music requests container **[R]**
 * [ ] Look into WatchYourLAN and NetAlertX **[R]**
 * [ ] Redeploy it-tools again **[R]**
-* [ ] Guest homepage **[R]**
+* [ ] Guest homepage **[R]** (Either edit classic: https://startpages.github.io/startpages/start_page_2-tayumpee/ or use https://github.com/gethomepage/homepage)
 * [ ] Look into Healthchecks.io
 * [ ] Look into Vaultwarden
 * [ ] Look into SearXNG
